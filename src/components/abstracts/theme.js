@@ -1,5 +1,4 @@
-import { createTheme } from '@mui/system';
-
+import { createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
     palette: {
@@ -11,12 +10,6 @@ export const theme = createTheme({
         text: {
             primary: '#161616',
             secondary: '#161616',
-        },
-        primary: {
-            main: '#ffffff',
-        },
-        secondary: {
-            main: '#ff4747'
         },
         black: {
             main: "#000000"
@@ -64,55 +57,55 @@ export const theme = createTheme({
             main: "transparent"
         }
     },
-    // typography: {
-    //     fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif',
-    //     body1: {
-    //         fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     body2: {
-    //         fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     title: {
-    //         fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     d1: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     d2: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     d3: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     d4: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     d5: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     d6: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     l1: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     l2: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     l3: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     l4: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     button: {
-    //         fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    //     navBar1: {
-    //         fontFamily: 'open-sans, "Verdana", "Helvetica", "Arial", sans-serif'
-    //     },
-    //     navLink: {
-    //         fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
-    //     },
-    // }
+    typography: {
+        fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif',
+        body1: {
+            fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
+        },
+        body2: {
+            fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
+        },
+        title: {
+            fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
+        },
+        d1: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        d2: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        d3: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        d4: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        d5: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        d6: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        l1: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        l2: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        l3: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        l4: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+        button: {
+            fontFamily: 'ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif'
+        },
+        navBar1: {
+            fontFamily: 'open-sans, "Verdana", "Helvetica", "Arial", sans-serif'
+        },
+        navLink: {
+            fontFamily: 'ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif'
+        },
+    }
 });
