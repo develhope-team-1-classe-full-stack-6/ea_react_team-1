@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import EABox from "./components/components/box/EABox";
 
-export const App = () => {
+export default function App (){
   return (
     <>
     <Routes>
