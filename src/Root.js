@@ -4,7 +4,7 @@ import { App } from "./App";
 
 //Style
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from './components/abstracts/theme';
+import { theme } from './components/themes/theme';
 import './index.css'
 
 export const Root = () => {

@@ -11,49 +11,65 @@ export const theme = createTheme({
             secondary: '#161616',
         },
         black: {
-            main: "#000000"
+            main: "#000000",
+            contrastText: '#ffffff',
         },
         dark: {
-            main: "#161616"
+            main: "#161616",
+            contrastText: '#ffffff',
         },
         light: {
-            main: "#f3f3f3"
+            main: "#f3f3f3",
+            contrastText: '#000000',
         },
         white: {
-            main: "#ffffff"
+            main: "#ffffff",
+            contrastText: '#000000',
         },
         gray: {
-            main: "#eaeaea"
+            main: "#eaeaea",
+            contrastText: '#000000',
         },
         grayFocus: {
-            main: "#dedede"
+            main: "#dedede",
+            contrastText: '#000000',
         },
         darkBlue: {
-            main: "#29244d"
+            main: "#29244d",
+            contrastText: '#ffffff',
         },
         blue: {
-            main: "#001C9D"
+            main: "#001C9D",
+            contrastText: '#ffffff',
         },
         lightOrange: {
-            main: "#ed5355"
+            main: "#ed5355",
+            contrastText: '#ffffff',
         },
         orange: {
-            main: "#ff4747"
+            main: "#ff4747",
+            contrastText: '#ffffff',
+            
         },
         red: {
-            main: "#fe0115"
+            main: "#fe0115",
+            contrastText: '#ffffff',
         },
         darkLightBlue: {
-            main: "#6fb0d6"
+            main: "#6fb0d6",
+            contrastText: '#ffffff',
         },
         violet: {
-            main: "#a649ce"
+            main: "#a649ce",
+            contrastText: '#ffffff',
         },
         darkViolet: {
-            main: "#390086"
+            main: "#390086",
+            contrastText: '#ffffff',
         },
         transparent: {
-            main: "transparent"
+            main: "transparent",
+            contrastText: '#ffffff',
         }
     },
     typography: {
