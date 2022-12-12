@@ -1,14 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import './BoxComponent.css';
+import './EABox.css';
 import fifa23 from '../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg';
 import fifa23Logo from '../../../assets/images/box/fifa23-logo-white-stacked.svg';
 
 export default function EABox() {
 
-  const boxHover = () => {
-   
-  }
+  const boxHover = () => {}
 
   return (
     <Box
