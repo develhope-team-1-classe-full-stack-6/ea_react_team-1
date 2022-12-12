@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import CustomButton from "./components/components/button/CustomButton";
 
 export const App = () => {
   return (
