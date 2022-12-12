@@ -4,9 +4,11 @@ import './BoxComponent.css';
 import fifa23 from '../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg';
 import fifa23Logo from '../../../assets/images/box/fifa23-logo-white-stacked.svg';
 
-export default function BoxComponent() {
+export default function EABox() {
 
-  const boxHover = () => {console.log("hover")}
+  const boxHover = () => {
+   
+  }
 
   return (
     <Box
