@@ -1,0 +1,39 @@
+/* Box Styling*/
+.box-container {
+  aspect-ratio: 1/1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-container:hover .box-background {
+  opacity: 0.1;
+}
+.box-container:hover .box-logo {
+  transform: translateY(-70px);
+}
+.box-container:hover p {
+  visibility: visible;
+}
+.box-container .box-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+  filter: brightness(0.7);
+}
+.box-container .box-logo {
+  position: absolute;
+  width: 130px;
+  transition: all 300ms ease-out;
+}
+.box-container p {
+  position: absolute;
+  visibility: hidden;
+  color: #fff;
+}
+
+/*# sourceMappingURL=BoxComponent.css.map */

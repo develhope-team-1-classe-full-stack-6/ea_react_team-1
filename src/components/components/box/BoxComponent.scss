@@ -1,0 +1,48 @@
+/* Box Styling*/
+.box-container {
+  aspect-ratio: 1/1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: linear-gradient(90deg, var(--dark-blue), var(--orange));
+
+  &:hover {
+    .box-background {
+      opacity: 0.1;
+    }
+
+    .box-logo {
+      transform: translateY(-70px);
+    }
+
+    p {
+      visibility: visible;
+    }
+  }
+
+  .box-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    filter: brightness(0.7);
+  }
+
+  .box-logo{
+    position: absolute;
+    width: 130px;
+    transition: all 300ms ease-out;
+  }
+
+  p {
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+  }
+}
+
+// sass src/components/components/box/BoxComponent.scss src/components/components/box/BoxComponent.css
