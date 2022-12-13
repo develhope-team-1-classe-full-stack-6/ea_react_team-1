@@ -18,7 +18,7 @@ const MenuButton = styled(Button)({
     },
 })
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Giochi', 'Altre Esperienze'];
 
 function ResponsiveAppBar() {
 
@@ -35,9 +35,9 @@ function ResponsiveAppBar() {
                             size="large"
                             edge="start"
                             disableRipple
-                            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
+                            sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
                         >
-                            <MoreVertIcon />
+                            <MoreVertIcon sx={{fontSize:"2rem"}}/>
                         </IconButton>
                         <IconButton
                             size="large"
@@ -45,7 +45,7 @@ function ResponsiveAppBar() {
                             disableRipple
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
                         >
-                            <MenuIcon />
+                            <MenuIcon sx={{fontSize:"2rem"}}/>
                         </IconButton>
                     </Box>
                     <Box>
@@ -57,7 +57,7 @@ function ResponsiveAppBar() {
                             <MenuButton
                                 disableRipple
                                 key={page}
-                                sx={{ my: 2, color: 'dark.main', '&:hover': { color: 'orange.main' }, display: 'flex', flexDirection: "align-items-center" }}
+                                sx={{color: 'dark.main', '&:hover': { color: 'orange.main' }, display: 'flex', flexDirection: "align-items-center" }}
                             >
                                 {page}
                             </MenuButton>
