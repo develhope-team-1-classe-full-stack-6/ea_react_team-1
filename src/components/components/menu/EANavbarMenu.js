@@ -1,7 +1,6 @@
-import { Button, Menu, MenuItem, Typography } from "@mui/material";
+import { Button, Menu, MenuItem, Typography,styled } from "@mui/material";
 import { Box } from "@mui/system";
 import { useState } from "react";
-import styled from "styled-components";
 
 const MenuButton = styled(Button)({
     textTransform: 'none',
@@ -41,38 +40,41 @@ function EANavbarMenu() {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
-                MenuListProps={{ onMouseLeave: handleClose }}
+                MenuListProps={{
+                    onMouseLeave: handleClose,
+                    'aria-labelledby': 'fade-button',
+                }}
             >
                 <Typography variant="navLink" component="h2">
-                <Box
-                    sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
                     <Box
-                        sx={{ flexGrow: 1 }}
-                    >
-                        <MenuItem onClick={handleClose}
-                        sx={{color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" }}}
-                        >Profile</MenuItem>
-                        <MenuItem onClick={handleClose}
-                        sx={{color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" }}}
-                        >My account</MenuItem>
-                        <MenuItem onClick={handleClose}
-                        sx={{color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" }}}
-                        >Logout</MenuItem>
+                        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                        <Box
+                            sx={{ flexGrow: 1 }}
+                        >
+                            <MenuItem onClick={handleClose}
+                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
+                            >Profile</MenuItem>
+                            <MenuItem onClick={handleClose}
+                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
+                            >My account</MenuItem>
+                            <MenuItem onClick={handleClose}
+                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
+                            >Logout</MenuItem>
+                        </Box>
+                        <Box
+                            sx={{ flexGrow: 1 }}
+                        >
+                            <MenuItem onClick={handleClose}
+                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
+                            >Profile</MenuItem>
+                            <MenuItem onClick={handleClose}
+                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
+                            >My account</MenuItem>
+                            <MenuItem onClick={handleClose}
+                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
+                            >Logout</MenuItem>
+                        </Box>
                     </Box>
-                    <Box
-                        sx={{ flexGrow: 1 }}
-                    >
-                        <MenuItem onClick={handleClose}
-                        sx={{color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" }}}
-                        >Profile</MenuItem>
-                        <MenuItem onClick={handleClose}
-                        sx={{color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" }}}
-                        >My account</MenuItem>
-                        <MenuItem onClick={handleClose}
-                        sx={{color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" }}}
-                        >Logout</MenuItem>
-                    </Box>
-                </Box>
                 </Typography>
             </Menu>
         </div>
