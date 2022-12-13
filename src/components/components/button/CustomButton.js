@@ -1,12 +1,16 @@
-import { Button, styled } from "@mui/material";
+import { Button, styled, useMediaQuery } from "@mui/material";
 
 function CustomButton(props) {
 
+    const matches = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    
     const BootstrapButton = styled(Button)({
         textTransform: 'none',
         padding: "17px 47px",
         borderRadius: "0px",
         transition: "all 0.15s",
+        maxHeight: "65px",
+        width: matches ? "100%": "inherit",
         '&:hover': {
             transform: "scale(1.1 , 1.1)",
             transition: "all 0.15s"
@@ -20,7 +24,6 @@ function CustomButton(props) {
                 variant={props.variant || "contained"}
                 disableElevation
                 disableRipple
-                sx={{ maxHeight: "65px" }}
             >
                 {props.children || "Button"}
             </BootstrapButton>
