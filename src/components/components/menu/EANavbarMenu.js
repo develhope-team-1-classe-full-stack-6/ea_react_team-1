@@ -31,7 +31,7 @@ function EANavbarMenu() {
                 aria-haspopup="true"
                 onClick={handleClick}
                 onMouseOver={handleClick}
-                sx={{ display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition: "all 0.25s", '&:hover': { color: 'orange.main', transition: "all 0.25s" } }}
+                sx={{ display: { xs: 'none', md: 'flex' }, color: open ? 'orange.main' : 'dark.main', transition: "all 0.25s", '&:hover': { color: 'orange.main', transition: "all 0.25s" } }}
             >
                 Open Menu
             </MenuButton>
