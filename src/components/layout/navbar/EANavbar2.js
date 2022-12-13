@@ -20,7 +20,7 @@ const MenuButton = styled(Button)({
 
 const pages = ['Products', 'Pricing', 'Blog'];
 
-function ResponsiveAppBar() {
+function EANavbar() {
 
     return (
         <AppBar position="static"
@@ -63,10 +63,9 @@ function ResponsiveAppBar() {
                             </MenuButton>
                         ))}
                     </Box>
-
                 </Toolbar>
             </Container>
         </AppBar>
     );
 }
-export default ResponsiveAppBar;
+export default EANavbar;
