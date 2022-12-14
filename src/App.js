@@ -4,7 +4,9 @@ import EACard from "./components/components/ea-card/EACard";
 export default function App (){
   return (
 
-    <EACard/>
+    <div>
+      <EACard/>
+    </div>
     // <Routes>
     //   <Route path="/" element={<div>Home</div>}/>
     // </Routes>

@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, styled, useMediaQuery } from '@mui/material';
+import ItTakesTwo from './it_takes_two_banner.jpg'
 
 function EACard() {
 
@@ -31,33 +32,172 @@ function EACard() {
 
   return (
 
-    <div style={{maxWidth: '1456px'}}>
+    <div 
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        maxWidth: '1456px'
+      }}
+    >
         <StyledCard>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
-              image="it_takes_two_banner.jpg"
+              height="200"
+              image={ItTakesTwo}
               alt="it_takes_two_banner"
             />
-            <CardContent>
-                <div className="spanWrap" style={{display: 'flex', justifyContent: 'start', padding: '1rem 1rem 1rem 0' }}>
-                    <Typography variant='subtitle2' color='orange.main' fontWeight='bold' marginRight='1rem'>
+            <CardContent
+              style={{
+                minHeight: '320px',
+              }}
+            >
+                <div 
+                  className="spanWrap" 
+                  style={{
+                    display: 'flex', 
+                    justifyContent: 'start', 
+                    padding: '0' }}
+                >
+                    <Typography 
+                      variant='subtitle2' 
+                      color='orange.main' 
+                      fontWeight='bold' 
+                      marginRight='1rem'
+                    >
                         It Takes Two
                     </Typography>
-                    <Typography variant='subtitle2' color='orange.main' fontWeight='bold'>
-                        gg/mm/aaaa
+                    <Typography 
+                      variant='subtitle2' 
+                      color='orange.main' 
+                      fontWeight='bold'
+                    >
+                        4-nov-2022
                     </Typography>
                 </div>
-              <Typography gutterBottom variant="h5" component="div" fontWeight='bold'>
-                It Takes Two
+              <Typography 
+                gutterBottom 
+                variant="h5" 
+                component="div" 
+                fontWeight='bold'>
+                It Takes Two è disponibile su Nintendo Switch<sup>tm</sup>
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi odit architecto animi accusamus, doloribus beatae. Cupiditate aperiam fuga explicabo eveniet repellat quam ipsum inventore amet! Corrupti qui dolore quis debitis sit. Blanditiis nesciunt in officia voluptatem odio? Distinctio, facere corrupti!
+              <Typography 
+                variant="h6" 
+                color="text.secondary"
+              >
+                Immergiti subito nella più pazza avventura cooperativa di Switch<sup>tm</sup>
               </Typography>
             </CardContent>
           </CardActionArea>
         </StyledCard>
+
+        {/* <StyledCard>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image={ItTakesTwo}
+              alt="it_takes_two_banner"
+            />
+            <CardContent
+              style={{
+                minHeight: '320px',
+              }}
+            >
+                <div 
+                  className="spanWrap" 
+                  style={{
+                    display: 'flex', 
+                    justifyContent: 'start', 
+                    padding: '0' }}
+                >
+                    <Typography 
+                      variant='subtitle2' 
+                      color='orange.main' 
+                      fontWeight='bold' 
+                      marginRight='1rem'
+                    >
+                        It Takes Two
+                    </Typography>
+                    <Typography 
+                      variant='subtitle2' 
+                      color='orange.main' 
+                      fontWeight='bold'
+                    >
+                        4-nov-2022
+                    </Typography>
+                </div>
+              <Typography 
+                gutterBottom 
+                variant="h5" 
+                component="div" 
+                fontWeight='bold'>
+                It Takes Two è disponibile su Nintendo Switch<sup>tm</sup>
+              </Typography>
+              <Typography 
+                variant="h6" 
+                color="text.secondary"
+              >
+                Immergiti subito nella più pazza avventura cooperativa di Switch<sup>tm</sup>
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </StyledCard>
+
+        <StyledCard>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="200"
+              image={ItTakesTwo}
+              alt="it_takes_two_banner"
+            />
+            <CardContent
+              style={{
+                minHeight: '320px',
+              }}
+            >
+                <div 
+                  className="spanWrap" 
+                  style={{
+                    display: 'flex', 
+                    justifyContent: 'start', 
+                    padding: '0' }}
+                >
+                    <Typography 
+                      variant='subtitle2' 
+                      color='orange.main' 
+                      fontWeight='bold' 
+                      marginRight='1rem'
+                    >
+                        It Takes Two
+                    </Typography>
+                    <Typography 
+                      variant='subtitle2' 
+                      color='orange.main' 
+                      fontWeight='bold'
+                    >
+                        4-nov-2022
+                    </Typography>
+                </div>
+              <Typography 
+                gutterBottom 
+                variant="h5" 
+                component="div" 
+                fontWeight='bold'>
+                It Takes Two è disponibile su Nintendo Switch<sup>tm</sup>
+              </Typography>
+              <Typography 
+                variant="h6" 
+                color="text.secondary"
+              >
+                Immergiti subito nella più pazza avventura cooperativa di Switch<sup>tm</sup>
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </StyledCard> */}
     </div>
   );
 }
