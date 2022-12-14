@@ -53,15 +53,15 @@ const Footer = () => {
 
 
     return (
-        <FooterGrid sx={{height: {xs: '45vw', sm: 'auto', md: 'auto', lg: '300px'}, width: 1}} container>
-            <Grid container xs={8} sm={10} md={10} lg={8} xl={8} justifyContent="space-between" sx={{border: '1px solid black', height: 3/4, margin: "auto", mt: {sm: "20px", lg: "0px"}, mb: {sm: "20px", lg: "0px"} ,maxWidth: "1120px !important"}}>
+        <FooterGrid sx={{height: {xs: 'auto', sm: 'auto', md: 'auto', lg: '280px'}, width: 1}} container>
+            <Grid container xs={8} sm={11} md={11} lg={8} xl={8} justifyContent="space-between" sx={{border: '1px solid black', height: 3/4, margin: "auto", mt: {sm: "20px", lg: "10px"}, mb: {sm: "20px", lg: "0px"} ,maxWidth: "1120px !important"}}>
                 <Grid item container justifyContent="center" xs={1} sm={12} md={12} lg={1} sx={{ justifyContent: {xs: "left", lg: "center"}, border: '1px solid black', height: {xs: 2/5, sm: 1/5, md: 1/5, lg: 2/5}, minHeight: "55px"}}>
                         <img item style={{width: '64px', height: '64px'}} alt="logo" src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"/>
                 </Grid>
-                <Grid item container sx={{border: '1px solid black', height: {xs: 2/5, sm: 1/5, md: 1/5, lg: 2/5}, pl: 1, pt: {md: "0.5em", lg: 0}, m: {sm:"10px", md: "20px", lg: "0px"}}} xs={6} sm={12} md={12} lg={6}>
+                <Grid item container sx={{border: '1px solid black', height: {xs: 2/5, sm: 1/5, md: 1/5, lg: 2/5}, pl: 1, pt: {md: "0.5em", lg: 0}, m: {sm:"10px", md: "5px", lg: "0px"}}} xs={6} sm={12} md={12} lg={6}>
                     {MAIN_LINKS.map(text => <Typography item sx={{mr: "20px", maxHeight: {}}}>{text}</Typography>)}
                 </Grid>
-                <Grid item container justifyContent="space-between" sx={{border: '1px solid black', height: {xs: 2/5, sm: 2/5, md: 2/5, lg: 2/5}, justifyContent: {xs: "center", lg: "flex-end"}, minHeight: {sm: "150px", md: "100px", lg: "0px"}}} xs={5} sm={12} md={12} lg={5}>
+                <Grid item container justifyContent="space-between" sx={{border: '1px solid black', height: {xs: 2/5, sm: 2/5, md: 2/5, lg: 2/5}, justifyContent: {xs: "center", lg: "flex-end"}, minHeight: {sm: "150px", md: "80px", lg: "0px"}}} xs={5} sm={12} md={12} lg={5}>
 
 
                 <FormControl sx={{ m: 1, minWidth: 120, width: {sm:"80%", md: "40%", lg: 120} }}>
@@ -71,7 +71,7 @@ const Footer = () => {
                 displayEmpty
                 inputProps={{ 'aria-label': 'Without label' }}
                 >
-                <MenuItem disabled  value="">
+                <MenuItem disabled value="">
                     <Typography>Language</Typography>
                 </MenuItem>
                 <MenuItem value={10}>Ten</MenuItem>
@@ -87,12 +87,14 @@ const Footer = () => {
                 displayEmpty
                 inputProps={{ 'aria-label': 'Without label' }}
                 >
-                <MenuItem value="">
+                    <MenuItem disabled value="">
                     <Typography>Language</Typography>
-                </MenuItem>
+                </MenuItem><div style={{width: '500px', height: '500px', display: 'flex'}}>
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
                 <MenuItem value={30}>Thirty</MenuItem>
+                </div>
+                
                 </Select>
             </FormControl>
 
@@ -101,7 +103,7 @@ const Footer = () => {
 
 
                 </Grid>
-                <Grid item container sx={{border: '1px solid black', height: 3/5, pt: 2, pb: 2, pl: 1, ml: {xs: 13, sm: "10px", md: 3, lg: 9, xl: 11}}} xs={6} sm={8} md={7} xl={5}>
+                <Grid item container sx={{border: '1px solid black', height: 3/5, pt: 2, pb: 2, pl: 1, ml: {xs: 13, sm: "10px", md: 3, lg: 9, xl: 11}}} xs={6} sm={8} md={7} lg={7} xl={5}>
                     {TC_LINKS.map(text => <Typography item sx={{fontSize: "14px", maxWidth: {xs: '200px', md: '250px'}, mr: "15px", wordWrap:"break-word"}}>{text}</Typography>)}
                 </Grid>
                 <Grid item container justifyContent="flex-end" alignItems="flex-end" sx={{border: '1px solid black', height: {md: "140px", lg: 3/5}}} xs={3}>
