@@ -101,7 +101,7 @@ const Footer = () => {
 
 
                 </Grid>
-                <Grid item container sx={{border: '1px solid black', height: 3/5, pt: 2, pb: 2, pl: 1, ml: {xs: 13, sm: 13, md: 8, lg: 9, xl: 11}}} xs={6} lg={7}>
+                <Grid item container sx={{border: '1px solid black', height: 3/5, pt: 2, pb: 2, pl: 1, ml: {xs: 13, sm: 13, md: 8, lg: 9, xl: 11}}} xs={6} md={7} xl={5}>
                     {TC_LINKS.map(text => <Typography item sx={{fontSize: "14px", maxWidth: {xs: '200px', md: '250px'}, mr: "15px", wordWrap:"break-word"}}>{text}</Typography>)}
                 </Grid>
                 <Grid item container justifyContent="flex-end" alignItems="flex-end" sx={{border: '1px solid black', height: 3/5}} xs={3}>
