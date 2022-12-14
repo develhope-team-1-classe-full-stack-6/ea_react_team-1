@@ -21,7 +21,7 @@ const MenuButton = styled(Button)({
 
 const pages = ['Giochi', 'Altre Esperienze'];
 
-function ResponsiveAppBar() {
+function EANavbar() {
 
     return (
         <AppBar position="static"
@@ -69,4 +69,4 @@ function ResponsiveAppBar() {
         </AppBar>
     );
 }
-export default ResponsiveAppBar;
+export default EANavbar;
