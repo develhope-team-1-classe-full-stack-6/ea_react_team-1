@@ -13,6 +13,16 @@ function Prova(props) {
         },
     })
 
+    const EAMenuItem = styled(MenuItem)({
+        fontSize: "1rem",
+        fontWeight: "lighter",
+        color: theme.palette.dark.main,
+        '&:hover':{
+            color: theme.palette.orange.main,
+            background: "none"
+        }
+    })
+
     const [hover, setHover] = useState(false);
 
     const hadlerOver = () => {
@@ -32,17 +42,12 @@ function Prova(props) {
 
     const styleItemMenu = {
         position: "absolute",
-        background: theme.palette.light.main,
-        color: theme.palette.dark.main,
-        fontSize: "0.7rem",
         fontWeight: "lighter",
         transformOrigin: "top",
-        transform: `${hover ? "scaleY(1)" : "scaleY(0)"} translateY(15px)`,
+        transform: hover ? "scaleY(1)" : "scaleY(0)",
         transition: "all 0.25s",
         listStyle: "none",
-        padding: "10px",
-        borderRadius: "5px",
-        display: "flex",
+        padding: "0px",
 
     }
 
@@ -55,41 +60,45 @@ function Prova(props) {
             >
                 <MenuButton
                     key={"key"}
-                    sx={{ display: { xs: 'none', md: 'flex' },
-                    color: 'dark.main',
-                    transition: "all 0.25s",
-                    '&:hover': { color: 'orange.main', transition: "all 0.25s" } }}
+                    sx={{
+                        display: { xs: 'none', md: 'flex' },
+                        color: 'dark.main',
+                        transition: "all 0.25s",
+                        '&:hover': { color: 'orange.main', transition: "all 0.25s" }
+                    }}
                 >
                     {props.children}
                 </MenuButton>
                 <li><ul style={styleItemMenu}>
-                    <Box sx={{ padding: "20px 50px 20px 10px" }}>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                    </Box>
-                    <Box sx={{ padding: "20px 50px 20px 10px" }}>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
-                        <MenuItem sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}>
-                            Profile
-                        </MenuItem>
+                    <Box sx={{ background: theme.palette.light.main, color: theme.palette.dark.main, display: "flex", transform: "translateY(20px)",borderRadius: "5px", padding: "25px"}}>
+                        <Box sx={{ padding: "10px 55px 10px 0px", fontSize:"0rem" }}>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                            <EAMenuItem >
+                                Profile
+                            </EAMenuItem>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                        </Box>
+                        <Box sx={{ padding: "10px 55px 10px 0px" }}>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                            <EAMenuItem>
+                                Profile
+                            </EAMenuItem>
+                        </Box>
                     </Box>
                 </ul></li>
             </ul>
