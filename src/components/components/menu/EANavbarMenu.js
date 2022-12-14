@@ -10,7 +10,7 @@ const MenuButton = styled(Button)({
     },
 })
 
-function EANavbarMenu() {
+function EANavbarMenu(props) {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -31,9 +31,10 @@ function EANavbarMenu() {
                 aria-haspopup="true"
                 onClick={handleClick}
                 onMouseOver={handleClick}
+                key={props.key}
                 sx={{ display: { xs: 'none', md: 'flex' }, color: open ? 'orange.main' : 'dark.main', transition: "all 0.25s", '&:hover': { color: 'orange.main', transition: "all 0.25s" } }}
             >
-                Open Menu
+                {props.children}
             </MenuButton>
             <Menu
                 id="simple-menu"
@@ -41,9 +42,9 @@ function EANavbarMenu() {
                 open={open}
                 onClose={handleClose}
                 MenuListProps={{
-                    onMouseLeave: handleClose,
-                    'aria-labelledby': 'fade-button',
+                    onMouseLeave: handleClose
                 }}
+                sx={{transform: "translateY(25px)"}}
             >
                 <Typography variant="navLink" component="h2">
                     <Box

@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/system';
 import Logo from "../../../assets/images/common/ea-wordmark-network-nav-coral.svg";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import EANavbarMenu from '../../components/menu/EANavbarMenu';
 
 const MenuButton = styled(Button)({
     textTransform: 'none',
@@ -20,7 +21,7 @@ const MenuButton = styled(Button)({
 
 const pages = ['Giochi', 'Altre Esperienze'];
 
-function EANavbar() {
+function ResponsiveAppBar() {
 
     return (
         <AppBar position="static"
@@ -54,13 +55,12 @@ function EANavbar() {
                     {/* testo */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 2 }}>
                         {pages.map((page) => (
-                            <MenuButton
-                                disableRipple
+                            <EANavbarMenu
                                 key={page}
                                 sx={{color: 'dark.main', '&:hover': { color: 'orange.main' }, display: 'flex', flexDirection: "align-items-center" }}
                             >
                                 {page}
-                            </MenuButton>
+                            </EANavbarMenu>
                         ))}
                     </Box>
 
@@ -69,4 +69,4 @@ function EANavbar() {
         </AppBar>
     );
 }
-export default EANavbar;
+export default ResponsiveAppBar;
