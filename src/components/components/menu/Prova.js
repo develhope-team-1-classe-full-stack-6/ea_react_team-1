@@ -72,9 +72,7 @@ function Prova(props) {
                 <li><ul style={styleItemMenu}>
                     <Box sx={{ background: theme.palette.light.main, color: theme.palette.dark.main, display: "flex", transform: "translateY(20px)",borderRadius: "5px", padding: "25px"}}>
                         <Box sx={{ padding: "10px 55px 10px 0px", fontSize:"0rem" }}>
-                            <EAMenuItem>
-                                Profile
-                            </EAMenuItem>
+                            <EAMenuItem>Profile</EAMenuItem>
                             <EAMenuItem >
                                 Profile
                             </EAMenuItem>
