@@ -54,7 +54,7 @@ const Footer = () => {
 
     return (
         <FooterGrid sx={{height: {xs: '45vw', sm: '30vw', md: '30vvw', lg: '300px'}, width: 1}} container>
-            <Grid container xs={8} justifyContent="space-between" sx={{border: '1px solid black', height: 3/4, margin: 'auto', maxWidth: "1120px !important"}}>
+            <Grid container xs={8} sm={8} md={10} lg={8} xl={8} justifyContent="space-between" sx={{border: '1px solid black', height: 3/4, margin: 'auto', maxWidth: "1120px !important"}}>
                 <Grid item container justifyContent="center" xs={1} sx={{ border: '1px solid black', height: 2/5 }}>
                         <img item style={{width: '64px', height: '64px'}} alt="logo" src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"/>
                 </Grid>
