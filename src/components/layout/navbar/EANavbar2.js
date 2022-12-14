@@ -5,19 +5,9 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/system';
 import Logo from "../../../assets/images/common/ea-wordmark-network-nav-coral.svg";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EANavbarMenu from '../../components/menu/EANavbarMenu';
-
-const MenuButton = styled(Button)({
-    textTransform: 'none',
-    fontSize: "1.1rem",
-    '&:hover': {
-        background: "none"
-    },
-})
 
 const pages = ['Giochi', 'Altre Esperienze'];
 
