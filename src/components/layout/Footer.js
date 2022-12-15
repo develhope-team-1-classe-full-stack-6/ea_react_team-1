@@ -18,16 +18,24 @@ const Footer = () => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    height: lg ? "300px" : "auto",
-    width: "100%"
+    height: lg ? "300px" : "auto"
   });
 
   const MainGrid = styled (Grid) ({
     justifyContent: "space-between",
-    height: 3/4,
+    height: "75%",
     margin: "auto",
-    marginTop: sm ? "20px" : "10px",
-    marginBottom: sm ? "20px" : "10px"
+    marginTop: lg ? "10px" : "20px",
+    marginBottom: lg ? "10px" : "20px",
+    paddingLeft: md ? "30px" : "20px",
+    paddingRight: md ? "30px" : "20px",
+    maxWidth: "1120px !important"
+  });
+
+  const ImgGrid = styled (Grid) ({
+    JustifyContent: lg ? "center" : "left",
+    height: lg ? "40%" : sm ? "20%" : "40%",
+    minHeight: "55px"
   });
 
   const [age, setAge] = useState("");
@@ -37,10 +45,7 @@ const Footer = () => {
   };
 
   return (
-    <FooterGrid
-      sx={{ height: { xs: "auto", lg: "300px" }, width: 1 }}
-      container
-    >
+    <FooterGrid sx={{ height: { xs: "auto", lg: "300px" }, width: 1 }} container>
       <Grid
         container
         xs={11}
@@ -73,7 +78,7 @@ const Footer = () => {
         >
           <img
             item
-            style={{ width: "64px", height: "64px" }}
+            style={{ width: md ? "64px" : "47px", height:  md ? "64px" : "47px" }}
             alt="logo"
             src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"
           />
