@@ -13,7 +13,7 @@ function EACard() {
   const StyledCard = styled(CardActionArea)({
     
       margin: '20px 20px',
-      width: '24%',
+      width: mq ? '90%' : '24%',
       minWidth: '310px',
       height: 'auto',
       borderRadius: '0%',
@@ -30,6 +30,7 @@ function EACard() {
   
     });
 
+
   return (
 
     <div 
@@ -40,9 +41,11 @@ function EACard() {
         maxWidth: '1456px'
       }}
     >
-        <StyledCard>
+        <StyledCard className='styledCard'>
           <CardActionArea>
-            <CardMedia
+            <CardMedia style={{
+              display: mq ? 'none' : 'show'
+            }}
               component="img"
               height="200"
               image={ItTakesTwo}
@@ -56,7 +59,7 @@ function EACard() {
                 <div 
                   className="spanWrap" 
                   style={{
-                    display: 'flex', 
+                    display: mq ? 'none' : 'flex', 
                     justifyContent: 'start', 
                     padding: '.5rem 0' }}
                 >
