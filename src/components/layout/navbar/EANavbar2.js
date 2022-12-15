@@ -10,54 +10,105 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EANavbarMenu from '../../components/menu/EANavbarMenu';
 import Prova from '../../components/menu/Prova';
 
-const pages = ['Giochi', 'Altre Esperienze'];
+const pages = [
+    {
+        id: 0,
+        title: "Giochi",
+        menu: [
+            {
+                subtitle: "ESPLORA I GIOCHI",
+                items: ["item1", "item2", "items3"]
+            },
+            {
+                subtitle: "PIATTAFORME",
+                items: ["item4", "item5", "items6"]
+            }
+        ]
+    },
+    {
+        id: 1,
+        title: "Altre esperienze",
+        menu: [
+            {
+                items: ["item1", "item2", "items3"]
+            },
+        ]
+    },
+    {
+        id: 2,
+        title: "Informazioni",
+        menu: [
+            {
+                items: ["item1", "item2", "items3"]
+            },
+        ]
+    },
+    {
+        id: 3,
+        title: "impegni",
+        menu: [
+            {
+                items: ["item1", "item2", "items3"]
+            },
+        ]
+    },
+    {
+        id: 4,
+        title: "Risorse",
+        menu: [
+            {
+                items: ["item1", "item2", "items3"]
+            },
+        ]
+    }
+]
 
 function EANavbar() {
 
     return (
-        <AppBar position="static"
-            color="light"
-            sx={{ boxShadow: "none" }}
-        >
-            <Container maxWidth="xxl">
-                <Toolbar disableGutters>
-                    {/* icone */}
-                    <Box >
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            disableRipple
-                            sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
-                        >
-                            <MoreVertIcon sx={{fontSize:"2rem"}}/>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            disableRipple
-                            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
-                        >
-                            <MenuIcon sx={{fontSize:"2rem"}}/>
-                        </IconButton>
-                    </Box>
-                    <Box>
-                        <img src={Logo} alt="EA Logo" />
-                    </Box>
-                    {/* testo */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 2 }}>
-                        {pages.map((page) => (
-                            <Prova
-                                key={page}
-                                sx={{color: 'dark.main', '&:hover': { color: 'orange.main' }, display: 'flex', flexDirection: "align-items-center" }}
+        <>
+            <AppBar position="static"
+                color="white"
+                sx={{ boxShadow: "none" }}
+            >
+                <Container maxWidth="xxl">
+                    <Toolbar disableGutters>
+                        {/* icone */}
+                        <Box >
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                disableRipple
+                                sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
                             >
-                                {page}
-                            </Prova>
-                        ))}
-                    </Box>
+                                <MoreVertIcon sx={{fontSize:"2rem"}}/>
+                            </IconButton>
+                            <IconButton
+                                size="large"
+                                edge="start"
+                                disableRipple
+                                sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
+                            >
+                                <MenuIcon sx={{fontSize:"2rem"}}/>
+                            </IconButton>
+                        </Box>
+                        <Box>
+                            <img src={Logo} alt="EA Logo" />
+                        </Box>
+                        {/* testo */}
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 4 }}>
+                            {pages.map((page, index) => (
+                                <Prova key={page.id +"_"+index}>
+                                    {page}
+                                </Prova>
+                            ))}
+                        </Box>
 
-                </Toolbar>
-            </Container>
-        </AppBar>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+            <Box sx={{background:"darkgreen", height: "100vh"}}></Box>
+        </>
     );
 }
 export default EANavbar;
