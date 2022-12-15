@@ -4,24 +4,30 @@ import { useState } from "react";
 
 const Footer = () => {
   const theme = useTheme();
-  const uno = useMediaQuery (theme.breakpoints.up('xs'));
-  const due = useMediaQuery (theme.breakpoint.up('sm'));
-  const tre = useMediaQuery (theme.breakpoint.up('md'));
-  const quattro = useMediaQuery (theme.breakpoint.up('lg'));
-  const cinque = useMediaQuery (theme.breakpoint.up('xl'));
+  const xs = useMediaQuery (theme.breakpoints.up('xs'));
+  const sm = useMediaQuery (theme.breakpoints.up('sm'));
+  const md = useMediaQuery (theme.breakpoints.up('md'));
+  const lg = useMediaQuery (theme.breakpoints.up('lg'));
+  const xl = useMediaQuery (theme.breakpoints.up('xl'));
 
   const MAIN_LINKS = ["Libreria dei Giochi", "Registrati", "Riscatta codice", "EA App", "Informazioni", "Accessibilità", "Aiuto"];
   const TC_LINKS = ["Note legali e privacy", "Accordo con l'utente", "Politica sulla privacy e sui cookie", "Aggiornamenti sui servizi online", "Termini di servizio di YouTube", "Norme sulla privacy di Google", "Cookie preferenze"];
   
-  const FooterGrid = styled(Grid)({
+  const FooterGrid = styled (Grid) ({
     backgroundColor: theme.palette.light.main,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    height: lg ? "300px" : "auto",
+    width: "100%"
   });
 
   const MainGrid = styled (Grid) ({
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    height: 3/4,
+    margin: "auto",
+    marginTop: sm ? "20px" : "10px",
+    marginBottom: sm ? "20px" : "10px"
   });
 
   const [age, setAge] = useState("");
