@@ -1,41 +1,27 @@
-import {
-  Grid,
-  useTheme,
-  Select,
-  MenuItem,
-  FormControl,
-  Typography,
-} from "@mui/material";
-import { styled, sizing } from "@mui/system";
+import { Grid, useTheme, Select, MenuItem, FormControl, Typography, useMediaQuery } from "@mui/material";
+import { styled } from "@mui/system";
 import { useState } from "react";
 
 const Footer = () => {
   const theme = useTheme();
+  const uno = useMediaQuery (theme.breakpoints.up('xs'));
+  const due = useMediaQuery (theme.breakpoint.up('sm'));
+  const tre = useMediaQuery (theme.breakpoint.up('md'));
+  const quattro = useMediaQuery (theme.breakpoint.up('lg'));
+  const cinque = useMediaQuery (theme.breakpoint.up('xl'));
 
-  const MAIN_LINKS = [
-    "Libreria dei Giochi",
-    "Registrati",
-    "Riscatta codice",
-    "EA App",
-    "Informazioni",
-    "Accessibilità",
-    "Aiuto",
-  ];
-  const TC_LINKS = [
-    "Note legali e privacy",
-    "Accordo con l'utente",
-    "Politica sulla privacy e sui cookie",
-    "Aggiornamenti sui servizi online",
-    "Termini di servizio di YouTube",
-    "Norme sulla privacy di Google",
-    "Cookie preferenze",
-  ];
-
+  const MAIN_LINKS = ["Libreria dei Giochi", "Registrati", "Riscatta codice", "EA App", "Informazioni", "Accessibilità", "Aiuto"];
+  const TC_LINKS = ["Note legali e privacy", "Accordo con l'utente", "Politica sulla privacy e sui cookie", "Aggiornamenti sui servizi online", "Termini di servizio di YouTube", "Norme sulla privacy di Google", "Cookie preferenze"];
+  
   const FooterGrid = styled(Grid)({
     backgroundColor: theme.palette.light.main,
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+  });
+
+  const MainGrid = styled (Grid) ({
+    justifyContent: "space-between"
   });
 
   const [age, setAge] = useState("");
