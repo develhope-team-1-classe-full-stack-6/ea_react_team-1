@@ -7,7 +7,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Logo from "../../../assets/images/common/ea-wordmark-network-nav-coral.svg";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import EANavbarMenu from '../../components/menu/EANavbarMenu';
 import Prova from '../../components/menu/Prova';
 
 const pages = [
