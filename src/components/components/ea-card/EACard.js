@@ -8,7 +8,9 @@ import ItTakesTwo from './it_takes_two_banner.jpg'
 
 function EACard() {
 
-  const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  // const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const mq = useMediaQuery('(max-width: 767px)');
+
 
   const StyledCard = styled(CardActionArea)({
     
@@ -53,14 +55,16 @@ function EACard() {
             />
             <CardContent
               style={{
-                minHeight: '320px',
+                minHeight: mq ? 'auto' :'320px',
               }}
             >
                 <div 
                   className="spanWrap" 
                   style={{
-                    display: mq ? 'none' : 'flex', 
-                    justifyContent: 'start', 
+                    display: 'flex', 
+                    flexDirection: mq ? 'column' : 'row',
+                    justifyContent: mq ? 'center' : 'start',
+                    alignItems: 'center', 
                     padding: '.5rem 0' }}
                 >
                     <Typography 
@@ -82,12 +86,19 @@ function EACard() {
                 gutterBottom 
                 variant="h5" 
                 component="div" 
-                fontWeight='bold'>
+                fontWeight='bold'
+                style={{
+                  textAlign: mq ? 'center' : 'inherit',
+                }}
+              >
                 It Takes Two è disponibile su Nintendo Switch<sup>tm</sup>
               </Typography>
               <Typography 
                 variant="h6" 
                 color="text.secondary"
+                style={{
+                  display: mq ? 'none' : 'show',
+                }}
               >
                 Immergiti subito nella più pazza avventura cooperativa di Switch<sup>tm</sup>
               </Typography>
