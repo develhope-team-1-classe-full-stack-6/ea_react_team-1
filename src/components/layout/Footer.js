@@ -93,23 +93,9 @@ const Footer = () => {
   };
 
   return (
-    <FooterGrid sx={{ height: { xs: "auto", lg: "300px" }, width: 1 }} container>
-      <Grid container xs={11} lg={8} xl={8} justifyContent="space-between" sx={{
-          height: 3 / 4,
-          margin: "auto",
-          mt: { sm: "20px", lg: "10px" },
-          mb: { sm: "20px", lg: "10px" },
-          pl: { xs: "20px", md: "30px" },
-          pr: { xs: "20px", md: "30px" },
-          maxWidth: "1120px !important",
-        }}
-      >
-        <Grid
-          item
-          container
-          justifyContent="center"
-          xs={12}
-          lg={1}
+    <FooterGrid container>
+      <MainGrid container xs={11} lg={8} xl={8}>
+        <Grid item container justifyContent="center" xs={12} lg={1}
           sx={{
             justifyContent: { xs: "left", lg: "center" },
             // border: "1px solid black",
@@ -220,7 +206,7 @@ const Footer = () => {
             src="https://privacy-policy.truste.com/privacy-seal/seal?rid=2593a571-b03b-4951-9a22-c175bd66b351"
           />
         </Grid>
-      </Grid>
+      </MainGrid>
     </FooterGrid>
   );
 };
