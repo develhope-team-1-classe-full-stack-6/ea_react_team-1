@@ -1,10 +1,10 @@
 import { Grid, useTheme, Select, MenuItem, FormControl, Typography, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/system";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const theme = useTheme();
-  const xs = useMediaQuery (theme.breakpoints.up('xs'));
   const sm = useMediaQuery (theme.breakpoints.up('sm'));
   const md = useMediaQuery (theme.breakpoints.up('md'));
   const lg = useMediaQuery (theme.breakpoints.up('lg'));
@@ -38,6 +38,54 @@ const Footer = () => {
     minHeight: "55px"
   });
 
+  const LogoImg = styled ('img') ({
+    width: md ? "64px" : "47px", 
+    height:  md ? "64px" : "47px"
+  });
+
+  const CopyrightImg = styled ('img') ({
+    width: "191px",
+    height: "57px"
+  });
+
+  const MainLink = styled (Typography) ({
+    marginRight: "20px",
+    '&:hover': {
+      cursor: 'pointer'
+    }
+  });
+
+  const FormContainerGrid = styled (Grid) ({
+    justifyContent: "space-between",
+    height: "40%",
+    minHeight: lg ? "0px" : md ? "80px" : sm ? "150px" : "0px"
+  });
+
+  const PrivacyLinkGrid = styled (Grid) ({
+    height: "60%",
+    paddingTop: "16px",
+    paddingBottom: "16px",
+    paddingLeft: "8px",
+    marginLeft: xl ? "88px" : lg ? "72px" : md ? "24px" : sm ? "10px" : "0px"
+  });
+
+  const PrivacyLink = styled (Typography) ({
+    fontSize: "14px",
+    marginRight: "15px", 
+    wordWrap: "break-word"
+  });
+
+  const CopyrightImgGrid = styled (Grid) ({
+    height: lg ? "60%" : md ? "140px" : "auto",
+    justifyContent: md ? "flex-end" : "flex-start"
+  });
+
+  const DropdownFormControl = styled (FormControl) ({
+    margin : "8px",
+    minWidth: "120px",
+    width: lg ? "120px" : md ? "40%" : "80%"
+  });
+
   const [age, setAge] = useState("");
 
   const handleChange = (event) => {
@@ -46,14 +94,7 @@ const Footer = () => {
 
   return (
     <FooterGrid sx={{ height: { xs: "auto", lg: "300px" }, width: 1 }} container>
-      <Grid
-        container
-        xs={11}
-        lg={8}
-        xl={8}
-        justifyContent="space-between"
-        sx={{
-        //   border: "1px solid black",
+      <Grid container xs={11} lg={8} xl={8} justifyContent="space-between" sx={{
           height: 3 / 4,
           margin: "auto",
           mt: { sm: "20px", lg: "10px" },
@@ -96,11 +137,7 @@ const Footer = () => {
           xs={12}
           lg={6}
         >
-          {MAIN_LINKS.map((text) => (
-            <Typography item sx={{ mr: "20px" }}>
-              {text}
-            </Typography>
-          ))}
+          {MAIN_LINKS.map((text) => (<Typography item sx={{ mr: "20px", fontSize: "18px" }}>{text}</Typography>))}
         </Grid>
         <Grid
           item
@@ -161,29 +198,8 @@ const Footer = () => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid
-          item
-          container
-          sx={{
-            // border: "1px solid black",
-            height: 3 / 5,
-            pt: 2,
-            pb: 2,
-            pl: 1,
-            ml: { sm: "10px", md: 3, lg: 9, xl: 11 },
-          }}
-          xs={12}
-          md={7}
-          xl={5}
-        >
-          {TC_LINKS.map((text) => (
-            <Typography
-              item
-              sx={{ fontSize: "14px", mr: "15px", wordWrap: "break-word" }}
-            >
-              {text}
-            </Typography>
-          ))}
+        <Grid item container sx={{height: 3 / 5, pt: 2, pb: 2, pl: 1, ml: { sm: "10px", md: 3, lg: 9, xl: 11 }}} xs={12} md={7} xl={5}>
+          {TC_LINKS.map((text) => (<Typography item sx={{ fontSize: "14px", mr: "15px", wordWrap: "break-word" }}>{text}</Typography>))}
         </Grid>
         <Grid
           item
