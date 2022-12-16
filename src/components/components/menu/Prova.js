@@ -1,4 +1,5 @@
-import { Box, Button, MenuItem, styled } from "@mui/material";
+import { Box, Button, MenuItem, styled, useMediaQuery } from "@mui/material";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
 import { theme } from "../../themes/theme";
 
@@ -6,10 +7,12 @@ import { theme } from "../../themes/theme";
 function Prova(props) {
 
 
+    const matches = useMediaQuery((theme) => theme.breakpoints.down('md'));
+
     const MenuButton = styled(Button)({
         textTransform: 'capitalize',
-        fontSize: "1.1rem",
-        marginInline: "10px",
+        fontSize: matches ? "1.0rem" : "1.1rem",
+        marginInline: "5px 0px",
         '&:hover': {
             background: "none"
         },
@@ -57,7 +60,7 @@ function Prova(props) {
         fontWeight: "lighter",
         transformOrigin: "top",
         transform: hover ? "scaleY(1)" : "scaleY(0)",
-        transition: "all 0.25s",
+        transition: "all 0.30s",
         listStyle: "none",
         padding: "0px",
 
@@ -81,14 +84,15 @@ function Prova(props) {
                     }}
                 >
                     {props.children.title}
+                    <ExpandMoreIcon sx={{transform:hover ? 'rotateZ(180deg)' :'rotateZ(0deg)'}}/>
                 </MenuButton>
                 <li key={props.children.title + "list"}><ul style={styleItemMenu}>
                     {!!props.children.menu ? <Box key={props.children.title + "box"} sx={{ background: theme.palette.white.main, color: theme.palette.dark.main, opacity: 0.9, display: "flex", transform: "translateY(20px)", borderRadius: "5px", padding: "0 30px 0 25px" }}>
                         {props.children.menu.map((items, index) => (
                             <Box key={index + "box"} sx={{ padding: "10px 20px 10px 0px", margin: "20px 10px" }}>
-                                {items.subtitle ?<EAMenuTitle disableRipple key={items.subtitle}>{items.subtitle}</EAMenuTitle> : null}
-                                {items.subtitle ? <hr style={{marginBlock: "0px 10px", opacity: 0.4, transform: "scaleY(0.5)"}}></hr> : null}
-                                {items.items ? items.items.map((item, index) => (<EAMenuItem disableRipple key={index + item}>{item}</EAMenuItem>)) : null}
+                                {!!items.subtitle ?<EAMenuTitle disableRipple key={items.subtitle}>{items.subtitle}</EAMenuTitle> : null}
+                                {!!items.subtitle ? <hr style={{marginBlock: "0px 10px", opacity: 0.4, transform: "scaleY(0.5)"}}></hr> : null}
+                                {!!items.items ? items.items.map((item, index) => (<EAMenuItem disableRipple key={index + item}>{item}</EAMenuItem>)) : null}
                             </Box>
                         ))}
                     </Box> : null}

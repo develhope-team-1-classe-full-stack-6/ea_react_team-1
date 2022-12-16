@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Logo from "../../../assets/images/common/ea-wordmark-network-nav-coral.svg";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Prova from '../../components/menu/Prova';
@@ -70,13 +69,12 @@ function EANavbar() {
                 color="white"
                 sx={{ boxShadow: "none" }}
             >
-                <Container maxWidth="xxl">
                     <Toolbar disableGutters>
                         {/* icone */}
                         <Box >
                             <IconButton
                                 size="large"
-                                edge="start"
+                                edge="end"
                                 disableRipple
                                 sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
                             >
@@ -84,7 +82,7 @@ function EANavbar() {
                             </IconButton>
                             <IconButton
                                 size="large"
-                                edge="start"
+                                edge="end"
                                 disableRipple
                                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
                             >
@@ -92,10 +90,10 @@ function EANavbar() {
                             </IconButton>
                         </Box>
                         <Box>
-                            <img src={Logo} alt="EA Logo" />
+                            <img src={Logo} style={{marginLeft: "20px"}} alt="EA Logo" />
                         </Box>
                         {/* testo */}
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 4 }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 3 }}>
                             {pages.map((page, index) => (
                                 <Prova key={page.id +"_"+index}>
                                     {page}
@@ -104,7 +102,6 @@ function EANavbar() {
                         </Box>
 
                     </Toolbar>
-                </Container>
             </AppBar>
             <Box sx={{background:"darkgreen", height: "100vh"}}></Box>
         </>
