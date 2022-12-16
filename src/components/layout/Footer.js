@@ -1,7 +1,6 @@
 import { Grid, useTheme, Select, MenuItem, FormControl, Typography, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/system";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   const theme = useTheme();
@@ -64,7 +63,7 @@ const Footer = () => {
   });
 
   const FormContainerGrid = styled (Grid) ({
-    justifyContent: "space-between",
+    justifyContent: lg ? "flex-end" : "center",
     height: "40%",
     minHeight: lg ? "0px" : md ? "80px" : sm ? "150px" : "0px"
   });
@@ -80,12 +79,16 @@ const Footer = () => {
   const PrivacyLink = styled (Typography) ({
     fontSize: "14px",
     marginRight: "15px", 
-    wordWrap: "break-word"
+    wordWrap: "break-word",
+    '&:hover': {
+      cursor: 'pointer'
+    }
   });
 
   const CopyrightImgGrid = styled (Grid) ({
     height: lg ? "60%" : md ? "140px" : "auto",
-    justifyContent: md ? "flex-end" : "flex-start"
+    justifyContent: md ? "flex-end" : "flex-start",
+    alignItems: "flex-end"
   });
 
   const DropdownFormControl = styled (FormControl) ({
@@ -107,28 +110,10 @@ const Footer = () => {
           <LogoImg item alt="logo" src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"/>
         </ImgGrid>
         <MainLinkGrid item container xs={12} lg={6}>
-          {MAIN_LINKS.map((text) => (<Typography item sx={{ mr: "20px", fontSize: "18px" }}>{text}</Typography>))}
+          {MAIN_LINKS.map((text) => (<MainLink item>{text}</MainLink>))}
         </MainLinkGrid>
-        <Grid
-          item
-          container
-          justifyContent="space-between"
-          sx={{
-            // border: "1px solid black",
-            height: 2 / 5,
-            justifyContent: { xs: "center", lg: "flex-end" },
-            minHeight: { sm: "150px", md: "80px", lg: "0px" },
-          }}
-          xs={12}
-          lg={5}
-        >
-          <FormControl
-            sx={{
-              m: 1,
-              minWidth: 120,
-              width: { xs: "80%", md: "40%", lg: 120 },
-            }}
-          >
+        <FormContainerGrid item container xs={12} lg={5}>
+          <DropdownFormControl>
             <Select
               value={age}
               onChange={handleChange}
@@ -142,15 +127,9 @@ const Footer = () => {
               <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>
-          </FormControl>
+          </DropdownFormControl>
 
-          <FormControl
-            sx={{
-              m: 1,
-              minWidth: 120,
-              width: { xs: "80%", md: "40%", lg: 120 },
-            }}
-          >
+          <DropdownFormControl>
             <Select
               value={age}
               onChange={handleChange}
@@ -166,30 +145,14 @@ const Footer = () => {
                 <MenuItem value={30}>Thirty</MenuItem>
               </div>
             </Select>
-          </FormControl>
-        </Grid>
-        <Grid item container sx={{height: 3 / 5, pt: 2, pb: 2, pl: 1, ml: { sm: "10px", md: 3, lg: 9, xl: 11 }}} xs={12} md={7} xl={5}>
-          {TC_LINKS.map((text) => (<Typography item sx={{ fontSize: "14px", mr: "15px", wordWrap: "break-word" }}>{text}</Typography>))}
-        </Grid>
-        <Grid
-          item
-          container
-          justifyContent="flex-end"
-          alignItems="flex-end"
-          sx={{
-            // border: "1px solid black",
-            height: { md: "140px", lg: 3 / 5 },
-            justifyContent: { sx: "flex-start", md: "flex-end" },
-          }}
-          xs={12}
-          md={3}
-        >
-          <img
-            style={{ width: "191px", height: "57px" }}
-            alt="diritti"
-            src="https://privacy-policy.truste.com/privacy-seal/seal?rid=2593a571-b03b-4951-9a22-c175bd66b351"
-          />
-        </Grid>
+          </DropdownFormControl>
+        </FormContainerGrid>
+        <PrivacyLinkGrid item container xs={12} md={7} xl={5}>
+          {TC_LINKS.map((text) => (<PrivacyLink item>{text}</PrivacyLink>))}
+        </PrivacyLinkGrid>
+        <CopyrightImgGrid item container xs={12} md={3}>
+          <CopyrightImg alt="diritti" src="https://privacy-policy.truste.com/privacy-seal/seal?rid=2593a571-b03b-4951-9a22-c175bd66b351"/>
+        </CopyrightImgGrid>
       </MainGrid>
     </FooterGrid>
   );
