@@ -48,7 +48,15 @@ const Footer = () => {
     height: "57px"
   });
 
+  const MainLinkGrid = styled (Grid) ({
+    height: lg ? "40%" : sm ? "20%" : "40%",
+    paddingLeft : "8px",
+    paddingTop: lg ?  "0px" : md ? "0.5em" :"0px" ,
+    margin: lg ? "0px" : md ? "5px" : sm ? "10px" : "0px"
+  });
+
   const MainLink = styled (Typography) ({
+    fontSize: "18px",
     marginRight: "20px",
     '&:hover': {
       cursor: 'pointer'
@@ -95,36 +103,12 @@ const Footer = () => {
   return (
     <FooterGrid container>
       <MainGrid container xs={11} lg={8} xl={8}>
-        <Grid item container justifyContent="center" xs={12} lg={1}
-          sx={{
-            justifyContent: { xs: "left", lg: "center" },
-            // border: "1px solid black",
-            height: { xs: 2 / 5, sm: 1 / 5, lg: 2 / 5 },
-            minHeight: "55px",
-          }}
-        >
-          <img
-            item
-            style={{ width: md ? "64px" : "47px", height:  md ? "64px" : "47px" }}
-            alt="logo"
-            src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"
-          />
-        </Grid>
-        <Grid
-          item
-          container
-          sx={{
-            // border: "1px solid black",
-            height: { xs: 2 / 5, sm: 1 / 5, md: 1 / 5, lg: 2 / 5 },
-            pl: 1,
-            pt: { md: "0.5em", lg: 0 },
-            m: { sm: "10px", md: "5px", lg: "0px" },
-          }}
-          xs={12}
-          lg={6}
-        >
+        <ImgGrid item container xs={12} lg={1}>
+          <LogoImg item alt="logo" src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"/>
+        </ImgGrid>
+        <MainLinkGrid item container xs={12} lg={6}>
           {MAIN_LINKS.map((text) => (<Typography item sx={{ mr: "20px", fontSize: "18px" }}>{text}</Typography>))}
-        </Grid>
+        </MainLinkGrid>
         <Grid
           item
           container
