@@ -8,7 +8,10 @@ import ItTakesTwo from './it_takes_two_banner.jpg'
 
 function EACard() {
 
+  //theme breakpoints 
   // const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
+  //original breakpoint 
   const mq = useMediaQuery('(max-width: 767px)');
 
 
