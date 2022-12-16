@@ -34,12 +34,13 @@ const Footer = () => {
   const ImgGrid = styled (Grid) ({
     JustifyContent: lg ? "center" : "left",
     height: lg ? "40%" : sm ? "20%" : "40%",
-    minHeight: "55px"
+    minHeight: "55px",
+    paddingLeft: lg ? "0px" : sm ? "20px" : "8px"
   });
 
   const LogoImg = styled ('img') ({
-    width: md ? "64px" : "47px", 
-    height:  md ? "64px" : "47px"
+    width: lg ? "64px" : "47px", 
+    height:  lg ? "64px" : "47px"
   });
 
   const CopyrightImg = styled ('img') ({
@@ -51,11 +52,11 @@ const Footer = () => {
     height: lg ? "40%" : sm ? "20%" : "40%",
     paddingLeft : "8px",
     paddingTop: lg ?  "0px" : md ? "0.5em" :"0px" ,
-    margin: lg ? "0px" : md ? "5px" : sm ? "10px" : "0px"
+    margin: lg ? "0px" : md ? "10px" : sm ? "10px" : "5px"
   });
 
   const MainLink = styled (Typography) ({
-    fontSize: "18px",
+    fontSize: lg ? "18px" : "16px",
     marginRight: "20px",
     '&:hover': {
       cursor: 'pointer'
@@ -63,7 +64,7 @@ const Footer = () => {
   });
 
   const FormContainerGrid = styled (Grid) ({
-    justifyContent: lg ? "flex-end" : "center",
+    justifyContent: lg ? "flex-end" : "flex-start",
     height: "40%",
     minHeight: lg ? "0px" : md ? "80px" : sm ? "150px" : "0px"
   });
@@ -86,15 +87,16 @@ const Footer = () => {
   });
 
   const CopyrightImgGrid = styled (Grid) ({
+    margin: md ? "0px" : "20px",
     height: lg ? "60%" : md ? "140px" : "auto",
-    justifyContent: md ? "flex-end" : "flex-start",
-    alignItems: "flex-end"
+    justifyContent: lg ? "flex-end" : "flex-start",
+    alignItems: lg ? "flex-end" : md ? "center" : "flex-end"
   });
 
   const DropdownFormControl = styled (FormControl) ({
-    margin : "8px",
+    margin : lg ? "8px" : "20px",
     minWidth: "120px",
-    width: lg ? "120px" : md ? "40%" : "80%"
+    width: lg ? "120px" : md ? "40%" : "60%"
   });
 
   const [age, setAge] = useState("");
@@ -113,6 +115,7 @@ const Footer = () => {
           {MAIN_LINKS.map((text) => (<MainLink item>{text}</MainLink>))}
         </MainLinkGrid>
         <FormContainerGrid item container xs={12} lg={5}>
+          {/* Inizio parte dropdown da rivedere */}
           <DropdownFormControl>
             <Select
               value={age}
@@ -147,6 +150,7 @@ const Footer = () => {
             </Select>
           </DropdownFormControl>
         </FormContainerGrid>
+        {/* Fine parte dropdown da rivedere */}
         <PrivacyLinkGrid item container xs={12} md={7} xl={5}>
           {TC_LINKS.map((text) => (<PrivacyLink item>{text}</PrivacyLink>))}
         </PrivacyLinkGrid>
