@@ -60,7 +60,7 @@ export default function EABox(props) {
     },
     ".boxLogo": {
       position: "absolute",
-      width: props.logoWidth,
+      width: !props.logoWidth ? "130px" : props.logoWidth,
       transition: "all 300ms ease-out"
     }    
   });

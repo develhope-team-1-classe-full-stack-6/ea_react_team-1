@@ -8,7 +8,7 @@ export default function App (){
     <Routes>
       <Route path="/" element={<div>Home</div>}/>
     </Routes>
-    <EABox variant="up" overlay="" links="" logoWidth="130px" />
+    <EABox variant="up" overlay="" links="" logoWidth="" />
     </>
   );
 }
