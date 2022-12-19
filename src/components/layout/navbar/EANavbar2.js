@@ -15,11 +15,11 @@ const pages = [
         menu: [
             {
                 subtitle: "ESPLORA I GIOCHI",
-                items: ["item1", "item2", "items3"]
+                items: ["Ultimi giochi", "Prossimamente", "Giochi gratuiti", "EA SPORTS", "EA Originals", "Libreria dei giochi"]
             },
             {
                 subtitle: "PIATTAFORME",
-                items: ["item4", "item5", "items6"]
+                items: ["PC", "PlayStation®5", "Xbox Series X", "Nintendo Switch™", "Cellulari"]
             }
         ]
     },
@@ -28,7 +28,7 @@ const pages = [
         title: "Altre esperienze",
         menu: [
             {
-                items: ["item1", "item2", "items3"]
+                items: ["EA Play", "l'EA app", "Competizioni videoludiche", "Diretta di EA Play", "Test di gioco"]
             },
         ]
     },
@@ -37,7 +37,7 @@ const pages = [
         title: "Informazioni",
         menu: [
             {
-                items: ["item1", "item2", "items3"]
+                items: ["Società", "EA Studi", "Lavora con noi", "La nostra tecnologia", "EA Partners", "Notizie", "Inside EA"]
             },
         ]
     },
@@ -46,7 +46,7 @@ const pages = [
         title: "impegni",
         menu: [
             {
-                items: ["item1", "item2", "items3"]
+                items: ["I nostri impegni", "Gioco positivo", "Diversità e inclusione", "Impatto sociale", "Persone e cultura", "Ambiente"]
             },
         ]
     },
@@ -55,7 +55,7 @@ const pages = [
         title: "Risorse",
         menu: [
             {
-                items: ["item1", "item2", "items3"]
+                items: ["Aiuto", "Forum", "Filtro famiglia", "Accessibilità", "Stampa", "Investitori"]
             },
         ]
     }

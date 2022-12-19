@@ -1,4 +1,4 @@
-import { Box, Button, MenuItem, styled, useMediaQuery } from "@mui/material";
+import { Box, Button, keyframes, MenuItem, styled, useMediaQuery } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
 import { theme } from "../../themes/theme";
@@ -73,7 +73,10 @@ function EAMenuStyle() {
         padding: "0 30px 0 25px"
     }
 
-    return { MenuButton, EAMenuTitle, EAMenuItem, hover, hadlerOver, hadlerOut, styleMenu, styleItemMenu, BoxSx }
+    const rotateArrow = keyframes({ from: { transform: 'rotateX(0deg)' }, to: { transform: 'rotateX(180deg)' } });
+    const rotateArrowHover = keyframes({ from: { transform: 'rotateX(180deg)' }, to: { transform: 'rotateX(0deg)' } });
+
+    return { MenuButton, EAMenuTitle, EAMenuItem, hover, hadlerOver, hadlerOut, styleMenu, styleItemMenu, BoxSx, rotateArrow, rotateArrowHover }
 }
 
 function EANavbarMenu(props) {
@@ -87,7 +90,9 @@ function EANavbarMenu(props) {
         hadlerOut,
         styleMenu,
         styleItemMenu,
-        BoxSx
+        BoxSx,
+        rotateArrow,
+        rotateArrowHover
     } = EAMenuStyle()
 
     return (
@@ -108,7 +113,7 @@ function EANavbarMenu(props) {
                     }}
                 >
                     {props.children.title}
-                    <ExpandMoreIcon sx={{ transform: hover ? 'rotateZ(180deg)' : 'rotateZ(0deg)' }} />
+                    <ExpandMoreIcon sx={{ animation: hover? `${rotateArrow} 0.8s ease forwards`: `${rotateArrowHover} 0.8s ease forwards` }} />
                 </MenuButton>
                 <li key={props.children.title + "list"}><ul style={styleItemMenu}>
                     {!!props.children.menu ? <Box key={props.children.title + "box"} sx={BoxSx}>
