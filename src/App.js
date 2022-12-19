@@ -8,7 +8,7 @@ export default function App (){
     <Routes>
       <Route path="/" element={<div>Home</div>}/>
     </Routes>
-    <EABox variant="up" overlay="" links="" logoWidth="" />
+    <EABox variant="up" overlay="blue" links="3" logoWidth="" boxLink="https://www.ea.com/it-it/games/fifa/fifa-23"/>
     </>
   );
 }

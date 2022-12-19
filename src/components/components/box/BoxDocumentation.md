@@ -15,7 +15,10 @@ Logo width:
   change with logoWidth="px"
 
 
-Links inside box:
+Show links inside box:
   default = no links
   links="1" = 1 link (sito ufficiale)
   links="3" = 3 links (sito ufficiale, aiuto, forum)
+
+Custom link to "sito ufficiale":
+  boxLink="http://..."

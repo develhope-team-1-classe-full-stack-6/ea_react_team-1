@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material';
 import fifa23 from '../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg';
 import fifa23Logo from '../../../assets/images/box/fifa23-logo-white-stacked.svg';
-import { useState } from 'react';
 
 export default function EABox(props) {
   const BoxComponent = styled(Box)({
@@ -28,10 +27,14 @@ export default function EABox(props) {
       },
     }, 
     ".link1": {
-      color: "#fff",
       position: "absolute",
       visibility: "hidden",
       display: props.links === "1" ? "inline-block" : "none",
+      a:{
+        display: "block",
+        textDecoration: "none",
+        color: "#fff",
+      }
     },
     ".link3": {
       position: "absolute",
@@ -76,12 +79,12 @@ export default function EABox(props) {
       <img className='boxBgImage' src={fifa23} width="100%" height="100%" alt=""/>
       <img className='boxLogo' src={fifa23Logo} width="100%" height="100%" alt=""/>
       <div className='link1'>
-        <p>Sito ufficiale</p>
+        <a href={props.boxLink}>Sito ufficiale</a>
       </div>
       <div className='link3'>
-        <a href=''>Sito ufficiale</a>
-        <a href=''>Aiuto</a>
-        <a href=''>Forum</a>
+        <a href={props.boxLink}>Sito ufficiale</a>
+        <a href='https://help.ea.com/it/'>Aiuto</a>
+        <a href='https://answers.ea.com/t5/Answer-HQ-English/ct-p/AHQ-English'>Forum</a>
       </div>
     </BoxComponent>
   );
