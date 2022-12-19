@@ -1,12 +1,10 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, styled, useMediaQuery } from '@mui/material';
-import ItTakesTwo from './it_takes_two_banner.jpg'
 
-function EACard() {
+function EACard(props) {
 
   //theme breakpoints 
   // const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -53,7 +51,7 @@ function EACard() {
             }}
               component="img"
               height="200"
-              image={ItTakesTwo}
+              image={props.img}
               alt="it_takes_two_banner"
             />
             <CardContent
@@ -76,13 +74,13 @@ function EACard() {
                       fontWeight='bold' 
                       marginRight='1rem'
                     >
-                        It Takes Two
+                        {props.info}
                     </Typography>
                     <Typography 
                       variant='subtitle1' 
                       fontWeight='bold'
                     >
-                        4-nov-2022
+                        {props.date}
                     </Typography>
                 </div>
               <Typography 
@@ -94,7 +92,7 @@ function EACard() {
                   textAlign: mq ? 'center' : 'inherit',
                 }}
               >
-                It Takes Two è disponibile su Nintendo Switch<sup>tm</sup>
+                {props.title}
               </Typography>
               <Typography 
                 variant="h6" 
@@ -103,7 +101,7 @@ function EACard() {
                   display: mq ? 'none' : 'show',
                 }}
               >
-                Immergiti subito nella più pazza avventura cooperativa di Switch<sup>tm</sup>
+                {props.text}
               </Typography>
             </CardContent>
           </CardActionArea>
