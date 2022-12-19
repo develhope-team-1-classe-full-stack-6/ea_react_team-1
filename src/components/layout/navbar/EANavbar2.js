@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from "../../../assets/images/common/ea-wordmark-network-nav-coral.svg";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Prova from '../../components/menu/Prova';
+import EANavbarMenu from '../../components/menu/EANavbarMenu';
 
 const pages = [
     {
@@ -95,9 +95,9 @@ function EANavbar() {
                         {/* testo */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 3 }}>
                             {pages.map((page, index) => (
-                                <Prova key={page.id +"_"+index}>
+                                <EANavbarMenu key={page.id +"_"+index}>
                                     {page}
-                                </Prova>
+                                </EANavbarMenu>
                             ))}
                         </Box>
 

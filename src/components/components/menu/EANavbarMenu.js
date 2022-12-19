@@ -1,85 +1,128 @@
-import { Button, Menu, MenuItem, Typography,styled } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Button, MenuItem, styled, useMediaQuery } from "@mui/material";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
+import { theme } from "../../themes/theme";
 
-const MenuButton = styled(Button)({
-    textTransform: 'none',
-    fontSize: "1.1rem",
-    '&:hover': {
-        background: "none"
-    },
-})
+function EAMenuStyle() {
+    const matches = useMediaQuery((theme) => theme.breakpoints.down('lg'));
+
+    const MenuButton = styled(Button)({
+        textTransform: 'capitalize',
+        fontSize: matches ? "1.0rem" : "1.1rem",
+        marginInline: "5px 0px",
+        '&:hover': {
+            background: "none"
+        },
+    })
+
+    const EAMenuTitle = styled(MenuItem)({
+        cursor: "unset",
+        textTransform: 'uppercase',
+        paddingInline: "0 20px",
+        fontSize: "1rem",
+        fontWeight: "700",
+        color: theme.palette.dark.main,
+        '&:hover': {
+            background: "none"
+        }
+    })
+    const EAMenuItem = styled(EAMenuTitle)({
+        cursor: "pointer",
+        textTransform: 'capitalize',
+        fontWeight: "lighter",
+        '&:hover': {
+            color: theme.palette.orange.main,
+        }
+    })
+
+    const [hover, setHover] = useState(false);
+
+    const hadlerOver = () => {
+        setHover(true)
+    }
+
+    const hadlerOut = () => {
+        setHover(false)
+    }
+
+    const styleMenu = {
+        position: "relative",
+        listStyle: "none",
+        padding: "0px",
+        margin: "0px"
+    }
+
+    const styleItemMenu = {
+        position: "absolute",
+        fontWeight: "lighter",
+        transformOrigin: "top",
+        transform: hover ? "scaleY(1)" : "scaleY(0)",
+        transition: "all 0.30s",
+        listStyle: "none",
+        padding: "0px",
+
+    }
+
+    const BoxSx = {
+        background: theme.palette.white.main,
+        color: theme.palette.dark.main,
+        opacity: 0.9,
+        display: "flex",
+        transform: "translateY(20px)",
+        borderRadius: "5px",
+        padding: "0 30px 0 25px"
+    }
+
+    return { MenuButton, EAMenuTitle, EAMenuItem, hover, hadlerOver, hadlerOut, styleMenu, styleItemMenu, BoxSx }
+}
 
 function EANavbarMenu(props) {
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
 
-    function handleClick(event) {
-        if (anchorEl !== event.currentTarget) {
-            setAnchorEl(event.currentTarget);
-        }
-    }
-
-    function handleClose() {
-        setAnchorEl(null);
-    }
+    const {
+        MenuButton,
+        EAMenuTitle,
+        EAMenuItem,
+        hover,
+        hadlerOver,
+        hadlerOut,
+        styleMenu,
+        styleItemMenu,
+        BoxSx
+    } = EAMenuStyle()
 
     return (
         <div>
-            <MenuButton
-                aria-owns={anchorEl ? "simple-menu" : undefined}
-                aria-haspopup="true"
-                onClick={handleClick}
-                onMouseOver={handleClick}
-                key={props.key}
-                sx={{ display: { xs: 'none', md: 'flex' }, color: open ? 'orange.main' : 'dark.main', transition: "all 0.25s", '&:hover': { color: 'orange.main', transition: "all 0.25s" } }}
+            <ul
+                onMouseOver={hadlerOver}
+                onMouseOut={hadlerOut}
+                style={styleMenu}
             >
-                {props.children}
-            </MenuButton>
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                    onMouseLeave: handleClose
-                }}
-                sx={{transform: "translateY(25px)"}}
-            >
-                <Typography variant="navLink" component="h2">
-                    <Box
-                        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
-                        <Box
-                            sx={{ flexGrow: 1 }}
-                        >
-                            <MenuItem onClick={handleClose}
-                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
-                            >Profile</MenuItem>
-                            <MenuItem onClick={handleClose}
-                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
-                            >My account</MenuItem>
-                            <MenuItem onClick={handleClose}
-                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
-                            >Logout</MenuItem>
-                        </Box>
-                        <Box
-                            sx={{ flexGrow: 1 }}
-                        >
-                            <MenuItem onClick={handleClose}
-                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
-                            >Profile</MenuItem>
-                            <MenuItem onClick={handleClose}
-                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
-                            >My account</MenuItem>
-                            <MenuItem onClick={handleClose}
-                                sx={{ color: 'dark.main', '&:hover': { color: 'orange.main', background: "none" } }}
-                            >Logout</MenuItem>
-                        </Box>
-                    </Box>
-                </Typography>
-            </Menu>
+                <MenuButton
+                    key={props.children.title + "button"}
+                    disableRipple
+                    sx={{
+                        display: { xs: 'none', md: 'flex' },
+                        color: hover ? 'orange.main' : 'dark.main',
+                        transition: "all 0.25s",
+                        '&:hover': { color: 'orange.main', transition: "all 0.25s" }
+                    }}
+                >
+                    {props.children.title}
+                    <ExpandMoreIcon sx={{ transform: hover ? 'rotateZ(180deg)' : 'rotateZ(0deg)' }} />
+                </MenuButton>
+                <li key={props.children.title + "list"}><ul style={styleItemMenu}>
+                    {!!props.children.menu ? <Box key={props.children.title + "box"} sx={BoxSx}>
+                        {props.children.menu.map((items, index) => (
+                            <Box key={index + "box"} sx={{ padding: "10px 20px 10px 0px", margin: "20px 10px" }}>
+                                {!!items.subtitle ? <EAMenuTitle disableRipple key={items.subtitle}>{items.subtitle}</EAMenuTitle> : null}
+                                {!!items.subtitle ? <hr style={{ marginBlock: "0px 10px", opacity: 0.4, transform: "scaleY(0.5)" }}></hr> : null}
+                                {!!items.items ? items.items.map((item, index) => (<EAMenuItem disableRipple key={index + item}>{item}</EAMenuItem>)) : null}
+                            </Box>
+                        ))}
+                    </Box> : null}
+                </ul></li>
+            </ul>
         </div>
     );
 }
-
 export default EANavbarMenu;

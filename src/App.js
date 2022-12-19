@@ -1,4 +1,3 @@
-import Prova from "./components/components/menu/Prova";
 import EANavbar from "./components/layout/navbar/EANavbar2";
 
 export default function App (){
