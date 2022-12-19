@@ -1,6 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import EABox from "./components/components/box/EABox";
 
+const links = [
+  {
+    title: "Sito ufficiale",
+    link: "#"
+  },
+  {
+    title: "Aiuto",
+    link: "#"
+  },
+  {
+    title: "Forum",
+    link: "#"
+  }
+]
 
 export default function App (){
   return (
@@ -8,7 +22,7 @@ export default function App (){
     <Routes>
       <Route path="/" element={<div>Home</div>}/>
     </Routes>
-    <EABox variant="up" overlay="blue" links="3" logoWidth="" boxLink="https://www.ea.com/it-it/games/fifa/fifa-23"/>
+    <EABox variant="up" overlay="" links={links} logoWidth="" />
     </>
   );
 }

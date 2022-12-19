@@ -1,53 +1,39 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material';
-import fifa23 from '../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg';
-import fifa23Logo from '../../../assets/images/box/fifa23-logo-white-stacked.svg';
 
 export default function EABox(props) {
+
   const BoxComponent = styled(Box)({
     aspectRatio: "1/1",
     position: "relative",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: props.overlay === "gradient" ? "linear-gradient(90deg, #001c9d, #ff4747)" : props.overlay === "blue" ? "#001c9d" : "",
+    background: !!props.overlay || props.overlay !== "" ? props.overlay : "none" ,
     "&:hover":{
       ".boxLogo":{
         transform: props.variant === "up" ? "translateY(-70px)" : props.variant === "scale" ? "scale(1)" : ""
       },
       ".boxBgImage":{
-        opacity: !props.overlay ? "1" : "0.1" 
+        opacity: !props.overlay ? "1" : "0.1" ,
+        filter: "brightness(1)"
       },
-      ".link1":{
-        visibility: "visible"
-      },
-      ".link3":{
+      ".links":{
         visibility: "visible",
-      },
+      }
     }, 
-    ".link1": {
+    ".links": {
       position: "absolute",
       visibility: "hidden",
-      display: props.links === "1" ? "inline-block" : "none",
+      textAlign: "center",
+      marginTop: (props.links.length === 1 && "0") || (props.links.length === 2 && "40px") || (props.links.length === 3 && "80px"),
       a:{
         display: "block",
         textDecoration: "none",
         color: "#fff",
-      }
-    },
-    ".link3": {
-      position: "absolute",
-      visibility: "hidden",
-      display: props.links === "3" ? "inline-block" : "none",
-      textAlign: "center",
-      paddingTop: "80px",
-      a:{
-        display: "block",
-        textDecoration: "none",
-        color: "gray",
         padding: "12px 0",
-        borderTop: "1px solid gray",
+        borderTop: "1px solid #fff",
         "&:hover":{
           color: "#fff"
         },
@@ -59,7 +45,7 @@ export default function EABox(props) {
     ".boxBgImage": {
       position: "absolute",
       transition: "all 200ms ease-in-out",
-      filter: "brightness(0.7)"
+      filter: "brightness(0.7)",
     },
     ".boxLogo": {
       position: "absolute",
@@ -67,6 +53,10 @@ export default function EABox(props) {
       transition: "all 300ms ease-out"
     }    
   });
+  
+  const bgImage = require("../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg");
+
+  const boxLogo = require("../../../assets/images/box/fifa23-logo-white-stacked.svg");
 
   return (
     <BoxComponent
@@ -76,15 +66,12 @@ export default function EABox(props) {
         }
       } 
     >
-      <img className='boxBgImage' src={fifa23} width="100%" height="100%" alt=""/>
-      <img className='boxLogo' src={fifa23Logo} width="100%" height="100%" alt=""/>
-      <div className='link1'>
-        <a href={props.boxLink}>Sito ufficiale</a>
-      </div>
-      <div className='link3'>
-        <a href={props.boxLink}>Sito ufficiale</a>
-        <a href='https://help.ea.com/it/'>Aiuto</a>
-        <a href='https://answers.ea.com/t5/Answer-HQ-English/ct-p/AHQ-English'>Forum</a>
+      <img className='boxBgImage' src={bgImage} width="100%" height="100%" alt=""/>
+      <img className='boxLogo' src={boxLogo.default} width="100%" height="100%" alt=""/>
+      <div className='links'>
+        {!!props.links ? props.links.map((item, index) => (
+          <a href={item.link}>{item.title}</a>
+        )) : null } 
       </div>
     </BoxComponent>
   );
