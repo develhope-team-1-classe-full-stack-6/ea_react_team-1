@@ -27,7 +27,7 @@ export default function EABox(props) {
       position: "absolute",
       visibility: "hidden",
       textAlign: "center",
-      marginTop: (props.links.length === 1 && "0") || (props.links.length === 2 && "40px") || (props.links.length === 3 && "80px"),
+      marginTop: (props.links.length === 1 && "0") || (props.links.length === 2 && "40px") || (props.links.length >= 3 && "80px"),
       a:{
         display: "block",
         textDecoration: "none",
@@ -54,7 +54,7 @@ export default function EABox(props) {
     }    
   });
   
-  const bgImage = require("../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg");
+  const boxbgImage = require("../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg");
 
   const boxLogo = require("../../../assets/images/box/fifa23-logo-white-stacked.svg");
 
@@ -66,7 +66,7 @@ export default function EABox(props) {
         }
       } 
     >
-      <img className='boxBgImage' src={bgImage} width="100%" height="100%" alt=""/>
+      <img className='boxBgImage' src={boxbgImage} width="100%" height="100%" alt=""/>
       <img className='boxLogo' src={boxLogo.default} width="100%" height="100%" alt=""/>
       <div className='links'>
         {!!props.links ? props.links.map((item, index) => (

@@ -1,24 +1,49 @@
 How to use box component:
 
-Logo animation:
-  default variant = nothing
-  variant="up" logo will go up on hover
-  variant="scale" logo will scale bigger on hover
+PROPS
+variant=""
+overlay=""
+logoWidth=""
+links={nomeArray}
 
-Background color overlay:
-  default overlay = nothing
-  overlay="gradient" blue/orange color
-  overlay="blue" blue color
+Logo animation:
+  default variant = no animation
+  <EABox variant="up" /> logo will go up on hover
+  <EABox variant="scale" /> logo will scale bigger on hover
+
+Background overlay:
+  default overlay = transparent
+  overlay accept any css color values
+  example:
+    <EABox overlay="red" />
+    <EABox overlay="#000" />
+  Homepage gradient:
+  <EABox overlay="linear-gradient(90deg, #001c9d, #ff4747)" />
 
 Logo width:
-  default width is 130px
-  change with logoWidth="px"
+  default width = 130px
+  Change:
+  <EABox logoWidth="120px" />
 
+<!-- Obbligatorio -->
+Links inside the box: 
+  Must always include this prop
+  <EABox links={nomeArray} />
+  Create an array of obects for the links.
+  Give an empty array if no link needed.
 
-Show links inside box:
-  default = no links
-  links="1" = 1 link (sito ufficiale)
-  links="3" = 3 links (sito ufficiale, aiuto, forum)
-
-Custom link to "sito ufficiale":
-  boxLink="http://..."
+  example:
+    const nomeArray = [
+      {
+        title: "Sito ufficiale",
+        link: "#"
+      },
+      {
+        title: "Aiuto",
+        link: "#"
+      },
+      {
+        title: "Forum",
+        link: "#"
+      }
+    ]
