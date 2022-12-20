@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Logo from "../../../assets/images/common/ea-wordmark-network-nav-coral.svg";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EANavbarMenu from '../../components/menu/EANavbarMenu';
 
@@ -90,7 +89,7 @@ function EANavbar() {
                             </IconButton>
                         </Box>
                         <Box>
-                            <img src={Logo} style={{marginLeft: "20px"}} alt="EA Logo" />
+                            <img src="./assets/images/common/ea-wordmark-network-nav-coral.svg" style={{marginLeft: "20px"}} alt="EA Logo" />
                         </Box>
                         {/* testo */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: "align-items-center", ml: 3 }}>
