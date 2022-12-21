@@ -41,11 +41,12 @@ function EACard(props) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        maxWidth: '1456px'
       }}
     >
         <StyledCard className='styledCard'>
-          <CardActionArea>
+          <CardActionArea
+            style={{margin:'0px'}}
+          >
             <CardMedia style={{
               display: mq ? 'none' : 'show'
             }}
