@@ -7,10 +7,10 @@ import { CardActionArea, styled, useMediaQuery } from '@mui/material';
 function EACard(props) {
 
   //theme breakpoints 
-  // const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   //original breakpoint 
-  const mq = useMediaQuery('(max-width: 767px)');
+  // const mq = useMediaQuery('(max-width: 767px)');
 
 
   const StyledCard = styled(CardActionArea)({

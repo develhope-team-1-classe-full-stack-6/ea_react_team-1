@@ -7,9 +7,62 @@ function LatestGrid(){
     return(
         <Container
             maxWidth={'lg'}
+            style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                
+            }}
         >
-            <Grid item>
-                <EACard/>
+            <Grid container>
+                <Grid item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={4}
+                >
+                    <EACard/>
+                </Grid>
+                <Grid item
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={4}
+                >
+                    <EACard/>
+                </Grid>
+                <Grid item
+                    xs={12}
+                    sm={6}
+                    md={6}
+                    lg={4}
+                >
+                    <EACard/>
+                </Grid>
+                <Grid item
+                    xs={12}
+                    sm={6}
+                    md={6}
+                    lg={4}
+                >
+                    <EACard/>
+                </Grid>
+                <Grid item
+                    xs={12}
+                    sm={6}
+                    md={6}
+                    lg={4}
+                >
+                    <EACard/>
+                </Grid>
+                <Grid item
+                    xs={12}
+                    sm={6}
+                    md={6}
+                    lg={4}
+                >
+                    <EACard/>
+                </Grid>
             </Grid>
         </Container>
     )
