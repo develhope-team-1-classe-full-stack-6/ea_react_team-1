@@ -16,7 +16,7 @@ function EACard(props) {
   const StyledCard = styled(CardActionArea)({
     
       margin: '20px 20px',
-      width: mq ? '90%' : '24%',
+      width: mq ? '90%' : '354px',
       minWidth: '310px',
       height: 'auto',
       borderRadius: '0%',
@@ -52,7 +52,7 @@ function EACard(props) {
             }
           }
         >
-          <CardActionArea>
+          
             <CardMedia style={{
               display: mq ? 'none' : 'show'
             }}
@@ -113,7 +113,7 @@ function EACard(props) {
                 {props.text}
               </Typography>
             </CardContent>
-          </CardActionArea>
+    
         </StyledCard>
     </div>
   );
