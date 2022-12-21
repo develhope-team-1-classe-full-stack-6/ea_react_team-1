@@ -3,7 +3,10 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material';
 
 export default function EABox(props) {
-
+  const {boxImage = "./assets/images/components/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg"} = props;
+  const {boxLogo = "./assets/images/components/box/fifa23-logo-white-stacked.svg"} = props;
+  const {links = []} = props;
+  
   const BoxComponent = styled(Box)({
     aspectRatio: "1/1",
     position: "relative",
@@ -13,7 +16,7 @@ export default function EABox(props) {
     background: !!props.overlay || props.overlay !== "" ? props.overlay : "none" ,
     "&:hover":{
       ".boxLogo":{
-        transform: props.variant === "up" ? "translateY(-70px)" : props.variant === "scale" ? "scale(1)" : ""
+        transform: props.variant === "up" ? "translateY(-70px)" : props.variant === "scale" ? "scale(1.2)" : ""
       },
       ".boxBgImage":{
         opacity: !props.overlay ? "1" : "0.1" ,
@@ -27,7 +30,7 @@ export default function EABox(props) {
       position: "absolute",
       visibility: "hidden",
       textAlign: "center",
-      marginTop: (props.links.length === 1 && "0") || (props.links.length === 2 && "40px") || (props.links.length >= 3 && "80px"),
+      marginTop: (links.length === 1 && "0") || (links.length === 2 && "40px") || (links.length >= 3 && "80px"),
       a:{
         display: "block",
         textDecoration: "none",
@@ -54,10 +57,6 @@ export default function EABox(props) {
     }    
   });
   
-  const boxbgImage = require("../../../assets/images/box/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg");
-
-  const boxLogo = require("../../../assets/images/box/fifa23-logo-white-stacked.svg");
-
   return (
     <BoxComponent
       sx={{
@@ -66,10 +65,10 @@ export default function EABox(props) {
         }
       } 
     >
-      <img className='boxBgImage' src={boxbgImage} width="100%" height="100%" alt=""/>
-      <img className='boxLogo' src={boxLogo.default} width="100%" height="100%" alt=""/>
+      <img className='boxBgImage' src={boxImage} width="100%" height="100%" alt=""/>
+      <img className='boxLogo' src={boxLogo} width="100%" height="100%" alt=""/>
       <div className='links'>
-        {!!props.links ? props.links.map((item, index) => (
+        {!!links ? links.map((item, index) => (
           <a href={item.link}>{item.title}</a>
         )) : null } 
       </div>
