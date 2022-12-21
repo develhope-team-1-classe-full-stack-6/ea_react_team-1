@@ -16,7 +16,7 @@ function EACard(props) {
   const StyledCard = styled(CardActionArea)({
     
       margin: '20px 20px',
-      width: mq ? '90%' : '24%',
+      width: mq ? '90%' : '354px',
       minWidth: '310px',
       height: 'auto',
       borderRadius: '0%',
@@ -41,19 +41,25 @@ function EACard(props) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        maxWidth: '1456px',
       }}
     >
-        <StyledCard className='styledCard'>
-          <CardActionArea
-            style={{margin:'0px'}}
-          >
+        <StyledCard 
+          className='styledCard'
+          style= {
+            {
+              backgroundColor: `${props.backgroundColor}`
+            }
+          }
+        >
+          
             <CardMedia style={{
               display: mq ? 'none' : 'show'
             }}
               component="img"
               height="200"
               image={props.img}
-              alt="it_takes_two_banner"
+              alt={props.alt}
             />
             <CardContent
               style={{
@@ -85,6 +91,7 @@ function EACard(props) {
                     </Typography>
                 </div>
               <Typography 
+                color={props.titleColor}
                 gutterBottom 
                 variant="h5" 
                 component="div" 
@@ -96,6 +103,7 @@ function EACard(props) {
                 {props.title}
               </Typography>
               <Typography 
+                
                 variant="h6" 
                 color="text.secondary"
                 style={{
@@ -105,10 +113,21 @@ function EACard(props) {
                 {props.text}
               </Typography>
             </CardContent>
-          </CardActionArea>
+    
         </StyledCard>
     </div>
   );
 }
 
 export default EACard
+
+EACard.defaultProps = {
+  backgroundColor: '',
+  img: '',
+  alt: 'card image',
+  info: 'the game',
+  date:'dd-mmm-yyyy',
+  title: 'This is a Fancy Title',
+  titleColor: '',
+  text: 'This is a Fancy Tex',
+}
