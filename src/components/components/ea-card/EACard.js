@@ -7,7 +7,8 @@ import { CardActionArea, styled, useMediaQuery } from '@mui/material';
 function EACard(props) {
 
   //theme breakpoints 
-  const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const mqsm = useMediaQuery((theme) => theme.breakpoints.down('sm'))
+  // const mqmd = useMediaQuery((theme) => theme.breakpoints.down('md'))
 
   //original breakpoint 
   // const mq = useMediaQuery('(max-width: 767px)');
@@ -16,9 +17,9 @@ function EACard(props) {
   const StyledCard = styled(CardActionArea)({
     
       margin: '20px 20px',
-      width: mq ? '90%' : '354px',
-      minWidth: '310px',
-      height: 'auto',
+      width: mqsm ? '90%' : '354px',
+      aspectRatio: 2/1,
+      // height: 'auto',
       borderRadius: '0%',
       textDecoration: 'none',
       cursor: 'pointer',
@@ -54,7 +55,7 @@ function EACard(props) {
         >
           
             <CardMedia style={{
-              display: mq ? 'none' : 'show'
+              display: mqsm ? 'none' : 'show'
             }}
               component="img"
               height="200"
@@ -63,15 +64,15 @@ function EACard(props) {
             />
             <CardContent
               style={{
-                minHeight: mq ? 'auto' :'320px',
+                minHeight: mqsm ? 'auto' :'320px',
               }}
             >
                 <div 
                   className="spanWrap" 
                   style={{
                     display: 'flex', 
-                    flexDirection: mq ? 'column' : 'row',
-                    justifyContent: mq ? 'center' : 'start',
+                    flexDirection: mqsm ? 'column' : 'row',
+                    justifyContent: mqsm ? 'center' : 'start',
                     alignItems: 'center', 
                     padding: '.5rem 0' }}
                 >
@@ -97,7 +98,7 @@ function EACard(props) {
                 component="div" 
                 fontWeight='bold'
                 style={{
-                  textAlign: mq ? 'center' : 'inherit',
+                  textAlign: mqsm ? 'center' : 'inherit',
                 }}
               >
                 {props.title}
@@ -107,7 +108,7 @@ function EACard(props) {
                 variant="h6" 
                 color="text.secondary"
                 style={{
-                  display: mq ? 'none' : 'show',
+                  display: mqsm ? 'none' : 'show',
                 }}
               >
                 {props.text}
@@ -125,7 +126,7 @@ EACard.defaultProps = {
   backgroundColor: '',
   img: '',
   alt: 'card image',
-  info: 'the game',
+  info: 'electronics arts inc.',
   date:'dd-mmm-yyyy',
   title: 'This is a Fancy Title',
   titleColor: '',
