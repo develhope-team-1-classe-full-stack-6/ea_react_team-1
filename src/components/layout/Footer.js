@@ -249,7 +249,7 @@ const Footer = () => {
           <InputLabel sx={{width: "170px", marginLeft: "30px", marginTop: "5px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
-              value="miao"
+              defaultValue={price}
               inputProps={{ "aria-label": "Without label" }}
               sx={{border: "none", marginTop: "25px !important", marginRight: "10px"}}
               IconComponent={KeyboardArrowDownIcon}
