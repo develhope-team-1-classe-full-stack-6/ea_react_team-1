@@ -197,7 +197,8 @@ const Footer = () => {
   const DropdownFormControl = styled (FormControl) ({
     margin : lg ? "8px" : "20px",
     minWidth: "120px",
-    width: lg ? "120px" : md ? "40%" : sm ? "80%" : "80%"
+    width: lg ? "120px" : md ? "40%" : sm ? "80%" : "80%",
+    height: "70px"
   });
 
   const LanguageContainer = styled ('div') ({
@@ -245,12 +246,12 @@ const Footer = () => {
         <FormContainerGrid item container xs={12} lg={5}>
           {/* Inizio parte dropdown da rivedere */}
           <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "auto", lg: "190px"}, borderRadius: "5%"}}>
-          <InputLabel sx={{width: "170px", marginLeft: "30px", marginTop: "5px"}} variant="standard"
+          <InputLabel sx={{width: "170px", marginLeft: "30px", marginTop: "5px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
               value="miao"
               inputProps={{ "aria-label": "Without label" }}
-              sx={{border: "none"}}
+              sx={{border: "none", marginTop: "25px !important", marginRight: "10px"}}
               IconComponent={KeyboardArrowDownIcon}
               disableUnderline
             >
