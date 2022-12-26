@@ -223,11 +223,11 @@ const Footer = () => {
     fontSize: "16px"
   });
 
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState("miaaao");
   const [language, setLanguage] = useState ("");
 
-  const handlePrice = (event) => {
-    setPrice(event.target.value);
+  const handlePrice = () => {
+    setPrice("miao");
   };
 
   const handleLanguage = event => setLanguage (event.target.value);
@@ -244,19 +244,18 @@ const Footer = () => {
         </MainLinkGrid>
         <FormContainerGrid item container xs={12} lg={5}>
           {/* Inizio parte dropdown da rivedere */}
-          <DropdownFormControl sx={{ width: {xs: "auto", lg: "190px"}}}>
-          <InputLabel variant="standard"
-            margin="dense"
-           
-            ><div  style={{fontSize: "16px", color: "#5a5a58", paddingLeft: "10px"}}>Prezzi per regione</div></InputLabel>
+          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "auto", lg: "190px"}, borderRadius: "5%"}}>
+          <InputLabel sx={{width: "170px", marginLeft: "30px", marginTop: "5px"}} variant="standard"
+            margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
-              value={price}
+              value="miao"
               inputProps={{ "aria-label": "Without label" }}
-              sx={{border: "2px solid lightgray", width: {xs: "auto", lg: "190px"}}}
+              sx={{border: "none"}}
               IconComponent={KeyboardArrowDownIcon}
+              disableUnderline
             >
               <LanguageContainer>
-                {PRICES.map(item => <LanguageItem onClick={handlePrice}value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
+                {PRICES.map(item => <LanguageItem onClick={handlePrice} value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
               </LanguageContainer>
             </Select>
           </DropdownFormControl>
