@@ -9,11 +9,17 @@ const BoxWrapper = styled(Container)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: "60px auto",
+    margin: "50px auto",
     h3:{
       ...theme.typography.d1,
         fontSize: "40px",
-        marginBottom: "40px",
+        marginBottom: "32px",
+        "@media (max-width: 599px)":{
+            fontSize: "32px",
+        },
+        "@media (max-width: 290px)":{
+            fontSize: "16px",
+        }
     },
     li:{
         ...theme.typography.d1,
@@ -23,24 +29,17 @@ const BoxWrapper = styled(Container)(({ theme }) => ({
   }));
 
 const ButtonWrapper = styled(Box)({
-    marginTop: "40px",
+    marginTop: "32px",
     border: "1px solid #000"
   });
 
 export default function BoxSection() {
     return(
-        <BoxWrapper
-            maxWidth={'lg'}
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',   
-            }}
-        >
+        <BoxWrapper>
             <h3>Giochi in evidenza</h3>   
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
                 {boxes.map((item) => (
-                    <Grid item xs={12} sm={12}md={6} lg={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <li>{item.box}</li>
                     </Grid>
                 ))}
