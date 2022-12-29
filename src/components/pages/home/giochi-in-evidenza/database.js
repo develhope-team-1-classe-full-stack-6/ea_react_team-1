@@ -1,8 +1,8 @@
-import EABox from '../../components/box/EABox';
+import EABox from '../../../components/box/EABox';
 
 const links = [
   {
-    title: "sito ufficiale",
+    title: "Sito ufficiale",
     link: "#"
   }
 ]

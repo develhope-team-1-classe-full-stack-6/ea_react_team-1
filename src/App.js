@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import BoxSection from "./components/layout/giochi-in-evidenza/BoxSection";
+import BoxSection from "./components/pages/home/giochi-in-evidenza/BoxSection";
+
 
 export default function App() {
   return (
