@@ -1,13 +1,12 @@
 import EABox from '../../components/box/EABox';
 
-const links = [
+export const bigBox = 
   {
-    title: "Sito ufficiale",
-    link: "#"
+    play: <EABox variant="scale" boxImage="./assets/images/common/boxes/ea-play.jpg" boxLogo="./assets/images/common/boxes/ea-play-mono-logo-svg.svg" logoWidth="80px" />,
   }
-]
 
 export const boxes = [
+  
   {
     box: <EABox variant="scale" boxImage="./assets/images/common/boxes/fifa23.jpg" boxLogo="./assets/images/common/boxes/fifa23-logo-white-stacked.svg" logoWidth="80px" />,
   },
