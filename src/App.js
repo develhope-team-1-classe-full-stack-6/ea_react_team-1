@@ -5,7 +5,7 @@ import Otherfooter from "./components/layout/Otherfooter";
 export default function App (){
   return (
     <Routes>
-      <Route path="/" element={<Otherfooter />}/>
+      <Route path="/" element={<Footer />}/>
     </Routes>
   );
 }

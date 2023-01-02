@@ -32,7 +32,7 @@ export default function SelectLabels() {
                             xs: 'yellow',
                             md: 'orange !important'},
                         '& .MuiMenuItem-root': {
-                          padding: 10,
+                          padding: 1,
                         },
                       },
                     },

@@ -224,13 +224,10 @@ const Footer = () => {
     fontSize: "16px"
   });
 
-  const [price, setPrice] = useState("miaaao");
-  const [language, setLanguage] = useState ("");
+  const [price, setPrice] = useState("Italy");
+  const [language, setLanguage] = useState ("Italia");
 
-  const handlePrice = () => {
-    setPrice("miao");
-  };
-
+  const handlePrice = event => setPrice(event.target.value);
   const handleLanguage = event => setLanguage (event.target.value);
 
 
@@ -245,20 +242,60 @@ const Footer = () => {
         </MainLinkGrid>
         <FormContainerGrid item container xs={12} lg={5}>
           {/* Inizio parte dropdown da rivedere */}
-          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "5%"}}>
-          <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "30px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
+          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "4%"}}>
+          <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "20px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
-              defaultValue={price}
               value={price}
+              onChange={handlePrice}
+              displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{border: "none", marginTop: "25px !important", marginRight: "10px"}}
+              sx={{border: "none", marginTop: "25px !important", marginRight: "10px", paddingLeft: {xs: "10px", lg: "20px"}}}
               IconComponent={KeyboardArrowDownIcon}
               disableUnderline
+              MenuProps={{
+                PaperProps: {
+                  sx: {
+                    bgcolor: {
+                        xs: '#f3f3f3'},
+                    width: {
+                      lg: "537px"
+                    },
+                    padding: {
+                      xs: "auto",
+                      lg: "10px"
+                    },
+                    height: {
+                      xs: "auto",
+                      lg: "510px"
+                    },
+                    '& .MuiMenuItem-root': {
+                      marginRight: "0px",
+                      width: {
+                        xs: "auto",
+                        lg: "160px !important"}
+                    },
+                    '& .MuiMenu-list': {
+                      display :{
+                        xs: "auto",
+                        lg: "flex !important"
+                      },
+                      flexDirection: {
+                        xs: "auto",
+                        lg: "row !important"
+                      },
+                      flexWrap: {
+                        xs: "auto",
+                        lg: "wrap !important"
+                      },
+                    }
+                  },
+                },
+              }}
             >
-              <LanguageContainer>
-                {PRICES.map(item => <LanguageItem onClick={handlePrice} value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
-              </LanguageContainer>
+                
+                {PRICES.map(item => <LanguageItem value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
+              
             </Select>
           </DropdownFormControl>
 
