@@ -245,11 +245,12 @@ const Footer = () => {
         </MainLinkGrid>
         <FormContainerGrid item container xs={12} lg={5}>
           {/* Inizio parte dropdown da rivedere */}
-          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "auto", lg: "190px"}, borderRadius: "5%"}}>
-          <InputLabel sx={{width: "170px", marginLeft: "30px", marginTop: "5px", marginBottom: "5px"}} variant="standard"
+          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "5%"}}>
+          <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "30px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
               defaultValue={price}
+              value={price}
               inputProps={{ "aria-label": "Without label" }}
               sx={{border: "none", marginTop: "25px !important", marginRight: "10px"}}
               IconComponent={KeyboardArrowDownIcon}
@@ -261,19 +262,20 @@ const Footer = () => {
             </Select>
           </DropdownFormControl>
 
-          <DropdownFormControl>
+          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "5%"}}>
+          <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "30px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
+            margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Lingua</Typography></InputLabel>
             <Select
+              defaultValue={language}
               value={language}
               onChange={handleLanguage}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{border: "2px solid lightgray", width: {xs: "auto", lg: "190px"}}}
+              sx={{border: "none", marginTop: "25px !important", marginRight: "10px"}}
               IconComponent={KeyboardArrowDownIcon}
+              disableUnderline
             >
               {/* <MenuItem value="italiano">Italiano</MenuItem> */}
-              <MenuItem disabled value="">
-              <Typography sx={{fontSize: "14px", color: "#5a5a58"}}>Lingua</Typography>
-              </MenuItem>
               <LanguageContainer>
               {LANGUAGES.map(item => <LanguageItem value={item.name}><LanguageTypography>{item.name} <img style={{marginLeft: lg ? "5px" : "10px"}} src={item.flag}/></LanguageTypography></LanguageItem>)}
               </LanguageContainer>
