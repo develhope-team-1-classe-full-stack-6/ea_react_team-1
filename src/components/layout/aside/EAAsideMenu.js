@@ -37,7 +37,7 @@ const pages = [
     },
     {
         id: 3,
-        title: "impegni",
+        title: "Impegni",
         menu: [
             {
                 items: ["I nostri impegni", "Gioco positivo", "Diversità e inclusione", "Impatto sociale", "Persone e cultura", "Ambiente"]
@@ -76,7 +76,7 @@ export default function EAAsideMenu() {
                     sx={{ width: 400, padding: 1 }}
                 >
                         {pages.map(item => <AccordinonAside title={item.title} key={item.title}>
-                            {item.title}
+                            {item.menu}
                         </AccordinonAside>)}
                 </Box>
             </Drawer>

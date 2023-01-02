@@ -6,6 +6,7 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
+import { Divider, List, ListItem, ListItemText } from '@mui/material';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -60,6 +61,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     padding: theme.spacing(2),
     borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
+const styleList = {
+    width: '100%',
+    maxWidth: 360,
+    bgcolor: 'background.paper',
+  };
 
 export default function AccordinonAside(props) {
 
@@ -67,20 +73,33 @@ export default function AccordinonAside(props) {
     return (
         <div>
             <Accordion>
-                {!props.cross ? <AccordionSummaryArrow>
+                <AccordionSummaryArrow>
                     <Typography>{props.title || "Collapsible Group Item #1"}</Typography>
-                </AccordionSummaryArrow> :
-                <AccordionSummaryCross>
-                <Typography>{props.title || "Collapsible Group Item #1"}</Typography>
-            </AccordionSummaryCross>
-                }
+                </AccordionSummaryArrow>
                 <AccordionDetails>
-                    <Typography>
-                        {props.children || `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.`}
-                    </Typography>
+                        {props.children.map((menu, index) => {
+                            return (menu.subtitle ? <Accordion key={index + menu.subtitle}>
+                                <AccordionSummaryCross>
+                                <Typography>{menu.subtitle || "Collapsible Group menu #1"}</Typography>
+                            </AccordionSummaryCross>
+                            <AccordionDetails>
+                            {menu.items.map((item, index) => {
+                            return (<Typography key={index + item}>
+                                {item || "Collapsible Group Item #1"}
+                                </Typography>)})
+                                }
+                                </AccordionDetails>
+                            </Accordion> : <List key={index + "_list"} sx={styleList} component="nav" aria-label="mailbox folders">
+                            {menu.items.map((item, index) => {
+                            return (<div key={index + item}><ListItem button>
+                                        <ListItemText primary={item || "Collapsible Group Item #1"} />
+                                    </ListItem>
+                              <Divider />
+                              </div>)})
+                                }
+                                </List>)
+                        }
+                        )}
                 </AccordionDetails>
             </Accordion>
         </div>
