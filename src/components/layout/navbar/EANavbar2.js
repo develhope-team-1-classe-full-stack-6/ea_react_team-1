@@ -60,7 +60,7 @@ const pages = [
     }
 ]
 
-function EANavbar() {
+function EANavbar2() {
 
     return (
             <AppBar position="static"
@@ -103,4 +103,4 @@ function EANavbar() {
             </AppBar>
     );
 }
-export default EANavbar;
+export default EANavbar2;
