@@ -25,6 +25,18 @@ export default function SelectLabels() {
                 displayEmpty
                 IconComponent={ExpandMoreIcon}
                 inputProps={{ 'aria-label': 'Without label' }}
+                MenuProps={{
+                    PaperProps: {
+                      sx: {
+                        bgcolor: {
+                            xs: 'yellow',
+                            md: 'orange !important'},
+                        '& .MuiMenuItem-root': {
+                          padding: 10,
+                        },
+                      },
+                    },
+                  }}
             >
                 <MenuItem value="">
                     Italiano
