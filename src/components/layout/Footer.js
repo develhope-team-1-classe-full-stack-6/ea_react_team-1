@@ -225,10 +225,10 @@ const Footer = () => {
   });
 
   const [price, setPrice] = useState("Italy");
-  const [language, setLanguage] = useState ("Italia");
+  const [language, setLanguage] = useState("Italia");
 
   const handlePrice = event => setPrice(event.target.value);
-  const handleLanguage = event => setLanguage (event.target.value);
+  const handleLanguage = event => setLanguage(event.target.value);
 
 
   return (
@@ -300,22 +300,58 @@ const Footer = () => {
           </DropdownFormControl>
 
           <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "5%"}}>
-          <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "30px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
+          <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "20px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Lingua</Typography></InputLabel>
             <Select
-              defaultValue={language}
               value={language}
               onChange={handleLanguage}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{border: "none", marginTop: "25px !important", marginRight: "10px"}}
+              sx={{border: "none", marginTop: "25px !important", marginRight: "10px", paddingLeft: {xs: "10px", lg: "20px"}}}
               IconComponent={KeyboardArrowDownIcon}
               disableUnderline
+              MenuProps={{
+                PaperProps: {
+                  sx: {
+                    bgcolor: {
+                        xs: '#f3f3f3'},
+                    width: {
+                      lg: "537px"
+                    },
+                    padding: {
+                      xs: "auto",
+                      lg: "10px"
+                    },
+                    height: {
+                      xs: "auto",
+                      lg: "420px"
+                    },
+                    '& .MuiMenuItem-root': {
+                      marginRight: "0px",
+                      width: {
+                        xs: "auto",
+                        lg: "160px !important"}
+                    },
+                    '& .MuiMenu-list': {
+                      display :{
+                        xs: "auto",
+                        lg: "flex !important"
+                      },
+                      flexDirection: {
+                        xs: "auto",
+                        lg: "row !important"
+                      },
+                      flexWrap: {
+                        xs: "auto",
+                        lg: "wrap !important"
+                      },
+                    }
+                  },
+                },
+              }}
             >
-              {/* <MenuItem value="italiano">Italiano</MenuItem> */}
-              <LanguageContainer>
               {LANGUAGES.map(item => <LanguageItem value={item.name}><LanguageTypography>{item.name} <img style={{marginLeft: lg ? "5px" : "10px"}} src={item.flag}/></LanguageTypography></LanguageItem>)}
-              </LanguageContainer>
+              
             </Select>
           </DropdownFormControl>
         </FormContainerGrid>
