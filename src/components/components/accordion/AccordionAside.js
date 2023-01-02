@@ -36,7 +36,7 @@ const AccordionSummaryCross = styled((props) => (
     },
     '& .MuiAccordionSummary-content': {
         marginLeft: theme.spacing(1),
-    },
+    }
 }));
 
 const AccordionSummaryArrow = styled((props) => (
@@ -76,15 +76,15 @@ export default function AccordinonAside(props) {
                 <AccordionSummaryArrow>
                     <Typography>{props.title || "Collapsible Group Item #1"}</Typography>
                 </AccordionSummaryArrow>
-                <AccordionDetails>
+                <AccordionDetails style={{padding: "0px"}}>
                         {props.children.map((menu, index) => {
                             return (menu.subtitle ? <Accordion key={index + menu.subtitle}>
                                 <AccordionSummaryCross>
                                 <Typography>{menu.subtitle || "Collapsible Group menu #1"}</Typography>
                             </AccordionSummaryCross>
-                            <AccordionDetails>
+                            <AccordionDetails style={{padding: "0px", paddingBlock: "5px 20px"}}>
                             {menu.items.map((item, index) => {
-                            return (<Typography key={index + item}>
+                            return (<Typography key={index + item} sx={{paddingInline: "50px", paddingBlockStart: "15px", cursor: "pointer"}}>
                                 {item || "Collapsible Group Item #1"}
                                 </Typography>)})
                                 }
