@@ -19,6 +19,8 @@ function EACard(props) {
       margin: '20px 20px',
       width: mqsm ? '90%' : '354px',
       aspectRatio: 2/1,
+      maxHeight: '500px',
+      overflow: 'clip',
       // height: 'auto',
       borderRadius: '0%',
       textDecoration: 'none',
@@ -112,11 +114,11 @@ function EACard(props) {
                   {props.title}
                 </Typography>
                 <Typography 
-                  
-                  variant="h6" 
+                  variant='h6'
                   color="text.secondary"
                   style={{
-                    display: mqsm ? 'none' : 'show',
+                    display: mqsm ? 'none' : 'show', 
+                    whiteSpace: "pre-line"
                   }}
                 >
                   {props.text}

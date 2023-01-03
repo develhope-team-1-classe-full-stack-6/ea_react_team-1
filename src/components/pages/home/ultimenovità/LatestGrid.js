@@ -15,7 +15,7 @@ function LatestGrid(){
                 
             }}
         >
-            <Grid container>
+            <Grid container spacing={0}>
                 {cards.map((item)=>
                     (
                     <Grid item
