@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import EACard from "../../../components/ea-card/EACard";
+import { cards } from "./EACard-database";
 
 
 function LatestGrid(){
@@ -14,55 +15,19 @@ function LatestGrid(){
                 
             }}
         >
-            <Grid container>
-                <Grid item
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={4}
-                >
-                    <EACard/>
-                </Grid>
-                <Grid item
-                    xs={12}
-                    sm={12}
-                    md={6}
-                    lg={4}
-                >
-                    <EACard/>
-                </Grid>
-                <Grid item
+            <Grid container spacing={0}>
+                {cards.map((item)=>
+                    (
+                    <Grid item
                     xs={12}
                     sm={6}
-                    md={6}
+                    md={4}
                     lg={4}
                 >
-                    <EACard/>
+                    <div>{item.card}</div>
                 </Grid>
-                <Grid item
-                    xs={12}
-                    sm={6}
-                    md={6}
-                    lg={4}
-                >
-                    <EACard/>
-                </Grid>
-                <Grid item
-                    xs={12}
-                    sm={6}
-                    md={6}
-                    lg={4}
-                >
-                    <EACard/>
-                </Grid>
-                <Grid item
-                    xs={12}
-                    sm={6}
-                    md={6}
-                    lg={4}
-                >
-                    <EACard/>
-                </Grid>
+                    )
+                )}
             </Grid>
         </Container>
     )
