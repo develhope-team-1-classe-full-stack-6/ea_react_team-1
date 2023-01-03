@@ -30,6 +30,11 @@ function EACard(props) {
       '&:hover': {
         transform: 'translateY(-12px)',
         boxShadow: '0px 20px 30px rgba(0, 0, 0, 0.7)',
+      },
+
+      a: {
+        textDecoration: 'none',
+        color: 'inherit',
       }
   
     });
@@ -62,58 +67,62 @@ function EACard(props) {
               image={props.img}
               alt={props.alt}
             />
-            <CardContent
-              style={{
-                minHeight: mqsm ? 'auto' :'320px',
-              }}
+            <a 
+              href={props.link}
             >
-                <div 
-                  className="spanWrap" 
+              <CardContent
+                style={{
+                  minHeight: mq ? 'auto' :'320px',
+                }}
+              >
+                  <div 
+                    className="spanWrap" 
+                    style={{
+                      display: 'flex', 
+                      flexDirection: mq ? 'column' : 'row',
+                      justifyContent: mq ? 'center' : 'start',
+                      alignItems: 'center', 
+                      padding: '.5rem 0' }}
+                  >
+                      <Typography 
+                        variant='subtitle1' 
+                        color='orange.main' 
+                        fontWeight='bold' 
+                        marginRight='1rem'
+                      >
+                          {props.info}
+                      </Typography>
+                      <Typography 
+                        variant='subtitle1' 
+                        fontWeight='bold'
+                      >
+                          {props.date}
+                      </Typography>
+                  </div>
+                <Typography 
+                  color={props.titleColor}
+                  gutterBottom 
+                  variant="h5" 
+                  component="div" 
+                  fontWeight='bold'
                   style={{
-                    display: 'flex', 
-                    flexDirection: mqsm ? 'column' : 'row',
-                    justifyContent: mqsm ? 'center' : 'start',
-                    alignItems: 'center', 
-                    padding: '.5rem 0' }}
+                    textAlign: mq ? 'center' : 'inherit',
+                  }}
                 >
-                    <Typography 
-                      variant='subtitle1' 
-                      color='orange.main' 
-                      fontWeight='bold' 
-                      marginRight='1rem'
-                    >
-                        {props.info}
-                    </Typography>
-                    <Typography 
-                      variant='subtitle1' 
-                      fontWeight='bold'
-                    >
-                        {props.date}
-                    </Typography>
-                </div>
-              <Typography 
-                color={props.titleColor}
-                gutterBottom 
-                variant="h5" 
-                component="div" 
-                fontWeight='bold'
-                style={{
-                  textAlign: mqsm ? 'center' : 'inherit',
-                }}
-              >
-                {props.title}
-              </Typography>
-              <Typography 
-                
-                variant="h6" 
-                color="text.secondary"
-                style={{
-                  display: mqsm ? 'none' : 'show',
-                }}
-              >
-                {props.text}
-              </Typography>
-            </CardContent>
+                  {props.title}
+                </Typography>
+                <Typography 
+                  
+                  variant="h6" 
+                  color="text.secondary"
+                  style={{
+                    display: mq ? 'none' : 'show',
+                  }}
+                >
+                  {props.text}
+                </Typography>
+              </CardContent>
+            </a>
     
         </StyledCard>
     </div>
