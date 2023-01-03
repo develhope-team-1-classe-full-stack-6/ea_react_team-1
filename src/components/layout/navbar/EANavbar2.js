@@ -60,10 +60,9 @@ const pages = [
     }
 ]
 
-function EANavbar() {
+function EANavbar2() {
 
     return (
-        <>
             <AppBar position="static"
                 color="white"
                 sx={{ boxShadow: "none" }}
@@ -102,8 +101,6 @@ function EANavbar() {
 
                     </Toolbar>
             </AppBar>
-            <Box sx={{background:"darkgreen", height: "100vh"}}></Box>
-        </>
     );
 }
-export default EANavbar;
+export default EANavbar2;
