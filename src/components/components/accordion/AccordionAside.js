@@ -1,3 +1,4 @@
+import './AccordionAside.scss';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import MuiAccordion from '@mui/material/Accordion';
@@ -7,17 +8,20 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { Divider, List, ListItem, ListItemText } from '@mui/material';
+import { grey } from '@mui/material/colors';
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
+    background: grey[100],
+    borderBottom: `1px solid ${theme.palette.divider}`,
     '&:not(:last-child)': {
         borderBottom: 0,
     },
     '&:before': {
         display: 'none',
     },
+
 }));
 
 const AccordionSummaryCross = styled((props) => (
@@ -55,7 +59,7 @@ const AccordionSummaryArrow = styled((props) => (
     },
     '& .MuiAccordionSummary-content': {
         marginLeft: theme.spacing(1),
-    },
+    }
 }));
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     padding: theme.spacing(2),
@@ -63,7 +67,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 const styleList = {
     width: '100%',
-    maxWidth: 360,
+    padding: '0px',
     bgcolor: 'background.paper',
   };
 

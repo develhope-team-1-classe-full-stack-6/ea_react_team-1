@@ -1,0 +1,13 @@
+div.MuiButtonBase-root.MuiAccordionSummary-root.css-5kkiaz-MuiButtonBase-root-MuiAccordionSummary-root{
+    &:hover{
+        & > div {
+            color: orangered;
+        }
+    }
+}
+
+div.MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded.css-5kkiaz-MuiButtonBase-root-MuiAccordionSummary-root{
+    & > div {
+        color: orangered;
+    }
+}
