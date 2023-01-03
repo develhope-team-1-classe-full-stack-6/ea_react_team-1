@@ -4,7 +4,7 @@ import LatestGrid from "./components/pages/home/ultimenovità/LatestGrid";
 
 export default function App() {
   return (
-    <EACard link='https://www.ea.com/games/it-takes-two/news/it-takes-two-now-available-on-nintendo-switch'/>    
+    <LatestGrid/>   
   //   <Routes>
   //     <Route path="/" element={<div>Home</div>} />
   //   </Routes>

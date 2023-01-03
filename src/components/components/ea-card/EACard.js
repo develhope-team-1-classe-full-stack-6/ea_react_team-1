@@ -72,15 +72,15 @@ function EACard(props) {
             >
               <CardContent
                 style={{
-                  minHeight: mq ? 'auto' :'320px',
+                  minHeight: mqsm ? 'auto' :'320px',
                 }}
               >
                   <div 
                     className="spanWrap" 
                     style={{
                       display: 'flex', 
-                      flexDirection: mq ? 'column' : 'row',
-                      justifyContent: mq ? 'center' : 'start',
+                      flexDirection: mqsm ? 'column' : 'row',
+                      justifyContent: mqsm ? 'center' : 'start',
                       alignItems: 'center', 
                       padding: '.5rem 0' }}
                   >
@@ -106,7 +106,7 @@ function EACard(props) {
                   component="div" 
                   fontWeight='bold'
                   style={{
-                    textAlign: mq ? 'center' : 'inherit',
+                    textAlign: mqsm ? 'center' : 'inherit',
                   }}
                 >
                   {props.title}
@@ -116,7 +116,7 @@ function EACard(props) {
                   variant="h6" 
                   color="text.secondary"
                   style={{
-                    display: mq ? 'none' : 'show',
+                    display: mqsm ? 'none' : 'show',
                   }}
                 >
                   {props.text}
