@@ -22,7 +22,7 @@ Background overlay:
     <EABox overlay="red" />
     <EABox overlay="#000" />
   Homepage gradient:
-  <EABox overlay="linear-gradient(90deg, #001c9d, #ff4747)" />
+  <EABox overlay="linear-gradient(90deg, #29244d, #ff4747)" />
 
 <!--  -->
 Logo width:
