@@ -9,6 +9,8 @@ export default function EABox(props) {
   
   const BoxComponent = styled(Box)({
     aspectRatio: "1/1",
+    width: "100%",
+    height: "100%",
     position: "relative",
     display: "flex",
     justifyContent: "center",
@@ -58,13 +60,7 @@ export default function EABox(props) {
   });
   
   return (
-    <BoxComponent
-      sx={{
-        width: 300,
-        height: 300,
-        }
-      } 
-    >
+    <BoxComponent>
       <img className='boxBgImage' src={boxImage} width="100%" height="100%" alt=""/>
       <img className='boxLogo' src={boxLogo} width="100%" height="100%" alt=""/>
       <div className='links'>
