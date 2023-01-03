@@ -20,7 +20,7 @@ function LatestGrid(){
                     (
                     <Grid item
                     xs={12}
-                    sm={12}
+                    sm={6}
                     md={4}
                     lg={4}
                 >
