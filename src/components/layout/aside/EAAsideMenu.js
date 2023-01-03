@@ -73,7 +73,7 @@ export default function EAAsideMenu() {
 
                 </Box>
                 <Box
-                    sx={{ width: 400, padding: 1 }}
+                    sx={{ width: 400, padding: 2 }}
                 >
                         {pages.map(item => <AccordinonAside title={item.title} key={item.title}>
                             {item.menu}
