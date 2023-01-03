@@ -67,7 +67,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const styleList = {
     width: '100%',
     padding: '0px',
-    backgroundColor: "rgba(0, 0, 0, .01)"
   };
 
 export default function AccordinonAside(props) {
