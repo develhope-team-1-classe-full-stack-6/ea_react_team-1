@@ -61,7 +61,7 @@ export default function EAAsideMenu() {
         <div>
             <Drawer
                 anchor="left"
-                open
+                // open
                 // onClose={""}
             >
                 <Box
