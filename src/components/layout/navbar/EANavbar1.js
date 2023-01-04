@@ -2,13 +2,14 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-// import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
-import { Drawer } from '@mui/material';
+import OffcanvasTop from '../../components/offcanvasTop/OffcanvasTop';
+import { Typography, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -37,36 +38,51 @@ HideOnScroll.propTypes = {
 
 const filter = "invert(66%) sepia(1%) saturate(496%) hue-rotate(24deg) brightness(93%) contrast(93%)";
 
+
 export default function EANavbar1(props) {
+  const theme = useTheme();
+  const matchesMd = useMediaQuery(theme.breakpoints.up('lg'));
+  const matchesSm = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{height:"40px", boxShadow:"none", zIndex:"9999"}} color="dark">
+        <AppBar sx={{height:"40px", boxShadow:"none", zIndex:"9999", backgroundColor:"#111111"}}>
             <Toolbar variant='dense'>
               <Box sx={{ margin: "-10px 20px 0px 0px", display:"flex", justifyContent:"flex-end",width:"100%", gap:"40px"}}>
-                  <img src='./assets/images/common/user-regular.svg' alt='logo EA' style={{width:"15px", filter:filter}}/>
-                  <img src='./assets/images/common/question-solid.svg' alt='question' style={{width:"12px", filter:filter}}/>
-                  <img src='./assets/images/common/ea_logo.svg' alt='logo EA' style={{width:"35px", filter:filter}}/>
+                  <img src='./assets/images/common/offcanvas/user-regular.svg' alt='logo EA' style={{width:"15px", filter:filter,cursor:"pointer"}}/>
+                  <img src='./assets/images/common/offcanvas/question-solid.svg' alt='question' style={{width:"12px", filter:filter,cursor:"pointer"}}/>
+                  <img src='./assets/images/common/offcanvas/ea_logo.svg' alt='logo EA' style={{width:"33px", filter:filter, cursor:"pointer"}}/>
               </Box>
             </Toolbar>
         </AppBar>
       </HideOnScroll>
       <Toolbar />
-      <Drawer
-                anchor="top"
-                open
-                // onClose={""}
-            >
-                <Box
-                    sx={{padding: 2, display: "flex", justifyContent: "space-between" }}
-                >
-                    <img src="./assets/images/common/ea-wordmark-network-nav-coral.svg" alt="EA Logo" style={{ width: "60%", cursor: "pointer" }} />
+        <OffcanvasTop>
+          <Container maxWidth="sm" style={{height:"100%", display:"flex"}}>
 
-                    <img src="./assets/images/common/closebutton.svg" alt="close" style={{ width: "9%", cursor: "pointer" }} />
+            <Box style={{margin:matchesSm ? "-20px 40px":"-20px 0px", width:"100%", height:"100%", display:"flex", flexDirection:matchesSm ? "column" : "row", gap:"10px"}}>
+              <Box style={{ display:"flex", justifyContent:matchesSm? "flex-start" :"center", alignItems:matchesSm ? "flex-end":"center", height:"100%", flex:"1 1"}}>
+                <div style={{flexDirection:matchesMd ? "column" : "row", display:"flex", alignItems:"center", gap:"10px"}}>
+                  <img src="./assets/images/common/offcanvas/eaglobalnav-iconsignin.svg" style={{width:"35px"}} alt="iconsignin"/>
+                  <Typography variant='navBar1' style={{color:"#eaeaea"}}>
+                     Accedi
+                  </Typography>
+                </div>
+              </Box>
+              <Box style={{ display:"flex", justifyContent:matchesSm ? "flex-start":"center", alignItems:matchesSm ? "flex-start":"center", height:"100%", flex:"1 1"}}>
+              <div style={{flexDirection:matchesMd ? "column" : "row", display:"flex", alignItems:"center", gap:"10px"}}>
+                  <img src="./assets/images/common/offcanvas/eaglobalnav-iconregister.svg" style={{width:"35px"}} alt="iconsignup"/>
+                  <Typography variant='navBar1' style={{color:"#eaeaea"}}>
+                    Crea Account
+                  </Typography>
+                </div>
 
-                </Box>
-            </Drawer>
+              </Box>
+            </Box>
+          </Container>
+        </OffcanvasTop>
       <Container>
         <Box sx={{ my: 2 }}>
           {[...new Array(50)]
