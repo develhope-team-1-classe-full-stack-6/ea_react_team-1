@@ -19,7 +19,7 @@ function ButtonNav1(props) {
     return (
         <div style={{ flexDirection: matchesMd ? "column" : "row", display: "flex", alignItems: "center", gap: "10px", cursor:"pointer", transform: hover ? "translateY(-10px)" : "translateY(0px)", transition:"all 0.4s"}} onMouseOver={handleButtonOver} onMouseOut={handleButtonOut}>
             <img src={props.src} style={{ width: "35px" }} alt="iconsignin" />
-            <Typography variant='navBar1' style={{ color: "#eaeaea" }}>
+            <Typography variant='navBar1' style={{ color: "#eaeaea", textAlign:matchesMd ? "center" :"start" }}>
                 {props.children}
             </Typography>
         </div>
