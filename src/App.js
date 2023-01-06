@@ -1,8 +1,9 @@
-// import { Routes, Route } from "react-router-dom";
-import Hero1 from "./components/pages/home/hero1/Hero1";
+import { Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <Hero1/>
+    <Routes>
+      <Route path="/" element={<div>Home</div>} />
+    </Routes>
   );
 }
