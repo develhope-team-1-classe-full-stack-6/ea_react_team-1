@@ -1,5 +1,4 @@
 import { Button, styled, useMediaQuery } from "@mui/material";
-import "./Custombutton.scss";
 
 function CustomButton(props) {
 
@@ -25,6 +24,7 @@ function CustomButton(props) {
                 variant={props.variant || "contained"}
                 disableElevation
                 disableRipple
+                sx={{border:"2px solid"}}
             >
                 {props.children || "Button"}
             </BootstrapButton>

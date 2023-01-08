@@ -16,7 +16,7 @@ function Hero2() {
                             Non limitarti al gioco. Gioca al massimo. Sblocca ricompense esclusive, contenuti per i soli membri e una libreria dei migliori titoli.
                             </Typography>
                             <div style={{width:matchesDownSm ? "100%" : ""}}>
-                                <CustomButton variant="outlined">Iscriviti subito</CustomButton>
+                                <CustomButton variant="outlined" color="white">Iscriviti subito</CustomButton>
                             </div>
                     </Box>
                 </Container>
