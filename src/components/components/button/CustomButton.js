@@ -1,11 +1,11 @@
 import { Button, styled, useMediaQuery } from "@mui/material";
+import "./Custombutton.scss";
 
 function CustomButton(props) {
 
     const matches = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
     const BootstrapButton = styled(Button)({
-
         textTransform: 'none',
         padding: "17px 47px",
         borderRadius: "0px",
@@ -13,13 +13,13 @@ function CustomButton(props) {
         maxHeight: "65px",
         width: matches ? "100%": "inherit",
         '&:hover': {
-            transform: "scale(1.1 , 1.1)",
+            transform: "scale(1.05 , 1.05)",
             transition: "all 0.15s"
         }
     });
 
     return (
-        <div>
+        <div style={{width:matches? "100%":"210px", height:"70px", display:"flex", justifyContent:"center"}}>
             <BootstrapButton size="large"
                 color={props.color || "gray"}
                 variant={props.variant || "contained"}
