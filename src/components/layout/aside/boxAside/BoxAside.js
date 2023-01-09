@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -62,14 +63,17 @@ export default function BoxAside(props) {
           <CloseIcon
             style={{cursor: "pointer"}}
             color="black"
+            onClick={()=>{
+              props.render({aside1:false})
+          }}
           />
         </header>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={12} md={12}>
             <li><a href="#">{bigBox.play}</a></li>
           </Grid>
-          {boxes.map((item) => (
-              <Grid item xs={6} sm={6} md={6}>
+          {boxes.map((item,index) => (
+              <Grid item xs={6} sm={6} md={6} key={index+item}>
                 <li><a href="#">{item.box}</a></li>
               </Grid>
           ))}
@@ -83,7 +87,7 @@ export default function BoxAside(props) {
   return (
       <Drawer
         anchor={anchor}
-        open={props.open.aside1}
+        open={props.open}
       >
         {list(anchor)}
       </Drawer>
