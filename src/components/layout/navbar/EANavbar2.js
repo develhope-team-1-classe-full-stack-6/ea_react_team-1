@@ -60,7 +60,7 @@ const pages = [
     }
 ]
 
-function EANavbar2() {
+function EANavbar2(props) {
 
     return (
             <AppBar position="static"
@@ -76,7 +76,7 @@ function EANavbar2() {
                                 disableRipple
                                 sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
                             >
-                                <MoreVertIcon sx={{fontSize:"2rem"}}/>
+                                <MoreVertIcon sx={{fontSize:"2rem"}} onClick={props.render({aside1:true, aside2:false})}/>
                             </IconButton>
                             <IconButton
                                 size="large"
@@ -84,7 +84,7 @@ function EANavbar2() {
                                 disableRipple
                                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
                             >
-                                <MenuIcon sx={{fontSize:"2rem"}}/>
+                                <MenuIcon sx={{fontSize:"2rem"}}  onClick={props.render({aside1:false, aside2:true})}/>
                             </IconButton>
                         </Box>
                         <Box>
