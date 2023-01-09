@@ -11,8 +11,10 @@ export default function EAAsideMenu(props) {
     return (
             <Drawer
                 anchor="left"
-                open={props.open.aside2}
-            // onClose={""}
+                open={props.open}
+                onClick={()=>{
+                    props.render({aside2:false})
+                }}
             >
                 <Box
                     sx={{ background: grey[300], padding: 2, display: "flex", justifyContent: "space-between" }}

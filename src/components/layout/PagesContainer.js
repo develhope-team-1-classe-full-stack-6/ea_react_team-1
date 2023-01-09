@@ -10,19 +10,24 @@ function PagesContainer(props) {
         aside2:false
     });
 
+    const renderOpen = (open) => {
+            setOpenAside(c => ({
+                ...c,
+                ...open
+            }));
+        };
+
     return (
         <div>
             <header>
                 <EANavbar1 />
-                <EANavbar2 render={(open)=> {
-                    setOpenAside(open)
-                }}/>
+                <EANavbar2 render={renderOpen}/>
             </header>
             <div style={{marginTop:"56px"}}>
                 <main>
                     <aside>
-                        <BoxAside open={openAside.aside1}/>
-                        <EAAsideMenu open={openAside.aside2}/>
+                        <BoxAside open={openAside.aside1} render={renderOpen}/>
+                        <EAAsideMenu open={openAside.aside2} render={renderOpen}/>
                     </aside>
                     <article>
                         {props.children}

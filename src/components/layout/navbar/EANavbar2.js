@@ -53,6 +53,9 @@ function EANavbar2(props) {
                                 edge="end"
                                 disableRipple
                                 sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
+                                onClick={()=>{
+                                    props.render({aside1:true, aside2:false})
+                                }}
                             >
                                 <MoreVertIcon sx={{fontSize:"2rem"}}/>
                             </IconButton>
@@ -61,6 +64,9 @@ function EANavbar2(props) {
                                 edge="end"
                                 disableRipple
                                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
+                                onClick={()=>{
+                                    props.render({aside1:false, aside2:true})
+                                }}
                             >
                                 <MenuIcon sx={{fontSize:"2rem"}}/>
                             </IconButton>
