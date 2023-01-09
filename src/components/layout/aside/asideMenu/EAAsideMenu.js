@@ -12,16 +12,16 @@ export default function EAAsideMenu(props) {
             <Drawer
                 anchor="left"
                 open={props.open}
-                onClick={()=>{
-                    props.render({aside2:false})
-                }}
+
             >
                 <Box
                     sx={{ background: grey[300], padding: 2, display: "flex", justifyContent: "space-between" }}
                 >
                     <img src="./assets/images/common/ea-wordmark-network-nav-coral.svg" alt="EA Logo" style={{ width: "60%", cursor: "pointer" }} />
 
-                    <img src="./assets/images/common/closebutton.svg" alt="close" style={{ width: "9%", cursor: "pointer" }} />
+                    <img src="./assets/images/common/closebutton.svg" alt="close" style={{ width: "9%", cursor: "pointer" }} onClick={()=>{
+                    props.render({aside2:false})
+                }} />
 
                 </Box>
                 <Box

@@ -63,6 +63,9 @@ export default function BoxAside(props) {
           <CloseIcon
             style={{cursor: "pointer"}}
             color="black"
+            onClick={()=>{
+              props.render({aside1:false})
+          }}
           />
         </header>
         <Grid container spacing={3}>
@@ -85,9 +88,6 @@ export default function BoxAside(props) {
       <Drawer
         anchor={anchor}
         open={props.open}
-        onClick={()=>{
-            props.render({aside1:false})
-        }}
       >
         {list(anchor)}
       </Drawer>
