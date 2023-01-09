@@ -15,13 +15,14 @@ function LatestGrid(){
             }}
         >
             <Grid container spacing={0}>
-                {cards.map((item)=>
+                {cards.map((item, index)=>
                     (
                     <Grid item
                     xs={12}
                     sm={6}
                     md={4}
                     lg={4}
+                    key={index+item}
                 >
                     <div>{item.card}</div>
                 </Grid>

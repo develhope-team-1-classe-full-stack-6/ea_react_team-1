@@ -1,4 +1,5 @@
 import { Button, styled, useMediaQuery } from "@mui/material";
+import PropTypes from 'prop-types';
 
 function CustomButton(props) {
 
@@ -32,5 +33,9 @@ function CustomButton(props) {
         </div>
     );
 }
+CustomButton.propTypes = {
+    color: PropTypes.string,
+    variant: PropTypes.string,
+  };
 
 export default CustomButton;
