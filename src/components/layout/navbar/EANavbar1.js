@@ -24,7 +24,7 @@ function ElevationScroll(props) {
   });
 
   return React.cloneElement(children, {
-    sx: {top: trigger ? "-40px" : "0px",
+    sx: {top: trigger ? props.aside.aside1 || props.aside.aside2 ? "0px": "-40px" : "0px",
           transition:"all 0.30s ease",
           height: "40px",
           boxShadow: "none",

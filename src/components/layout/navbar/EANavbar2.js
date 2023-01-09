@@ -21,7 +21,7 @@ function ElevationScroll(props) {
     });
 
     return React.cloneElement(children, {
-      sx: {top: trigger ? "0" : "40px",
+      sx: {top: trigger ? props.aside.aside1 || props.aside.aside2 ? "40px": "0px" : "40px",
             transition:"all 0.30s ease",
             boxShadow: "none",
             zIndex:"11"},
@@ -52,7 +52,7 @@ function EANavbar2(props) {
                                 size="large"
                                 edge="end"
                                 disableRipple
-                                sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
+                                sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transform:"scale(1.2)",transition:"all 0.25s" }}}
                                 onClick={()=>{
                                     props.render({aside1:true, aside2:false})
                                 }}

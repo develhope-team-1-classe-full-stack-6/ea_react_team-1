@@ -20,8 +20,8 @@ function PagesContainer(props) {
     return (
         <div>
             <header>
-                <EANavbar1 />
-                <EANavbar2 render={renderOpen}/>
+                <EANavbar1 aside={openAside}/>
+                <EANavbar2 render={renderOpen} aside={openAside}/>
             </header>
             <div style={{marginTop:"56px"}}>
                 <main>
