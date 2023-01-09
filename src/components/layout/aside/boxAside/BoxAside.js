@@ -1,26 +1,14 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import { Grid, Icon } from "@mui/material";
+import { Grid } from "@mui/material";
 import { bigBox, boxes } from "./data";
 import { Container } from "@mui/system";
 import { styled } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
+import '../aside.scss';
 
-export default function BoxAside() {
-  const [state, setState] = React.useState({
-    left: false,
-  });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open }); 
-  };
-
+export default function BoxAside(props) {
   // Container styling
   const BoxWrapper = styled(Container)(({ theme }) => ({
     display: "flex",
@@ -71,9 +59,9 @@ export default function BoxAside() {
       <BoxWrapper>
         <header>
           <a href="#">Tutti i giochi</a>
-          <CloseIcon 
-            style={{cursor: "pointer"}} 
-            onClick={toggleDrawer(anchor, false)} color="black" 
+          <CloseIcon
+            style={{cursor: "pointer"}}
+            color="black"
           />
         </header>
         <Grid container spacing={3}>
@@ -93,15 +81,11 @@ export default function BoxAside() {
   const anchor = "left";
 
   return (
-    <div>
-      <Button onClick={toggleDrawer(anchor, true)}>clicca</Button>
       <Drawer
         anchor={anchor}
-        open={state[anchor]}
-        onClose={toggleDrawer(anchor, false)}
+        open={props.open.aside1}
       >
         {list(anchor)}
       </Drawer>
-    </div>
   );
 }
