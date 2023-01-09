@@ -1,6 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import CustomButton from "../../../components/button/CustomButton";
-import Banner from "../../../layout/banner/Banner";
+import Banner from "../../../components/banner/Banner";
 
 function BannerHome() {
 
