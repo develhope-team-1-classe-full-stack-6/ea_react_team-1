@@ -2,60 +2,9 @@ import Drawer from '@mui/material/Drawer';
 import { Box } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import AccordinonAside from '../../../components/accordion/AccordionAside';
+import pages from '../../../../data/pages.json';
 import '../aside.scss';
 
-const pages = [
-    {
-        id: 0,
-        title: "Giochi",
-        menu: [
-            {
-                subtitle: "ESPLORA I GIOCHI",
-                items: ["Ultimi giochi", "Prossimamente", "Giochi gratuiti", "EA SPORTS", "EA Originals", "Libreria dei giochi"]
-            },
-            {
-                subtitle: "PIATTAFORME",
-                items: ["PC", "PlayStation®5", "Xbox Series X", "Nintendo Switch™", "Cellulari"]
-            }
-        ]
-    },
-    {
-        id: 1,
-        title: "Altre esperienze",
-        menu: [
-            {
-                items: ["EA Play", "l'EA app", "Competizioni videoludiche", "Diretta di EA Play", "Test di gioco"]
-            },
-        ]
-    },
-    {
-        id: 2,
-        title: "Informazioni",
-        menu: [
-            {
-                items: ["Società", "EA Studi", "Lavora con noi", "La nostra tecnologia", "EA Partners", "Notizie", "Inside EA"]
-            },
-        ]
-    },
-    {
-        id: 3,
-        title: "Impegni",
-        menu: [
-            {
-                items: ["I nostri impegni", "Gioco positivo", "Diversità e inclusione", "Impatto sociale", "Persone e cultura", "Ambiente"]
-            },
-        ]
-    },
-    {
-        id: 4,
-        title: "Risorse",
-        menu: [
-            {
-                items: ["Aiuto", "Forum", "Filtro famiglia", "Accessibilità", "Stampa", "Investitori"]
-            },
-        ]
-    }
-]
 
 export default function EAAsideMenu(props) {
 

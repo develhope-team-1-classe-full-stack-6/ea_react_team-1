@@ -21,12 +21,12 @@ function Hero2() {
                     </Box>
                 </Container>
                 <picture>
-          <source media="(max-width: 320px)" srcset="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg"/>
-          <source media="(max-width: 767px)" srcset="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.767w.jpg"/>
-          <source media="(max-width: 1023px)" srcset="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg"/>
-          <source media="(max-width: 1455px)" srcset="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"/>
-          <source media="(min-width: 1456px)" srcset="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg"/>
-          <img class="eapl-hero__image eapl-animate__bg" src="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg" alt=""/>
+          <source media="(max-width: 320px)" srcSet="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg"/>
+          <source media="(max-width: 767px)" srcSet="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.767w.jpg"/>
+          <source media="(max-width: 1023px)" srcSet="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop2x1.1023w.jpg"/>
+          <source media="(max-width: 1455px)" srcSet="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"/>
+          <source media="(min-width: 1456px)" srcSet="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg"/>
+          <img src="./assets/images/pages/home/hero2/hero-medium-console-7x2-xl.jpg.adapt.crop3x5.320w.jpg" alt=""/>
         </picture>
             </Container>
         );

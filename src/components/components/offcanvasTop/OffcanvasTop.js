@@ -12,6 +12,7 @@ export default function OffcanvasTop(props) {
         anchor="top"
         open={props.open}
         hideBackdrop
+        sx={{zIndex:"16"}}
 >
 <Box
     style={{backgroundColor:"#111111"}}
