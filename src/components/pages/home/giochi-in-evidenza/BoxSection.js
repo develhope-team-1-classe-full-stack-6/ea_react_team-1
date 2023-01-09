@@ -38,7 +38,7 @@ export default function BoxSection() {
             <h3>Giochi in evidenza</h3>
             <Grid container spacing={3}>
                 {boxes.map((item) => (
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid key={item.id} item xs={12} sm={6} md={4}>
                         <li>{item.box}</li>
                     </Grid>
                 ))}

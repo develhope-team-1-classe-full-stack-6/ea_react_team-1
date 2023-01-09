@@ -69,7 +69,7 @@ export default function EABox(props) {
       <img className='boxLogo' src={boxLogo} width="100%" height="100%" alt=""/>
       <div className='links'>
         {!!links ? links.map((item, index) => (
-          <a href={item.link}>{item.title}</a>
+          <a href={item.link} key={index}>{item.title}</a>
         )) : null } 
       </div>
     </BoxComponent>
