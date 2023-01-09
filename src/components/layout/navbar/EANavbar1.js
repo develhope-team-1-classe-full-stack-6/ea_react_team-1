@@ -5,30 +5,35 @@ import Toolbar from '@mui/material/Toolbar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Slide from '@mui/material/Slide';
 import OffcanvasTop from '../../components/offcanvasTop/OffcanvasTop';
 import { Typography, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import ButtonNav1Type1 from '../../components/buttonNav1/ButtonNav1Type1';
 import ButtonNav1Type2 from '../../components/buttonNav1/ButtonNav1Type2';
+import './EANavbar1.scss';
 
-function HideOnScroll(props) {
+function ElevationScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
     target: window ? window() : undefined,
   });
 
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
+  return React.cloneElement(children, {
+    sx: {top: trigger ? "-40px" : "0px",
+          transition:"all 0.30s ease",
+          height: "40px",
+          boxShadow: "none",
+          zIndex: "17",
+          backgroundColor: "#111111"},
+  });
 }
 
-HideOnScroll.propTypes = {
+ElevationScroll.propTypes = {
   children: PropTypes.element.isRequired,
   /**
    * Injected by the documentation to work in an iframe.
@@ -36,8 +41,6 @@ HideOnScroll.propTypes = {
    */
   window: PropTypes.func,
 };
-
-
 
 export default function EANavbar1(props) {
   const theme = useTheme();
@@ -61,17 +64,18 @@ export default function EANavbar1(props) {
 
   return (
     <div>
-      <HideOnScroll {...props}>
-        <AppBar sx={{ height: "40px", boxShadow: "none", zIndex: "9999", backgroundColor: "#111111" }}>
+
+      <ElevationScroll {...props}>
+        <AppBar>
           <Toolbar variant='dense'>
-            <Box sx={{ margin: "-10px 20px 0px 0px", display: "flex", justifyContent: "flex-end", width: "100%", gap: "40px" }} onClick={handleOpen} >
+            <Box sx={{ display: "flex", justifyContent: "flex-end", width: "100%", height:"100%", gap: "40px" }} onClick={handleOpen} >
               <ButtonNav1Type1 id="user" src='./assets/images/common/offcanvas/user-regular.svg' alt="User" style={{ width: "15px" }} />
               <ButtonNav1Type1 id="question" src='./assets/images/common/offcanvas/question-solid.svg' alt="Question" style={{ width: "12px" }} />
               <ButtonNav1Type1 src='./assets/images/common/offcanvas/ea_logo.svg' alt="EA Logo" style={{ width: "30px" }} />
             </Box>
           </Toolbar>
         </AppBar>
-      </HideOnScroll>
+      </ElevationScroll>
       <Toolbar />
       <OffcanvasTop open={open.user} render={(item) => { setOpen(item) }}>
         <Container maxWidth="sm" style={{ height: "100%", display: "flex" }}>

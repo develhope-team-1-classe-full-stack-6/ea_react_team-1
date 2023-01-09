@@ -18,18 +18,20 @@ function PagesContainer(props) {
                     setOpenAside(open)
                 }}/>
             </header>
-            <main>
-                <aside>
-                    <BoxAside open={openAside.aside1}/>
-                    <EAAsideMenu open={openAside.aside2}/>
-                </aside>
-                <article>
-                    {props.children}
-                </article>
-            </main>
-            <footer>
+            <div style={{marginTop:"56px"}}>
+                <main>
+                    <aside>
+                        <BoxAside open={openAside.aside1}/>
+                        <EAAsideMenu open={openAside.aside2}/>
+                    </aside>
+                    <article>
+                        {props.children}
+                    </article>
+                </main>
+                <footer>
 
-            </footer>
+                </footer>
+            </div>
         </div>
     );
 }
