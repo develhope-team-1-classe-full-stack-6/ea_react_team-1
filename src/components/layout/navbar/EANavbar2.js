@@ -22,7 +22,9 @@ function ElevationScroll(props) {
 
     return React.cloneElement(children, {
       sx: {top: trigger ? "0" : "40px",
-            transition:"all 0.30s ease"},
+            transition:"all 0.30s ease",
+            boxShadow: "none",
+            zIndex:"11"},
     });
   }
 
@@ -42,7 +44,6 @@ function EANavbar2(props) {
         <ElevationScroll {...props}>
             <AppBar
                 color="white"
-                sx={{ boxShadow: "none", zIndex:"11"}}
             >
                     <Toolbar disableGutters>
                         {/* icone */}
