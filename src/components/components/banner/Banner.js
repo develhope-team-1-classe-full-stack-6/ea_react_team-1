@@ -8,7 +8,8 @@ function Banner(props) {
         backgroundColor: props.background || "#6fb0d6",
         width:"100wv",
         minHeight:"120px",
-        display:"flex"
+        display:"flex",
+        paddingBlock:"15px"
     }
 
     const stylesContainer = {

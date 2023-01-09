@@ -1,6 +1,8 @@
 import { useState } from "react";
 import EAAsideMenu from "./aside/asideMenu/EAAsideMenu";
 import BoxAside from "./aside/boxAside/BoxAside";
+import BannerFooter from "./bannerFooter/BannerFooter";
+import Footer from "./footer/Footer";
 import EANavbar1 from "./navbar/EANavbar1";
 import EANavbar2 from "./navbar/EANavbar2";
 
@@ -32,9 +34,10 @@ function PagesContainer(props) {
                     <article>
                         {props.children}
                     </article>
+                    <BannerFooter/>
                 </main>
                 <footer>
-
+                    <Footer/>
                 </footer>
             </div>
         </div>

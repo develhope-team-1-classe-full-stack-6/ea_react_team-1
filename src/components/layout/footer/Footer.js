@@ -9,7 +9,7 @@ const Footer = () => {
   const md = useMediaQuery (theme.breakpoints.up('md'));
   const lg = useMediaQuery (theme.breakpoints.up('lg'));
   const xl = useMediaQuery (theme.breakpoints.up('xl'));
-  
+
 
   const MAIN_LINKS = ["Libreria dei Giochi", "Registrati", "Riscatta codice", "EA App", "Informazioni", "Accessibilità", "Aiuto"];
   const TC_LINKS = ["Note legali e privacy", "Accordo con l'utente", "Politica sulla privacy e sui cookie", "Aggiornamenti sui servizi online", "Termini di servizio di YouTube", "Norme sulla privacy di Google", "Cookie preferenze"];
@@ -112,7 +112,7 @@ const Footer = () => {
       flag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAGYktHRAD/AP8A/6C9p5MAAAEuSURBVChTpVK9SgNBEP7mNmcul4h24kmSB7AUfAEbsbGx8TVsU2gEwTewsbfxScRCCAo2Eg0YIsglISZ3udtdd9djUS8kgh8sOzszOz/fDHX8NYl/wMluCykEZBRDpmmmmY8fAWQUQUQhvN0dsGDdvBeBHbmVEy3IeApWr6IadiGHQ1C5DHIY0vazcYTjgIi+5G+wHPBxDzXOMWicon/eVKUtG4el7S2I3hvEewip7L+D2BZ0FFJZxlfXYGwVVCoZ7UqzgaB9Dz7qzqzABtAmTaB/eADO+5CTidEOjs/wWt8EqyhOZH5gtgXDQW0DwVMLo4tLTO9aSNSJb25BrgsUCvM50DBTEB/w9/aRPDyCv3RAnpdZZyO3SLoNJImaDwOprIuQWyRNJBWLf/oMAJ+5mHSXRuZmqAAAAABJRU5ErkJggg=="
     }
   ];
-  
+
   const FooterGrid = styled (Grid) ({
     backgroundColor: theme.palette.light.main,
     display: "flex",
@@ -140,7 +140,7 @@ const Footer = () => {
   });
 
   const LogoImg = styled ('img') ({
-    width: lg ? "64px" : "47px", 
+    width: lg ? "64px" : "47px",
     height:  lg ? "64px" : "47px"
   });
 
@@ -180,7 +180,7 @@ const Footer = () => {
 
   const PrivacyLink = styled (Typography) ({
     fontSize: "14px",
-    marginRight: "15px", 
+    marginRight: "15px",
     wordWrap: "break-word",
     '&:hover': {
       cursor: 'pointer'
@@ -199,16 +199,6 @@ const Footer = () => {
     minWidth: "120px",
     width: lg ? "120px" : md ? "40%" : sm ? "80%" : "80%",
     height: "70px"
-  });
-
-  const LanguageContainer = styled ('div') ({
-    backgroundColor: "#f3f3f3",
-    padding: lg ? "10px" : "auto",
-    width: lg ? "537px" : "auto",
-    height: lg ? "453px" : "auto",
-    display: lg ? "flex" : "auto",
-    flexDirection: lg ? "column" : "auto",
-    flexWrap: lg ? "wrap" : "auto"
   });
 
   const LanguageItem = styled (MenuItem) ({
@@ -293,9 +283,9 @@ const Footer = () => {
                 },
               }}
             >
-                
+
                 {PRICES.map(item => <LanguageItem value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
-              
+
             </Select>
           </DropdownFormControl>
 
@@ -350,8 +340,8 @@ const Footer = () => {
                 },
               }}
             >
-              {LANGUAGES.map(item => <LanguageItem value={item.name}><LanguageTypography>{item.name} <img style={{marginLeft: lg ? "5px" : "10px"}} src={item.flag}/></LanguageTypography></LanguageItem>)}
-              
+              {LANGUAGES.map(item => <LanguageItem value={item.name}><LanguageTypography>{item.name} <img style={{marginLeft: lg ? "5px" : "10px"}} src={item.flag} alt=""/></LanguageTypography></LanguageItem>)}
+
             </Select>
           </DropdownFormControl>
         </FormContainerGrid>
