@@ -18,7 +18,7 @@ function PagesContainer(props) {
                     setOpenAside(open)
                 }}/>
             </header>
-            <div style={{marginTop:"40px"}}>
+            <div style={{marginTop:"56px"}}>
                 <main>
                     <aside>
                         <BoxAside open={openAside.aside1}/>
