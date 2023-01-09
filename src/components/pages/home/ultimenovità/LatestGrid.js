@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
-import EACard from "../../../components/ea-card/EACard";
 import { cards } from "./EACard-database";
 
 
@@ -12,7 +11,7 @@ function LatestGrid(){
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                
+
             }}
         >
             <Grid container spacing={0}>
@@ -31,7 +30,7 @@ function LatestGrid(){
             </Grid>
         </Container>
     )
-    
+
 }
 
 export default LatestGrid
