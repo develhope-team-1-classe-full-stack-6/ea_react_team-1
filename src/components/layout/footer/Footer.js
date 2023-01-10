@@ -167,7 +167,7 @@ const Footer = () => {
   const FormContainerGrid = styled (Grid) ({
     justifyContent: lg ? "space-around" : "flex-start",
     height: "40%",
-    minHeight: lg ? "0px" : md ? "80px" : sm ? "150px" : "0px"
+    $minHeight: lg ? "0px" : md ? "80px" : sm ? "150px" : "0px"
   });
 
   const PrivacyLinkGrid = styled (Grid) ({
@@ -222,13 +222,13 @@ const Footer = () => {
 
 
   return (
-    <FooterGrid container>
-      <MainGrid container xs={11} lg={8} xl={8}>
+    <FooterGrid item container>
+      <MainGrid item container xs={11} lg={8} xl={8}>
         <ImgGrid item container xs={12} lg={1}>
           <LogoImg item alt="logo" src="https://media.contentapi.ea.com/content/dam/eacom/it-it/common/october-ea-ring.png"/>
         </ImgGrid>
         <MainLinkGrid item container xs={12} lg={6}>
-          {MAIN_LINKS.map((text) => (<MainLink item>{text}</MainLink>))}
+          {MAIN_LINKS.map((text) => (<MainLink key={Math.random()} item="true">{text}</MainLink>))}
         </MainLinkGrid>
         <FormContainerGrid item container xs={12} lg={5}>
           {/* Inizio parte dropdown da rivedere */}
@@ -236,6 +236,7 @@ const Footer = () => {
           <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "20px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
+              className="footerselect"
               value={price}
               onChange={handlePrice}
               displayEmpty
@@ -250,6 +251,9 @@ const Footer = () => {
                         xs: '#f3f3f3'},
                     width: {
                       lg: "537px"
+                    },
+                    transform: {
+                      lg: "translateY(-225px) !important"
                     },
                     padding: {
                       xs: "auto",
@@ -284,7 +288,7 @@ const Footer = () => {
               }}
             >
 
-                {PRICES.map(item => <LanguageItem value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
+                {PRICES.map(item => <LanguageItem key={Math.random()} value={item}><LanguageTypography>{item}</LanguageTypography></LanguageItem>)}
 
             </Select>
           </DropdownFormControl>
@@ -307,6 +311,9 @@ const Footer = () => {
                         xs: '#f3f3f3'},
                     width: {
                       lg: "537px"
+                    },
+                    transform: {
+                      lg: "translateY(-225px) !important"
                     },
                     padding: {
                       xs: "auto",
@@ -340,14 +347,14 @@ const Footer = () => {
                 },
               }}
             >
-              {LANGUAGES.map(item => <LanguageItem value={item.name}><LanguageTypography>{item.name} <img style={{marginLeft: lg ? "5px" : "10px"}} src={item.flag} alt=""/></LanguageTypography></LanguageItem>)}
+              {LANGUAGES.map(item => <LanguageItem key={Math.random()} value={item.name}><LanguageTypography>{item.name} <img style={{$marginLeft: lg ? "5px" : "10px"}} src={item.flag} alt=""/></LanguageTypography></LanguageItem>)}
 
             </Select>
           </DropdownFormControl>
         </FormContainerGrid>
         {/* Fine parte dropdown da rivedere */}
         <PrivacyLinkGrid item container xs={12} md={7} xl={5}>
-          {TC_LINKS.map((text) => (<PrivacyLink item>{text}</PrivacyLink>))}
+          {TC_LINKS.map((text) => (<PrivacyLink key={Math.random()}>{text}</PrivacyLink>))}
         </PrivacyLinkGrid>
         <CopyrightImgGrid item container xs={12} md={3}>
           <CopyrightImg alt="diritti" src="https://privacy-policy.truste.com/privacy-seal/seal?rid=2593a571-b03b-4951-9a22-c175bd66b351"/>
