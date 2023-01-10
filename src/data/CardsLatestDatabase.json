@@ -1,0 +1,14 @@
+[
+    {
+        "id": 0,
+        "card": {
+                "img":"./assets/images/components/ea-card/ea-year-in-gaming-2022.png",
+                "alt":"abstract image",
+                "link":"https://www.ea.com/news/year-in-gaming-2022",
+                "info":"EA Inc.",
+                "date":"15-dic-2022",
+                "title":"2022: un anno animato dal gioco",
+                "text":"Celebriamo il potere positivo dei legami creati con il gioco ripercorrendo il modo in cui i nostri giocatori hanno apprezzato i nostri giochi nel 2022"
+        }
+    }
+]
