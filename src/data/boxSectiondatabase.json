@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "links": {
+        "title": "Sito Ufficiale",
+       "link":"#"
+      },
+      "boxImage":"./assets/images/common/boxes/fifa23.jpg",
+      "boxLogo":"./assets/images/common/boxes/fifa23-logo-white-stacked.svg",
+      "logoWidth":""
+    }
+]
