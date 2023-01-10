@@ -35,7 +35,7 @@ const ButtonWrapper = styled(Box)({
 export default function BoxSection() {
     return(
         <BoxWrapper>
-            <h3>Giochi in evidenza</h3>
+            <h3>Giochi in evidenza</h3>   
             <Grid container spacing={3}>
                 {boxes.map((item) => (
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
