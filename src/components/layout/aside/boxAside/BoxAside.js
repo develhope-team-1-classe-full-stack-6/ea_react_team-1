@@ -3,11 +3,13 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import { Grid } from "@mui/material";
-import { bigBox, boxes } from "./data";
+import { bigBox } from "./data";
 import { Container } from "@mui/system";
 import { styled } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
 import '../aside.scss';
+import boxAsideDatabase from '../../../../data/boxAsideDatabase.json'
+import EABox from '../../../components/box/EABox';
 
 export default function BoxAside(props) {
   // Container styling
@@ -72,9 +74,16 @@ export default function BoxAside(props) {
           <Grid item xs={12} sm={12} md={12}>
             <li><a href="#">{bigBox.play}</a></li>
           </Grid>
-          {boxes.map((item,index) => (
+          {boxAsideDatabase.map((item,index) => (
               <Grid item xs={6} sm={6} md={6} key={index+item}>
-                <li><a href="#">{item.box}</a></li>
+                <a href="#">
+                  <EABox 
+                    variant={item.variant}
+                    boxImage={item.boxImage}
+                    boxLogo={item.boxLogo}
+                    logoWidth={item.logoWidth}
+                  />
+                </a>
               </Grid>
           ))}
         </Grid>
