@@ -2,6 +2,8 @@ import { Grid, useTheme, Select, MenuItem, FormControl, Typography, useMediaQuer
 import { styled } from "@mui/system";
 import { useState } from "react";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import data from "../../../data/footerDatabase.json";
+import "./footer.scss";
 
 const Footer = () => {
   const theme = useTheme();
@@ -11,9 +13,9 @@ const Footer = () => {
   const xl = useMediaQuery (theme.breakpoints.up('xl'));
 
 
-  const MAIN_LINKS = ["Libreria dei Giochi", "Registrati", "Riscatta codice", "EA App", "Informazioni", "Accessibilità", "Aiuto"];
-  const TC_LINKS = ["Note legali e privacy", "Accordo con l'utente", "Politica sulla privacy e sui cookie", "Aggiornamenti sui servizi online", "Termini di servizio di YouTube", "Norme sulla privacy di Google", "Cookie preferenze"];
-  const PRICES = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Slovenia", "Spain", "Sweden", "Switzerland"]
+  const MAIN_LINKS = data.MAIN_LINKS;
+  const TC_LINKS = data.TC_LINKS;
+  const PRICES = data.PRICES;
   const LANGUAGES = [
     {
       name: "United States",
