@@ -252,6 +252,9 @@ const Footer = () => {
                     width: {
                       lg: "537px"
                     },
+                    border: "3px solid lightgray",
+                    borderBottom: "none",
+                    boxShadow: "none",
                     transform: {
                       lg: "translateY(-225px) !important"
                     },
@@ -261,7 +264,7 @@ const Footer = () => {
                     },
                     height: {
                       xs: "auto",
-                      lg: "510px"
+                      lg: "514px"
                     },
                     '& .MuiMenuItem-root': {
                       marginRight: "0px",
@@ -315,6 +318,9 @@ const Footer = () => {
                     transform: {
                       lg: "translateY(-225px) !important"
                     },
+                    border: "3px solid lightgray",
+                    borderBottom: "none",
+                    boxShadow: "none",
                     padding: {
                       xs: "auto",
                       lg: "10px"
