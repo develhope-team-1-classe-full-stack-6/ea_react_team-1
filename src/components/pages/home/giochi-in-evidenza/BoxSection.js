@@ -28,13 +28,6 @@ const ButtonWrapper = styled(Box)({
     marginTop: "32px",
 });
 
-const links = [
-    {
-      title: "Sito ufficiale",
-      link: "#"
-    }
-]
-
 export default function BoxSection() {
     return(
         <BoxWrapper>
@@ -48,7 +41,7 @@ export default function BoxSection() {
                         boxImage={item.boxImage}
                         boxLogo={item.boxLogo}
                         logoWidth={item.logoWidth}   
-                        links={links}
+                        links={item.links}
                         />
                     </Grid>
                 ))}
