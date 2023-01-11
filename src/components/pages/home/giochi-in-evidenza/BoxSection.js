@@ -3,7 +3,8 @@ import { Container } from "@mui/system";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import CustomButton from "../../../components/button/CustomButton";
-import { boxes } from "./database";
+import boxSectiondatabase from '../../../../data/boxSectionDatabase.json';
+import EABox from "../../../components/box/EABox";
 
 const BoxWrapper = styled(Container)(({ theme }) => ({
     display: "flex",
@@ -21,25 +22,27 @@ const BoxWrapper = styled(Container)(({ theme }) => ({
             fontSize: "16px",
         }
     },
-    li:{
-        ...theme.typography.d1,
-        listStyle: "none",
-        fontSize: "18px"
-    }
-  }));
+}));
 
 const ButtonWrapper = styled(Box)({
     marginTop: "32px",
-  });
+});
 
 export default function BoxSection() {
     return(
         <BoxWrapper>
             <h3>Giochi in evidenza</h3>   
             <Grid container spacing={3}>
-                {boxes.map((item) => (
+                {boxSectiondatabase.map((item) => (
                     <Grid key={item.id} item xs={12} sm={6} md={4}>
-                        <li>{item.box}</li>
+                        <EABox
+                        variant={item.variant}
+                        overlay={item.overlay} 
+                        boxImage={item.boxImage}
+                        boxLogo={item.boxLogo}
+                        logoWidth={item.logoWidth}   
+                        links={item.links}
+                        />
                     </Grid>
                 ))}
             </Grid>
