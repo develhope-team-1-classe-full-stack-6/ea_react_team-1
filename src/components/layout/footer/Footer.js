@@ -232,7 +232,7 @@ const Footer = () => {
         </MainLinkGrid>
         <FormContainerGrid item container xs={12} lg={5}>
           {/* Inizio parte dropdown da rivedere */}
-          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "4%"}}>
+          <DropdownFormControl variant="standard" sx={{border: "3px solid lightgray", width: {xs: "80vw", md: "40vw", lg: "190px"}, borderRadius: "4%", "&.MuiInputBase-input": {"&:focus": {outline: "none !important"}}}}>
           <InputLabel sx={{width: {xs: "500px", lg: "170px"}, marginLeft: {xs: "10px", lg: "20px"}, marginTop: "7px", marginBottom: "5px"}} variant="standard"
             margin="dense" shrink><Typography sx={{fontSize: "20px", width: "180px", color: "gray !important"}}>Prezzi per regione</Typography></InputLabel>
             <Select
@@ -241,7 +241,7 @@ const Footer = () => {
               onChange={handlePrice}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{border: "none", marginTop: "25px !important", marginRight: "10px", paddingLeft: {xs: "10px", lg: "20px"}}}
+              sx={{border: "none", marginTop: "25px !important", marginRight: "10px", paddingLeft: {xs: "10px", lg: "20px"}, "&.MuiInputBase-input": {"&:focus": {outline: "none !important"}}}}
               IconComponent={KeyboardArrowDownIcon}
               disableUnderline
               MenuProps={{
@@ -353,7 +353,7 @@ const Footer = () => {
                 },
               }}
             >
-              {LANGUAGES.map(item => <LanguageItem key={Math.random()} value={item.name}><LanguageTypography>{item.name} <img style={{$marginLeft: lg ? "5px" : "10px"}} src={item.flag} alt=""/></LanguageTypography></LanguageItem>)}
+              {LANGUAGES.map(item => <LanguageItem key={Math.random()} value={item.name}><LanguageTypography>{item.name} <img style={{marginLeft: lg ? "5px" : "10px"}} src={item.flag} alt=""/></LanguageTypography></LanguageItem>)}
 
             </Select>
           </DropdownFormControl>
