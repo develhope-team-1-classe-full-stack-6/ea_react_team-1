@@ -1,9 +1,12 @@
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 import { Container } from "@mui/system";
-import { cards } from "./EACard-database";
+import CardsLatestDatabase from '../../../../data/CardsLatestDatabase.json'
+import EACard from "../../../components/ea-card/EACard";
 
 
 function LatestGrid(){
+    const matchesDownMd = useMediaQuery('(max-width: 767px)');
+    const matchesDownlg = useMediaQuery('(max-width: 1050px)');
     return(
         <Container
             maxWidth={'lg'}
@@ -14,17 +17,32 @@ function LatestGrid(){
 
             }}
         >
-            <Grid container spacing={0}>
-                {cards.map((item, index)=>
+            <Grid 
+                container 
+                columnSpacing={3.5} 
+                rowSpacing={matchesDownMd ? 0 :3.5}
+            >
+                {CardsLatestDatabase.map((item)=>
                     (
-                    <Grid item
+                    <Grid key={item.id} item
                     xs={12}
-                    sm={6}
-                    md={4}
-                    lg={4}
-                    key={index+item}
+                    sm={matchesDownMd ? 12 : 6}
+                    md={matchesDownlg? 6 : 4}   
+                    sx={{
+                        display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    }}                 
                 >
-                    <div>{item.card}</div>
+                    <EACard
+                        img={item.card.img}
+                        alt={item.card.alt}
+                        link={item.card.link}
+                        info={item.card.info}
+                        date={item.card.date}
+                        title={item.card.title}
+                        text={item.card.text}
+                    />
                 </Grid>
                     )
                 )}
