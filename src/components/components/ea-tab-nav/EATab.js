@@ -12,45 +12,46 @@ export default function EATab() {
   };
 
   return (
-    <div>
-        <Box sx={{           
+            <Box sx={{ 
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',                      
             }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="scrollable"
-            scrollButtons
-            allowScrollButtonsMobile
-            aria-label="scrollable force tabs example"
-            textColor=''
-          >
-            <Tab
-                disableRipple= 'true'
-                label="Notizie EA" 
-            />
-            <Tab
-                disableRipple= 'true'
-                label="EA Play" />
-            <Tab
-                disableRipple= 'true'
-                label="Fifa" />
-            <Tab
-                disableRipple= 'true'
-                label="F1" />
-            <Tab
-                disableRipple= 'true'
-                label="Apex Legends" />
-            <Tab
-                disableRipple= 'true'
-                label="The Sims 4" />
-            <Tab
-                disableRipple= 'true'
-                label="Battlefield" />
-            <Tab
-                disableRipple= 'true'
-                label="Inside EA"/>
-          </Tabs>
-        </Box>
-    </div>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons
+                allowScrollButtonsMobile
+                aria-label="scrollable force tabs example"
+                textColor=''
+              >
+                <Tab
+                    disableRipple= 'true'
+                    label="Notizie EA" 
+                />
+                <Tab
+                    disableRipple= 'true'
+                    label="EA Play" />
+                <Tab
+                    disableRipple= 'true'
+                    label="Fifa" />
+                <Tab
+                    disableRipple= 'true'
+                    label="F1" />
+                <Tab
+                    disableRipple= 'true'
+                    label="Apex Legends" />
+                <Tab
+                    disableRipple= 'true'
+                    label="The Sims 4" />
+                <Tab
+                    disableRipple= 'true'
+                    label="Battlefield" />
+                <Tab
+                    disableRipple= 'true'
+                    label="Inside EA"/>
+              </Tabs>
+            </Box>          
   );
 }
