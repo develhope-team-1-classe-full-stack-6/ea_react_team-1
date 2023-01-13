@@ -1,10 +1,12 @@
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 import { Container } from "@mui/system";
 import CardsLatestDatabase from '../../../../data/CardsLatestDatabase.json'
 import EACard from "../../../components/ea-card/EACard";
 
 
 function LatestGrid(){
+    const matchesDownMd = useMediaQuery('(max-width: 767px)');
+    const matchesDownlg = useMediaQuery('(max-width: 1050px)');
     return(
         <Container
             maxWidth={'lg'}
@@ -16,14 +18,12 @@ function LatestGrid(){
             }}
         >
             <Grid container spacing={0}>
-                {CardsLatestDatabase.map((item, index)=>
+                {CardsLatestDatabase.map((item)=>
                     (
                     <Grid key={item.id} item
                     xs={12}
-                    sm={6}
-                    md={4}
-                    lg={4}
-                    
+                    sm={matchesDownMd ? 12 : 6}
+                    md={matchesDownlg? 6 : 4}                    
                 >
                     <EACard
                         img={item.card.img}

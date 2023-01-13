@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, styled, useMediaQuery } from '@mui/material';
 
 function EACard(props) {
-
+  
   //theme breakpoints 
-  const mqsm = useMediaQuery((theme) => theme.breakpoints.down('sm'))
+  const mqsm = useMediaQuery('(max-width: 767px)');
   // const mqmd = useMediaQuery((theme) => theme.breakpoints.down('md'))
 
   //original breakpoint 
