@@ -3,11 +3,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, styled, useMediaQuery } from '@mui/material';
+import './EACard.scss'
 
 function EACard(props) {
-
+  
   //theme breakpoints 
-  const mqsm = useMediaQuery((theme) => theme.breakpoints.down('sm'))
+  const mqsm = useMediaQuery('(max-width: 767px)');
   // const mqmd = useMediaQuery((theme) => theme.breakpoints.down('md'))
 
   //original breakpoint 
@@ -43,15 +44,6 @@ function EACard(props) {
 
 
   return (
-
-    <div 
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        maxWidth: '1456px',
-      }}
-    >
         <StyledCard 
           className='styledCard'
           style= {
@@ -127,7 +119,6 @@ function EACard(props) {
             </a>
     
         </StyledCard>
-    </div>
   );
 }
 
