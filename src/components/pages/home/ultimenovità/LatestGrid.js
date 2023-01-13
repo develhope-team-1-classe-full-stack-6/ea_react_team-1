@@ -17,13 +17,22 @@ function LatestGrid(){
 
             }}
         >
-            <Grid container spacing={0}>
+            <Grid 
+                container 
+                columnSpacing={3.5} 
+                rowSpacing={matchesDownMd ? 0 :3.5}
+            >
                 {CardsLatestDatabase.map((item)=>
                     (
                     <Grid key={item.id} item
                     xs={12}
                     sm={matchesDownMd ? 12 : 6}
-                    md={matchesDownlg? 6 : 4}                    
+                    md={matchesDownlg? 6 : 4}   
+                    sx={{
+                        display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    }}                 
                 >
                     <EACard
                         img={item.card.img}
