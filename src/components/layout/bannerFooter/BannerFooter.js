@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import styled from "styled-components";
 import Banner from "../../components/banner/Banner";
