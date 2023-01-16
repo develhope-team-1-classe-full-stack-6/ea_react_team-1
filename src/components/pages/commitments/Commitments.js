@@ -11,7 +11,7 @@ const Commitments = () => {
   const xl = useMediaQuery (theme.breakpoints.up('xl'));
 
   const Hero = styled (Box) ({
-    height: xl ? "16.0vw" : lg ? "18.5vw" : md ? "23.5vw" : sm ? "31.2vw" : "35vw",
+    height: xl ? "15.0vw" : lg ? "18.5vw" : md ? "23.5vw" : sm ? "31.2vw" : "35vw",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
