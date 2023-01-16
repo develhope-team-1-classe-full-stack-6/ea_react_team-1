@@ -1,4 +1,3 @@
-import PagesContainer from "../../../layout/PagesContainer";
 import EABox from "../../../components/box/EABox";
 import Box from '@mui/material/Box';
 import { Container } from "@mui/system";
@@ -7,15 +6,7 @@ import { Grid } from "@mui/material";
 import CustomButton from "../../../components/button/CustomButton";
 import data from '../../../../data/latestGamesDatabase.json';
 
-export function LatestGames(props) {
-  const {videoHero = "./assets/videos/games/video-hero-ultimi-giochi.mp4"} = props;
-
-  const Hero = styled(Box)({
-    video: {
-      width: "100%",
-      height: "100%",
-    },
-  });
+export default function LatestGames(props) {
 
   const BoxWrapper = styled(Container)(({ theme }) => ({
     display: "flex",
@@ -40,11 +31,7 @@ export function LatestGames(props) {
   });
 
   return (
-    <PagesContainer>
-      <Hero>
-        <video src={videoHero} muted autoPlay loop />
-      </Hero>
-      <BoxWrapper>
+    <BoxWrapper>
         <h3>Ultimi giochi</h3>
         <Grid container spacing={3}>
           {data.map((item) => (
@@ -63,7 +50,6 @@ export function LatestGames(props) {
         <ButtonWrapper>
           <CustomButton color="white">Vedi tutti i giochi</CustomButton>
         </ButtonWrapper>
-      </BoxWrapper>
-    </PagesContainer>
+    </BoxWrapper>
   );
 }
