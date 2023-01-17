@@ -66,6 +66,12 @@ function BannerFooter (props) {
             paddingLeft: "20px",
             "&:first-of-type":{
                 paddingLeft: "0",
+            },
+            img:{
+                "&:hover":{
+                    transform: "scale(1.2)",
+                    transition: "all 100ms ease-out"
+                }
             }
         },
         p:{
