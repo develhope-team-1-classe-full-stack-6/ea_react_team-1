@@ -1,10 +1,8 @@
-import EABox from "../../../components/box/EABox";
-import Box from '@mui/material/Box';
 import { Container } from "@mui/system";
 import { styled } from '@mui/material';
 import { Grid } from "@mui/material";
-import CustomButton from "../../../components/button/CustomButton";
-import data from '../../../../data/latestGamesDatabase.json';
+import data from '../../../../data/ComingSoonDatabase.json';
+import CardComingSoon from "../../../layout/cardComingSoon/CardComingSoon";
 
 export default function ComingSoon() {
 
@@ -29,8 +27,19 @@ export default function ComingSoon() {
   return (
     <BoxWrapper>
         <h3>Prossimamente</h3>
-        <Grid container spacing={3}>
-      
+        <Grid container spacing={4}>
+        {data.map((item) => (
+            <Grid key={item.id} item xs={12} sm={6} md={6}>
+              <CardComingSoon
+                srcImg={item.srcImg}
+                title={item.title} 
+                date={item.date}
+                platform={item.platform}
+                genere={item.genere}   
+                href={item.href}
+              />
+            </Grid>
+          ))}
         </Grid>
     </BoxWrapper>
   );

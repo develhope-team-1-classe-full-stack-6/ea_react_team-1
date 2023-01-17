@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 import CustomButton from "../../../components/button/CustomButton";
 import data from '../../../../data/latestGamesDatabase.json';
 
-export default function LatestGames(props) {
+export default function LatestGames() {
 
   const BoxWrapper = styled(Container)(({ theme }) => ({
     display: "flex",
