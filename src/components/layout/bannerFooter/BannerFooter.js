@@ -86,7 +86,7 @@ function BannerFooter (props) {
             {matchesDownMd && <hr/>}
             <Icons>
                 <Typography>
-                    <p>Partecipa alla conversazione</p>
+                    Partecipa alla conversazione
                 </Typography>
                 <div>
                 {icons.map((item, index) => (
