@@ -1,0 +1,28 @@
+.coming-soon-card-wrapper{
+  .coming-soon-flex{
+    padding: 8px 0;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+  
+  .coming-soon-border{
+    border-bottom: 1px solid var(--gray);
+    @media (max-width: 767px) {
+      border: none;
+    }
+  }
+
+  p{
+    margin-bottom: 0;
+  }
+
+  .coming-soon-responsive-width{
+    width: 75%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+  
