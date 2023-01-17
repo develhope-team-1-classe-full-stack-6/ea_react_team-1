@@ -22,7 +22,7 @@ function CardComingSoon(props) {
                 <div className="h6 w-75 text-orange"><p>{props.genere}</p></div>
             </div>
             <div className="mt-4">
-                <a href={props.href}><CustomButton color={"theme.grey.main"}>Sito ufficiale</CustomButton></a>
+                <a href={props.href}><CustomButton color={"black"}>Sito ufficiale</CustomButton></a>
             </div>
         </div>
     );
