@@ -57,10 +57,10 @@ function LatestGrid(){
                 position: 'relative',
             }}>
                 <hr style={{
-                    top: '-2px',
+                    top: '-18px',
                     zIndex: '-1',
-                    backgroundColor: 'rgb(233, 233, 233)',                   
-                    border: '1px solid rgb(233, 233, 233)',
+                    backgroundColor: 'gray',                   
+                    border: '2px solid gray',
                     width: '100vw',
                     position: 'absolute',
                     left: '0',
