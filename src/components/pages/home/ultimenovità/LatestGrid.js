@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { Container } from "@mui/system";
 import styled from "styled-components";
-import CardsLatestDatabase from '../../../../data/CardsLatestDatabase.json'
+import CardsLatestDatabase from '../../../../data/CardsLatestNewsDatabase.json'
 import CustomButton from "../../../components/button/CustomButton";
 import EACard from "../../../components/ea-card/EACard";
 import EATab from "../../../components/ea-tab-nav/EATab";
