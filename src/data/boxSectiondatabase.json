@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "variant": "up",
+      "overlay": "linear-gradient(90deg, #001c9d, #ff4747)",
+      "links": [{
+        "title": "Sito Ufficiale",
+        "link":"#"
+      }],
+      "boxImage":"./assets/images/common/boxes/fifa23.jpg",
+      "boxLogo":"./assets/images/common/boxes/fifa23-logo-white-stacked.svg",
+      "logoWidth":""
+    },
+    {
+      "id": 2,
+      "variant": "up",
+      "overlay": "linear-gradient(90deg, #001c9d, #ff4747)",
+      "links": [{
+        "title": "Sito Ufficiale",
+        "link":"#"
+      }],
+      "boxImage":"./assets/images/common/boxes/apexmobile.jpg",
+      "boxLogo":"./assets/images/common/boxes/apex-mobile-logo.svg",
+      "logoWidth":"70px"
+    },
+    {
+      "id": 3,
+      "variant": "up",
+      "overlay": "linear-gradient(90deg, #001c9d, #ff4747)",
+      "links": [{
+        "title": "Sito Ufficiale",
+        "link":"#"
+      }],
+      "boxImage":"./assets/images/common/boxes/f122.png",
+      "boxLogo":"./assets/images/common/boxes/f122-gamebox.svg",
+      "logoWidth":"160px"
+    },
+    {
+      "id": 4,
+      "variant": "up",
+      "overlay": "linear-gradient(90deg, #001c9d, #ff4747)",
+      "links": [{
+        "title": "Sito Ufficiale",
+        "link":"#"
+      }],
+      "boxImage":"./assets/images/common/boxes/battlefield2042.jpg",
+      "boxLogo":"./assets/images/common/boxes/battlefield-2042-mono-logo-svg.svg",
+      "logoWidth":"160px"
+    },
+    {
+      "id": 5,
+      "variant": "up",
+      "overlay": "linear-gradient(90deg, #001c9d, #ff4747)",
+      "links": [{
+        "title": "Sito Ufficiale",
+        "link":"#"
+      }],
+      "boxImage":"./assets/images/common/boxes/apexlegends.jpg",
+      "boxLogo":"./assets/images/common/boxes/apex-legends-mono-logo.svg",
+      "logoWidth":"100px"
+    },
+    {
+      "id": 6,
+      "variant": "up",
+      "overlay": "linear-gradient(90deg, #001c9d, #ff4747)",
+      "links": [{
+        "title": "Sito Ufficiale",
+        "link":"#"
+      }],
+      "boxImage":"./assets/images/common/boxes/sims4.jpg",
+      "boxLogo":"./assets/images/common/boxes/game-box-logo-thesims4-refresh.svg",
+      "logoWidth":"160px"
+    }
+]

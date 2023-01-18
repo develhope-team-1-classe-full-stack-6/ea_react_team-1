@@ -6,67 +6,44 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EANavbarMenu from '../../components/menu/EANavbarMenu';
+import pages from '../../../data/pages.json';
+import { useScrollTrigger } from '@mui/material';
+import PropTypes from 'prop-types';
+function ElevationScroll(props) {
+    const { children, window } = props;
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+      disableHysteresis: true,
+      threshold: 0,
+      target: window ? window() : undefined,
+    });
 
-const pages = [
-    {
-        id: 0,
-        title: "Giochi",
-        menu: [
-            {
-                subtitle: "ESPLORA I GIOCHI",
-                items: ["Ultimi giochi", "Prossimamente", "Giochi gratuiti", "EA SPORTS", "EA Originals", "Libreria dei giochi"]
-            },
-            {
-                subtitle: "PIATTAFORME",
-                items: ["PC", "PlayStation®5", "Xbox Series X", "Nintendo Switch™", "Cellulari"]
-            }
-        ]
-    },
-    {
-        id: 1,
-        title: "Altre esperienze",
-        menu: [
-            {
-                items: ["EA Play", "l'EA app", "Competizioni videoludiche", "Diretta di EA Play", "Test di gioco"]
-            },
-        ]
-    },
-    {
-        id: 2,
-        title: "Informazioni",
-        menu: [
-            {
-                items: ["Società", "EA Studi", "Lavora con noi", "La nostra tecnologia", "EA Partners", "Notizie", "Inside EA"]
-            },
-        ]
-    },
-    {
-        id: 3,
-        title: "impegni",
-        menu: [
-            {
-                items: ["I nostri impegni", "Gioco positivo", "Diversità e inclusione", "Impatto sociale", "Persone e cultura", "Ambiente"]
-            },
-        ]
-    },
-    {
-        id: 4,
-        title: "Risorse",
-        menu: [
-            {
-                items: ["Aiuto", "Forum", "Filtro famiglia", "Accessibilità", "Stampa", "Investitori"]
-            },
-        ]
-    }
-]
+    return React.cloneElement(children, {
+      sx: {top: trigger ? props.aside.aside1 || props.aside.aside2 ? "40px": "0px" : "40px",
+            transition:"all 0.30s ease",
+            boxShadow: "none",
+            zIndex:"11"},
+    });
+  }
 
-function EANavbar() {
+  ElevationScroll.propTypes = {
+    children: PropTypes.element.isRequired,
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+  };
+
+function EANavbar2(props) {
 
     return (
-        <>
-            <AppBar position="static"
+
+        <ElevationScroll {...props}>
+            <AppBar
                 color="white"
-                sx={{ boxShadow: "none" }}
             >
                     <Toolbar disableGutters>
                         {/* icone */}
@@ -75,7 +52,10 @@ function EANavbar() {
                                 size="large"
                                 edge="end"
                                 disableRipple
-                                sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s" }}}
+                                sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transform:"scale(1.2)",transition:"all 0.25s" }}}
+                                onClick={()=>{
+                                    props.render({aside1:true, aside2:false})
+                                }}
                             >
                                 <MoreVertIcon sx={{fontSize:"2rem"}}/>
                             </IconButton>
@@ -84,6 +64,9 @@ function EANavbar() {
                                 edge="end"
                                 disableRipple
                                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'dark.main', transition:"all 0.25s", '&:hover': { color: 'orange.main', transition:"all 0.25s"}}}
+                                onClick={()=>{
+                                    props.render({aside1:false, aside2:true})
+                                }}
                             >
                                 <MenuIcon sx={{fontSize:"2rem"}}/>
                             </IconButton>
@@ -102,8 +85,7 @@ function EANavbar() {
 
                     </Toolbar>
             </AppBar>
-            <Box sx={{background:"darkgreen", height: "100vh"}}></Box>
-        </>
+            </ElevationScroll>
     );
 }
-export default EANavbar;
+export default EANavbar2;

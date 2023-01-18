@@ -1,0 +1,166 @@
+.form-wrapper {
+    div {
+        div {
+            @media screen and (min-width:992px) {
+                flex: 1 1 50%;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .form {
+            .form-floating {
+                height: 60px;
+                border-radius: 3px;
+                border: 2px solid #000;
+                outline:2px solid transparent;
+                &:hover {
+                    border: 2px solid transparent;
+                    outline:2px solid #000;
+                }
+
+                .form-control {
+                    border: none;
+                    box-shadow: none;
+                    padding-left: 20px;
+                    background-color: var(--transparent);
+                }
+
+                input[type="text"].form-control:focus {
+                    &::placeholder {
+                        color: #919191;
+                    }
+                }
+
+                label {
+                    color: #919191;
+                    margin-left: 5px;
+                    font-family: "ElectronicArtsText", Verdana, Helvetica, Arial, sans-serif;
+                    font-weight: normal;
+                }
+
+            }
+
+            div:nth-child(2) {
+                div {
+                    @media screen and (min-width:768px) {
+                        flex: 1 1 50%;
+                    }
+
+                    .form-select {
+                        height: 60px;
+                        border-radius: 0px;
+                        box-shadow: none;
+                        padding: 0px;
+                        position: relative;
+                        cursor: pointer;
+                        border-radius: 3px;
+                        background-color: var(--transparent);
+                        border: 2px solid #000;
+                        outline:2px solid transparent;
+                        transition: all 0.05s;
+                        &:hover {
+                            border: 2px solid transparent;
+                            outline:2px solid #000;
+                            transition: all 0.05s;
+                        }
+
+                        &>div {
+                            position: absolute;
+                            padding: 0rem 0.75rem;
+
+                            p {
+                                margin: 0;
+                                margin-left: 5px;
+                            }
+
+                            .label-select {
+                                margin-top: 6px;
+                                font-size: 11px;
+                                color: #afafaf;
+                                font-family: "ElectronicArtsText", Verdana, Helvetica, Arial, sans-serif;
+                                font-weight: normal;
+                            }
+
+                            #display-lang {
+                                font-size: 16px;
+                            }
+                        }
+
+                        &:not(:focus) {
+                            ul {
+                                display: none;
+                            }
+                        }
+
+                        ul {
+                            transform: translate(-3px, -3px);
+                            display: block;
+                            width: 102%;
+                            height: calc(60px * 5);
+                            position: absolute;
+                            background-color: white;
+                            overflow-y: scroll;
+                            list-style-type: none;
+                            padding-inline: 1.5em;
+                            border: 3px solid black;
+                            border-radius: 3px;
+
+                            li {
+                                height: 60px;
+                                display: flex;
+                                align-items: center;
+                                transition: all 0.25s;
+
+                                &:not(:last-child) {
+                                    border-bottom: 2px solid #c5c5c5;
+                                }
+
+                                &:hover p {
+                                    transform: translateX(10px);
+                                    transition: all 0.25s;
+                                }
+
+                                p {
+                                    margin: 0;
+                                }
+
+                                .fa-solid.fa-check {
+                                    display: none;
+                                }
+
+                                &.selected {
+                                    .fa-solid.fa-check {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-check {
+                .form-check-input {
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid black;
+                    border-radius: 3px;
+                }
+
+                .form-check-label {
+                    margin-left: 10px;
+                    font-size: 16px;
+                    font-weight: normal;
+
+                    a {
+                        color: var(--violet);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

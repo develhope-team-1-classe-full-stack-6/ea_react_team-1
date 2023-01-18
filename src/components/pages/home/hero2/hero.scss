@@ -1,0 +1,13 @@
+.hero {
+
+    picture {
+        display: flex;
+        img {
+            width: 100vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        height: 140vw;
+    }
+}

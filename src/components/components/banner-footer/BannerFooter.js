@@ -45,7 +45,6 @@ export function BannerFooter() {
     }
 
     const linkIcons = {
-        // width: (medium? '30px' : '35px') || (medium && isHover? '35px' : '30px') ,
         width: medium && isHover? '35px' : '30px' || !medium && isHover? '40px' : '35px' ,
         textAlign: medium? 'left' : 'center',
     }

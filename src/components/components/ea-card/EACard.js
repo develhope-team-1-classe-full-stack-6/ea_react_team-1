@@ -3,22 +3,26 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, styled, useMediaQuery } from '@mui/material';
+import './EACard.scss'
 
 function EACard(props) {
-
+  
   //theme breakpoints 
-  // const mq = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const mqsm = useMediaQuery('(max-width: 767px)');
+  // const mqmd = useMediaQuery((theme) => theme.breakpoints.down('md'))
 
   //original breakpoint 
-  const mq = useMediaQuery('(max-width: 767px)');
+  // const mq = useMediaQuery('(max-width: 767px)');
 
 
   const StyledCard = styled(CardActionArea)({
     
       margin: '20px 20px',
-      width: mq ? '90%' : '24%',
-      minWidth: '310px',
-      height: 'auto',
+      width: mqsm ? '90%' : '354px',
+      aspectRatio: 2/1,
+      maxHeight: '500px',
+      overflow: 'clip',
+      // height: 'auto',
       borderRadius: '0%',
       textDecoration: 'none',
       cursor: 'pointer',
@@ -29,85 +33,104 @@ function EACard(props) {
       '&:hover': {
         transform: 'translateY(-12px)',
         boxShadow: '0px 20px 30px rgba(0, 0, 0, 0.7)',
+      },
+
+      a: {
+        textDecoration: 'none',
+        color: 'inherit',
       }
   
     });
 
 
   return (
-
-    <div 
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        maxWidth: '1456px'
-      }}
-    >
-        <StyledCard className='styledCard'>
-          <CardActionArea>
+        <StyledCard 
+          className='styledCard'
+          style= {
+            {
+              backgroundColor: `${props.backgroundColor}`
+            }
+          }
+        >
+          
             <CardMedia style={{
-              display: mq ? 'none' : 'show'
+              display: mqsm ? 'none' : 'show'
             }}
               component="img"
               height="200"
               image={props.img}
-              alt="it_takes_two_banner"
+              alt={props.alt}
             />
-            <CardContent
-              style={{
-                minHeight: mq ? 'auto' :'320px',
-              }}
+            <a 
+              href={props.link}
             >
-                <div 
-                  className="spanWrap" 
+              <CardContent
+                style={{
+                  minHeight: mqsm ? 'auto' :'320px',
+                }}
+              >
+                  <div 
+                    className="spanWrap" 
+                    style={{
+                      display: 'flex', 
+                      flexDirection: mqsm ? 'column' : 'row',
+                      justifyContent: mqsm ? 'center' : 'start',
+                      alignItems: 'center', 
+                      padding: '.5rem 0' }}
+                  >
+                      <Typography 
+                        variant='subtitle1' 
+                        color='orange.main' 
+                        fontWeight='bold' 
+                        marginRight='1rem'
+                      >
+                          {props.info}
+                      </Typography>
+                      <Typography 
+                        variant='subtitle1' 
+                        fontWeight='bold'
+                      >
+                          {props.date}
+                      </Typography>
+                  </div>
+                <Typography 
+                  color={props.titleColor}
+                  gutterBottom 
+                  variant="h5" 
+                  component="div" 
+                  fontWeight='bold'
                   style={{
-                    display: 'flex', 
-                    flexDirection: mq ? 'column' : 'row',
-                    justifyContent: mq ? 'center' : 'start',
-                    alignItems: 'center', 
-                    padding: '.5rem 0' }}
+                    textAlign: mqsm ? 'center' : 'inherit',
+                  }}
                 >
-                    <Typography 
-                      variant='subtitle1' 
-                      color='orange.main' 
-                      fontWeight='bold' 
-                      marginRight='1rem'
-                    >
-                        {props.info}
-                    </Typography>
-                    <Typography 
-                      variant='subtitle1' 
-                      fontWeight='bold'
-                    >
-                        {props.date}
-                    </Typography>
-                </div>
-              <Typography 
-                gutterBottom 
-                variant="h5" 
-                component="div" 
-                fontWeight='bold'
-                style={{
-                  textAlign: mq ? 'center' : 'inherit',
-                }}
-              >
-                {props.title}
-              </Typography>
-              <Typography 
-                variant="h6" 
-                color="text.secondary"
-                style={{
-                  display: mq ? 'none' : 'show',
-                }}
-              >
-                {props.text}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
+                  {props.title}
+                </Typography>
+                <Typography 
+                  variant='h6'
+                  color="text.secondary"
+                  style={{
+                    display: mqsm ? 'none' : 'show', 
+                    whiteSpace: "pre-line"
+                  }}
+                >
+                  {props.text}
+                </Typography>
+              </CardContent>
+            </a>
+    
         </StyledCard>
-    </div>
   );
 }
 
 export default EACard
+
+EACard.defaultProps = {
+  backgroundColor: '',
+  img: '',
+  alt: 'card image',
+  info: 'electronics arts inc.',
+  date:'dd-mmm-yyyy',
+  title: 'This is a Fancy Title',
+  titleColor: '',
+  text: 'This is a Fancy Tex',
+}

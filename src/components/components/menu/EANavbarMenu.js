@@ -54,6 +54,7 @@ function EAMenuStyle() {
 
     const styleItemMenu = {
         position: "absolute",
+        zIndex:"16",
         fontWeight: "lighter",
         transformOrigin: "top",
         transform: hover ? "scaleY(1)" : "scaleY(0)",

@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "srcImg": "./assets/images/pages/coming-soon/deadspace-3840x2160.jpg.adapt.crop16x9.1455w.jpg",
+      "title": "Dead Space",
+      "date":"27 gennaio 2023",
+      "platform":"PC, PlayStation®5, Xbox Series X|S",
+      "genere":"Horror",
+      "href":"https://www.ea.com/it-it/games/dead-space/dead-space"
+    },
+    {
+      "id": 2,
+      "srcImg":"./assets/images/pages/coming-soon/wild-hearts-featured-image-16x9.jpg.adapt.crop16x9.1455w.jpg",
+      "title": "WILD HEARTS™",
+      "date":"17 febbraio 2023",
+      "platform":"PC, PlayStation®5, Xbox Series X|S",
+      "genere":"Azione, Gioco di ruolo (GDR)",
+      "href":"https://www.ea.com/it-it/games/wild-hearts/wild-hearts"
+    },
+    {
+      "id": 3,
+      "srcImg":"./assets/images/pages/coming-soon/swj-survivor-featured-image-16x9.jpg.adapt.crop16x9.1455w.jpg",
+      "title": "STAR WARS Jedi: Survivor™",
+      "date":"17 marzo 2023",
+      "platform":"PC, PlayStation®5, Xbox Series X|S",
+      "genere":"Azione, Avventura",
+      "href":"https://www.ea.com/it-it/games/starwars/jedi/jedi-survivor"
+    },
+    {
+      "id": 4,
+      "srcImg":"./assets/images/pages/coming-soon/final-immortals-16x9.jpg.adapt.crop16x9.1455w.jpg",
+      "title": "Immortals Of Aveum",
+      "date":"2023",
+      "platform":"PC, PlayStation®5, Xbox Series X|S",
+      "genere":"Fuoco",
+      "href":"https://www.ea.com/it-it/games/immortals-of-aveum/immortals-of-aveum"
+    },
+    {
+      "id": 5,
+      "srcImg":"./assets/images/pages/coming-soon/ea-sports-pga-tour-coming-soon.jpg.adapt.crop16x9.1455w.jpg",
+      "title": "EA SPORTS PGA TOUR",
+      "date":"Primavera 2023",
+      "platform":"",
+      "genere":"",
+      "href":"https://www.ea.com/games/ea-sports-pga-tour"
+    }
+]
