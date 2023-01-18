@@ -1,0 +1,23 @@
+.css-1aquho2-MuiTabs-indicator {
+    background-color: red !important;
+    transition-duration: 100ms !important;
+}
+
+.css-g4zyvf-MuiButtonBase-root-MuiTab-root {
+    text-transform: none !important;
+    font-size: 1.2rem !important;
+    
+    
+    &:hover{
+        background-color: rgb(233, 233, 233) !important;  
+    }
+    
+    &:focus {
+        background-color: rgb(233, 233, 233) !important;
+    }
+}
+
+.css-ptiqhd-MuiSvgIcon-root {
+    color: red;
+}
+
