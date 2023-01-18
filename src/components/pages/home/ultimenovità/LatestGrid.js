@@ -60,7 +60,7 @@ function LatestGrid(){
                     top: '-18px',
                     zIndex: '-1',
                     backgroundColor: 'gray',                   
-                    border: '2px solid gray',
+                    border: '1.5px solid gray',
                     width: '100vw',
                     position: 'absolute',
                     left: '0',
