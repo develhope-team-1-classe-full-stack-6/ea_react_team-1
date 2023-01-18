@@ -7,6 +7,7 @@ import EACard from "../../../components/ea-card/EACard";
 import EATab from "../../../components/ea-tab-nav/EATab";
 
 
+
 const LatestWrapper = styled(Container)(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
@@ -53,19 +54,6 @@ function LatestGrid(){
                 Ultime Novità
             </Typography>
             <EATab/>
-            <div style={{
-                position: 'relative',
-            }}>
-                <hr style={{
-                    top: '-18px',
-                    zIndex: '-1',
-                    backgroundColor: 'gray',                   
-                    border: '1.5px solid gray',
-                    width: '100vw',
-                    position: 'absolute',
-                    left: '0',
-                }}/>
-            </div>
             <Container
                 maxWidth={'lg'}
                 style={{
@@ -81,6 +69,7 @@ function LatestGrid(){
                     columnSpacing={3.5} 
                     rowSpacing={matchesDownMd ? 0 :3.5}
                 >
+                    
                     {CardsLatestDatabase.map((item)=>
                         (
                         <Grid key={item.id} item
