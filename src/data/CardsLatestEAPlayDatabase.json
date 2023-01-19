@@ -1,0 +1,79 @@
+[
+    {
+        "id": 0,
+        "card": {
+                "img":"./assets/images/pages/home/latest_new_images/EA_play_section_images/01_Massive_Effect_first_card.jpg",
+                "alt":"immagine astratta",
+                "link":"https://www.ea.com/it-it/ea-play/news/mass-effect-legendary-edition-ea-play-pro",
+                "info":"EA Inc.",
+                "date":"14-mag-2021",
+                "title":"Gioca a Mass Effect™ Legendary Edition con EA Play* Pro",
+                "text":"Vivi la saga cinematografica ora rimasterizzata e ottimizzata per il 4K Ultra HD"
+        }
+    },
+
+    {
+        "id": 1,
+        "card": {
+                "img":"./assets/images/pages/home/latest_new_images/EA_play_section_images/02_FIFA_21_second_card.jpg",
+                "alt":"immagine di fifa 21",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-21/news/get-more-fifa21-with-ea-play",
+                "info":"FIFA",
+                "date":"3-mag-2021",
+                "title":"Ottieni di più da FIFA 21 con EA Play - Sito ufficiale EA SPORTS",
+                "text":"FIFA 21 è ora disponibile in The Play List con EA Play."
+        }
+    },
+
+    {
+        "id": 2,
+        "card": {
+                "img":"./assets/images/pages/home/latest_new_images/EA_play_section_images/01_Massive_Effect_first_card.jpg",
+                "alt":"immagine astratta",
+                "link":"https://www.ea.com/it-it/ea-play/news/ea-play-spotlight-april2021",
+                "info":"EA Inc.",
+                "date":"1-apr-2021",
+                "title":"In evidenza su EA Play - Aprile 2021",
+                "text":"Scopri le nuove ricompense e i giochi ora disponibili con il tuo abbonamento EA Play."
+        }
+    },
+
+    {
+        "id": 3,
+        "card": {
+                "img":"./assets/images/pages/home/latest_new_images/EA_play_section_images/03_EAPlay_third_card.jpg",
+                "alt":"immagine gamepass",
+                "link":"https://www.ea.com/it-it/ea-play/news/ea-app-open-beta",
+                "info":"EA Inc.",
+                "date":"18-mar-2021",
+                "title":"EA Play è ora disponibile su Xbox Game Pass per PC tramite EA app",
+                "text":"EA app, la nostra piattaforma PC di nuova generazione, è in fase di open beta. Stiamo unendo le nostre forze con Xbox per offrire più giochi agli utenti PC."
+        }
+    },
+
+    {
+        "id": 4,
+        "card": {
+                "img":"./assets/images/pages/home/latest_new_images/EA_play_section_images/01_Massive_Effect_first_card.jpg",
+                "alt":"immagine astratta",
+                "link":"https://www.ea.com/it-it/ea-play/news/ea-play-spotlight-march2021",
+                "info":"EA Inc.",
+                "date":"1-mar-2021",
+                "title":"In evidenza su EA Play - Marzo 2021",
+                "text":"Scopri le nuove ricompense e i giochi ora disponibili con il tuo abbonamento EA Play o EA Play Pro."
+        }
+    },
+
+    {
+        "id": 5,
+        "card": {
+                "img":"./assets/images/pages/home/latest_new_images/EA_play_section_images/01_Massive_Effect_first_card.jpg",
+                "alt":"immagine astratta",
+                "link":"https://www.ea.com/it-it/ea-play/news/ea-play-next-up-spring2021",
+                "info":"EA Inc.",
+                "date":"25-feb-2021",
+                "title":"EA Play – Prossimamente in The Play List – Primavera 2021",
+                "text":"Scopri tutto sui nuovi giochi in arrivo su EA Play o EA Play Pro."
+        }
+    }
+]
