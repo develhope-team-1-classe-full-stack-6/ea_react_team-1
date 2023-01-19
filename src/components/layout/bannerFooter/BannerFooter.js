@@ -66,6 +66,12 @@ function BannerFooter (props) {
             paddingLeft: "20px",
             "&:first-of-type":{
                 paddingLeft: "0",
+            },
+            img:{
+                "&:hover":{
+                    transform: "scale(1.2)",
+                    transition: "all 100ms ease-out"
+                }
             }
         },
         p:{
@@ -86,7 +92,7 @@ function BannerFooter (props) {
             {matchesDownMd && <hr/>}
             <Icons>
                 <Typography>
-                    <p>Partecipa alla conversazione</p>
+                    Partecipa alla conversazione
                 </Typography>
                 <div>
                 {icons.map((item, index) => (
