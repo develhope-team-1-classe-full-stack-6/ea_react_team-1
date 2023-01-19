@@ -2,39 +2,45 @@
     "Cards": [
         {
             "id": 0,
-            "image": "https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-grid-tile-diverse-and-healthy-teams-16x9.jpg.adapt.crop16x9.652w.jpg",
+            "image": "./assets/images/pages/commitments/card1.jpg",
             "title": "Squadre di lavoro sane e all'insegna della diversità",
             "text": "Ci sforziamo di creare un luogo di lavoro diversificato, equo e inclusivo, in cui le persone abbiano l'opportunità di realizzare il proprio potenziale."
         },
         {
             "id": 1,
-            "image": "https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-grid-tile-social-impact-16x9.jpg.adapt.crop16x9.652w.jpg",
+            "image": "./assets/images/pages/commitments/card2.jpg",
             "title": "Gioco positivo",
             "text": "Crediamo nel potere del gioco positivo. Far parte di una community di giocatori dovrebbe essere un'esperienza positiva, divertente, equa e sicura per tutti."
         },
         {
             "id": 2,
-            "image": "https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-grid-tile-positive-play-16x9.jpg.adapt.crop16x9.652w.jpg",
+            "image": "./assets/images/pages/commitments/card3.jpg",
             "title": "Impatto sociale",
             "text": "Ci impegniamo a esercitare un impatto positivo sulle comunità in cui viviamo, giochiamo e lavoriamo."
         },
         {
             "id": 3,
-            "image": "https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-grid-tile-investing-in-privacy-and-security-16x9.jpg.adapt.crop16x9.652w.jpg",
+            "image": "./assets/images/pages/commitments/card4.jpg",
             "title": "Investire nella privacy e nella sicurezza",
             "text": "La privacy e la sicurezza sono fondamentali nelle nostre attività e nei rapporti con i nostri giocatori e dipendenti. Ci impegniamo a gestire con la massima cura le informazioni relative a tutte le parti coinvolte."
         },
         {
             "id": 4,
-            "image": "https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-grid-tile-protecting-the-environment-16x9.jpg.adapt.crop16x9.652w.jpg",
+            "image": "./assets/images/pages/commitments/card5.jpg",
             "title": "Proteggere l'ambiente",
             "text": "Ci impegniamo a operare in modo sostenibile e stiamo investendo attivamente nella nostra comprensione e capacità di gestire la nostra impronta ecologica."
         },
         {
             "id": 5,
-            "image": "https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-grid-tile-enhancing-corporate-governance-16x9.jpg.adapt.crop16x9.652w.jpg",
+            "image": "./assets/images/pages/commitments/card6.jpg",
             "title": "Rafforzare il governo societario",
             "text": "Le pratiche di amministrazione aziendali ricoprono un ruolo cruciale nel nostro modo di fare business e sono fondamentali per mettere in atto le nostre strategie e le nostre iniziative di impatto."
         }
+    ],
+    "Hero": [
+        "./assets/images/pages/commitments/mhero1920.jpg", "./assets/images/pages/commitments/mhero1456.jpg", "./assets/images/pages/commitments/mhero1024.jpg", "./assets/images/pages/commitments/mhero768.jpg", "./assets/images/pages/commitments/mhero320.jpg"
+    ],
+    "Banner": [
+        "./assets/images/pages/commitments/hero1920.jpg", "./assets/images/pages/commitments/hero1455.jpg", "./assets/images/pages/commitments/hero1023.jpg", "./assets/images/pages/commitments/hero767.jpg", "./assets/images/pages/commitments/hero320.jpg"
     ]
 }

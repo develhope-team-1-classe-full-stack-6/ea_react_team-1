@@ -20,7 +20,7 @@ const Commitments = () => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    background: xl ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-header-section-bg-xl.jpg.adapt.1920w.jpg')" : lg ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-header-section-bg-xl.jpg.adapt.1456w.jpg')" : md ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-header-section-bg-xl.jpg.adapt.1024w.jpg')" : sm ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-header-section-bg-xl.jpg.adapt.768w.jpg')" : "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-header-section-bg-xl.jpg.adapt.320w.jpg')",
+    background: xl ? `url(${data.Hero[0]})` : lg ? `url(${data.Hero[1]})` : md ? `url(${data.Hero[2]})` : sm ? `url(${data.Hero[3]})` : `url(${data.Hero[4]})`,
     backgroundSize: "cover"
   })
 
@@ -97,7 +97,10 @@ const Commitments = () => {
     width: "95%",
     borderRadius: "0px",
     backgroundColor: "#f3f3f3",
-    height: "95%"
+    height: "95%",
+    '&:hover': {
+      cursor: "pointer"
+    }
   })
 
   const CommitmentCardMedia = styled (CardMedia) ({
