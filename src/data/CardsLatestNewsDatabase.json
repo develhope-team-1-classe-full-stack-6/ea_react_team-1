@@ -2,7 +2,7 @@
     {
         "id": 0,
         "card": {
-                "img":"./assets/images/components/ea-card/ea-year-in-gaming-2022.png",
+                "img":"./assets/images/pages/home/latest_news_images/ea_news_section_images/ea-year-in-gaming-2022.png",
                 "alt":"abstract image",
                 "link":"https://www.ea.com/news/year-in-gaming-2022",
                 "info":"EA Inc.",
@@ -15,7 +15,7 @@
     {
         "id": 1,
         "card": {
-                "img":"./assets/images/components/ea-card/eacom-general-featured-image.png",
+                "img":"./assets/images/pages/home/latest_news_images/ea_news_section_images/eacom-general-featured-image.png",
                 "alt":"abstract image",
                 "link":"https://www.ea.com/news/ea-originals-at-the-game-awards-2022",
                 "info":"EA Inc.",
@@ -28,7 +28,7 @@
     {
         "id": 2,
         "card":{
-                "img":"./assets/images/components/ea-card/it_takes_two_banner.jpg",
+                "img":"./assets/images/pages/home/latest_news_images/ea_news_section_images/it_takes_two_banner.jpg",
                 "alt":"abstract image",
                 "link":"https://www.ea.com/it-it/games/it-takes-two/news/it-takes-two-now-available-on-nintendo-switch",
                 "info":"It Takes Two",
@@ -41,7 +41,7 @@
     {
         "id": 3,
         "card":{
-                "img":"./assets/images/components/ea-card/marvel-x-ea-featured-image.jpg",
+                "img":"./assets/images/pages/home/latest_news_images/ea_news_section_images/marvel-x-ea-featured-image.jpg",
                 "alt":"abstract image",
                 "link":"https://www.ea.com/it-it/news/ea-marvel-entertainment-multi-title-collaboration",
                 "info":"EA Inc.",
@@ -54,7 +54,7 @@
     {
         "id": 4,
         "card":{
-                "img":"./assets/images/components/ea-card/ts4-play-sims-for-free.png",
+                "img":"./assets/images/pages/home/latest_news_images/ea_news_section_images/ts4-play-sims-for-free.png",
                 "alt":"abstract image",
                 "link":"https://www.ea.com/it-it/games/the-sims/the-sims-4/news/everything-announced-during-the-behind-the-sims-summit",
                 "info":"EA Inc.",
@@ -67,7 +67,7 @@
     {
         "id": 5,
         "card":{
-                "img":"./assets/images/components/ea-card/ts4-play-sims-for-free.png",
+                "img":"./assets/images/pages/home/latest_news_images/ea_news_section_images/ts4-play-sims-for-free.png",
                 "alt":"abstract image",
                 "link":"https://www.ea.com/it-it/games/the-sims/the-sims-4/news/play-the-sims-4-for-free-beginning-october-18",
                 "info":"EA Inc.",

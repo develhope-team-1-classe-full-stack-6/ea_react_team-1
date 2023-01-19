@@ -74,7 +74,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="F1" 
-                      
+                      onClick={()=>handleClick('f1')}
                   />
                   <div style={
                     {
@@ -87,7 +87,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="Apex Legends"
-                      
+                      onClick={()=>handleClick('apex-legends')}
                   />
   
                   <div style={
@@ -101,7 +101,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="The Sims 4"
-                      
+                      onClick={()=>handleClick('the-sims-4')}
                   />
                   <div style={
                     {

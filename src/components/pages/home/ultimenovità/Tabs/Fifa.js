@@ -1,8 +1,8 @@
 import EACard from "../../../../components/ea-card/EACard";
-import CardsLatestEAPlayDatabase from '../../../../../data/CardsLatestEAPlayDatabase.json';
+import CardsLatestFifaDatabase from '../../../../../data/CardsLatestFifaDatabase.json';
 import { Grid, useMediaQuery } from "@mui/material";
 
-function EAPlay() {
+function Fifa() {
     const matchesDownMd = useMediaQuery('(max-width: 767px)');
     const matchesDownlg = useMediaQuery('(max-width: 1050px)');
 
@@ -14,7 +14,7 @@ function EAPlay() {
             rowSpacing={matchesDownMd ? 0 : 3.5}
         >
 
-            {CardsLatestEAPlayDatabase.map((item) =>
+            {CardsLatestFifaDatabase.map((item) =>
             (
                 <Grid key={item.id} item
                     xs={12}
@@ -44,5 +44,4 @@ function EAPlay() {
 }
 
 
-export default EAPlay;
-
+export default Fifa;

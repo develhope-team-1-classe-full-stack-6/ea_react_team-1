@@ -6,6 +6,7 @@ import LatestGames from "./components/pages/games/latest-games/LatestGames";
 import Home from "./components/pages/home/Home";
 import News from "./components/pages/home/ultimenovità/Tabs/News";
 import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
+import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
 
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route index element={<News />} />
         <Route path="ea-news" element={<News />} />
         <Route path="ea-play" element={<EAPlay />} />
+        <Route path="fifa" element={<Fifa/>}/>
       </Route>
       <Route path="/ea-originals" element={<EAOriginals/>}/>
       <Route path="/games" element={<Games />} >
