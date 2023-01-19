@@ -41,6 +41,7 @@
         "./assets/images/pages/commitments/mhero1920.jpg", "./assets/images/pages/commitments/mhero1456.jpg", "./assets/images/pages/commitments/mhero1024.jpg", "./assets/images/pages/commitments/mhero768.jpg", "./assets/images/pages/commitments/mhero320.jpg"
     ],
     "Banner": [
-        "./assets/images/pages/commitments/hero1920.jpg", "./assets/images/pages/commitments/hero1455.jpg", "./assets/images/pages/commitments/hero1023.jpg", "./assets/images/pages/commitments/hero767.jpg", "./assets/images/pages/commitments/hero320.jpg"
-    ]
+        "./assets/images/pages/commitments/hero1920.jpg", "./assets/images/pages/commitments/mhero1921.jpg", "./assets/images/pages/commitments/hero1023.jpg", "./assets/images/pages/commitments/hero767.jpg", "./assets/images/pages/commitments/hero320.jpg"
+    ],
+    "BlueBanner": "./assets/images/pages/commitments/commitmentbanner.jpg"
 }

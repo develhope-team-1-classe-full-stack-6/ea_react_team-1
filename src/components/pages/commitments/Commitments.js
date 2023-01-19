@@ -57,7 +57,7 @@ const Commitments = () => {
     alignItems: "center",
     height: xl ? "12vw" : lg ? "16vw" : sm ? "23vw" : "40vw",
     minHeight: sm? "0px" : "300px",
-    background: "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-esg-commitments-section-bg-additional-commitments-xl.jpg.adapt.1920w.jpg')",
+    background: `url(${data.BlueBanner})`,
     backgroundSize: "cover",
     marginTop: md ? "0px" : "700px"
   })
@@ -130,7 +130,7 @@ const Commitments = () => {
     flexDirection: md ? "row" : "column",
     justifyContent: md ? "start" : "flex-end",
     alignItems: "center",
-    background: xl ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/images/2022/09/eacom-esg-commitments-hero-md-impactreport-7x2-xl.jpg.adapt.crop7x2.1920w.jpg')" : lg ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/images/2022/09/eacom-esg-commitments-hero-md-impactreport-7x2-xl.jpg.adapt.crop5x2.1920w.jpg')" : md ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/images/2022/09/eacom-esg-commitments-hero-md-impactreport-7x2-xl.jpg.adapt.crop2x1.1023w.jpg')" : sm ? "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/images/2022/09/eacom-esg-commitments-hero-md-impactreport-7x2-xl.jpg.adapt.crop16x9.767w.jpg')" : "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/images/2022/09/eacom-esg-commitments-hero-md-impactreport-7x2-xl.jpg.adapt.crop16x9.320w.jpg')",
+    background: xl ? `url(${data.Banner[0]})` : lg ? `url(${data.Banner[1]})` : md ? `url(${data.Banner[2]})` : sm ? `url(${data.Banner[3]})` : `url(${data.Banner[4]})`,
     backgroundSize: "cover"
   })
 
