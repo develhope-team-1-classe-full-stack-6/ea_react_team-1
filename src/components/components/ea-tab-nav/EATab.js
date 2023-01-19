@@ -7,15 +7,10 @@ import { useNavigate } from 'react-router-dom';
 
 export default function EATab() {
   const navigate = useNavigate()
-  const handleClick1 = () => {
-    navigate('/ea-news')
+  const handleClick = (path) => {
+    navigate(path)
   }
-  const handleClick2 = () => {
-    navigate('/ea-play')
-  }
-  const handleClick3 = () => {
-    navigate('/fifa')
-  }
+  
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -40,7 +35,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="Notizie EA"
-                      onClick={handleClick1}
+                      onClick={()=>handleClick('ea-news')}
                   />
                   <div style={
                     {
@@ -53,7 +48,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="EA Play" 
-                      onClick={handleClick2}
+                      onClick={()=>handleClick('ea-play')}
                   />
                   <div style={
                     {
@@ -66,7 +61,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="Fifa" 
-                      onClick={handleClick3}
+                      onClick={()=>handleClick('fifa')}
                   />
                   <div style={
                     {
