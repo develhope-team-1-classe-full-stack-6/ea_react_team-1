@@ -3,8 +3,19 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import './EATab.scss'
+import { useNavigate } from 'react-router-dom';
 
 export default function EATab() {
+  const navigate = useNavigate()
+  const handleClick1 = () => {
+    navigate('/ea-news')
+  }
+  const handleClick2 = () => {
+    navigate('/ea-play')
+  }
+  const handleClick3 = () => {
+    navigate('/fifa')
+  }
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -29,7 +40,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="Notizie EA"
-                      
+                      onClick={handleClick1}
                   />
                   <div style={
                     {
@@ -42,7 +53,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="EA Play" 
-                      
+                      onClick={handleClick2}
                   />
                   <div style={
                     {
@@ -55,7 +66,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="Fifa" 
-                      
+                      onClick={handleClick3}
                   />
                   <div style={
                     {
@@ -95,7 +106,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="The Sims 4"
-                       
+                      
                   />
                   <div style={
                     {
@@ -108,7 +119,7 @@ export default function EATab() {
                   <Tab
                       disableRipple= 'true'
                       label="Battlefield" 
-                      
+                     
                   />
                   <div style={
                     {

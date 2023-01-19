@@ -1,9 +1,8 @@
-import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Container } from "@mui/system";
+import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import CardsLatestDatabase from '../../../../data/CardsLatestNewsDatabase.json'
 import CustomButton from "../../../components/button/CustomButton";
-import EACard from "../../../components/ea-card/EACard";
 import EATab from "../../../components/ea-tab-nav/EATab";
 
 
@@ -33,8 +32,7 @@ const ButtonWrapper = styled(Box)({
 });
 
 function LatestGrid(){
-    const matchesDownMd = useMediaQuery('(max-width: 767px)');
-    const matchesDownlg = useMediaQuery('(max-width: 1050px)');
+    
     return(
 
         <LatestWrapper
@@ -64,37 +62,7 @@ function LatestGrid(){
     
                 }}
             >
-                <Grid 
-                    container 
-                    columnSpacing={3.5} 
-                    rowSpacing={matchesDownMd ? 0 :3.5}
-                >
-                    
-                    {CardsLatestDatabase.map((item)=>
-                        (
-                        <Grid key={item.id} item
-                        xs={12}
-                        sm={matchesDownMd ? 12 : 6}
-                        md={matchesDownlg? 6 : 4}   
-                        sx={{
-                            display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        }}                 
-                    >
-                        <EACard
-                            img={item.card.img}
-                            alt={item.card.alt}
-                            link={item.card.link}
-                            info={item.card.info}
-                            date={item.card.date}
-                            title={item.card.title}
-                            text={item.card.text}
-                        />
-                    </Grid>
-                        )
-                    )}
-                </Grid>
+                <Outlet/>
             </Container>
             <ButtonWrapper>
                 <CustomButton color='white'/>
