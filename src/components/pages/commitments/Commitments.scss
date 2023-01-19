@@ -1,0 +1,36 @@
+.ccontainer {
+    @media only screen and (max-width: 1300px) and (min-width: 1201px) {
+        height: 80vw !important;
+    }
+    @media only screen and (max-width: 1200px) and (min-width: 1137px) {
+        height: 120vw !important;
+    }
+    @media only screen and (max-width: 1136px) and (min-width: 1050px) {
+        height: 120vw !important;
+    }
+    @media only screen and (max-width: 1049px) and (min-width: 1000px) {
+        height: 125vw !important;
+    }
+    @media only screen and (max-width: 999px) and (min-width: 950px) {
+        height: 130vw !important;
+    }
+    @media only screen and (max-width: 949px) and (min-width: 900px) {
+        height: 142vw !important;
+    }
+
+    // @media only screen and (max-width: 824px) and (min-width: 760px) {
+    //     height: 250vw !important;
+    // }
+    // @media only screen and (max-width: 759px) and (min-width: 720px) {
+    //     height: 200vw !important;
+    // }
+    // @media only screen and (max-width: 719px) and (min-width: 650px) {
+    //     height: 250vw !important;
+    // }
+
+    // @media only screen and (max-width: 649px) and (min-width: 600px) {
+    //     height: 300vw !important;
+    // }
+
+
+}
