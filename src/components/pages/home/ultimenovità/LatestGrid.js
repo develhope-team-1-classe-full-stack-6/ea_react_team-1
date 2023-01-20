@@ -65,7 +65,7 @@ function LatestGrid(){
                 <Outlet/>
             </Container>
             <ButtonWrapper>
-                <CustomButton color='white'/>
+                <CustomButton color='white'>Più dettagli</CustomButton>
             </ButtonWrapper>
         </LatestWrapper>
     )

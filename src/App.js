@@ -7,17 +7,21 @@ import Home from "./components/pages/home/Home";
 import News from "./components/pages/home/ultimenovità/Tabs/News";
 import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
 import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
+import EATabNew from "./components/components/ea-tab-nav/EATabNew";
+import TabItem from "./components/components/ea-tab-nav/TabItem";
+import EATab from "./components/components/ea-tab-nav/EATabNew";
 
 
 export default function App() {
   return (
+
     <Routes>
       <Route path="/" element={<Home/>}>
         <Route index element={<News />} />
         <Route path="ea-news" element={<News />} />
         <Route path="ea-play" element={<EAPlay />} />
         <Route path="fifa" element={<Fifa/>}/>
-      </Route>
+      </Route> 
       <Route path="/ea-originals" element={<EAOriginals/>}/>
       <Route path="/games" element={<Games />} >
         <Route index element={<LatestGames />} />
