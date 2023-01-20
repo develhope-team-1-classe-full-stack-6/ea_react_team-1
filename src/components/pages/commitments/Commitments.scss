@@ -1,0 +1,98 @@
+.ccontainer {
+    @media only screen and (max-width: 1300px) and (min-width: 1237px) {
+        height: 80vw !important;
+    }
+    @media only screen and (max-width: 1236px) and (min-width: 1200px) {
+        height: 90vw !important;
+    }
+    @media only screen and (max-width: 1199px) and (min-width: 1137px) {
+        height: 120vw !important;
+    }
+    @media only screen and (max-width: 1136px) and (min-width: 1050px) {
+        height: 120vw !important;
+    }
+    @media only screen and (max-width: 1049px) and (min-width: 1000px) {
+        height: 133vw !important;
+    }
+    @media only screen and (max-width: 999px) and (min-width: 950px) {
+        height: 138vw !important;
+    }
+    @media only screen and (max-width: 949px) and (min-width: 900px) {
+        height: 155vw !important;
+    }
+}
+
+.banner {
+    @media only screen and (max-width: 1300px) and (min-width: 1237px) {
+        height: 16vw !important;
+    }
+    @media only screen and (max-width: 1236px) and (min-width: 1200px) {
+        height: 16vw !important;
+    }
+    @media only screen and (max-width: 1199px) and (min-width: 1137px) {
+        height: 18vw !important;
+    }
+    @media only screen and (max-width: 1136px) and (min-width: 1050px) {
+        height: 18vw !important;
+    }
+    @media only screen and (max-width: 1049px) and (min-width: 1000px) {
+        height: 18vw !important;
+    }
+    @media only screen and (max-width: 999px) and (min-width: 950px) {
+        height: 18vw !important;
+    }
+    @media only screen and (max-width: 949px) and (min-width: 900px) {
+        height: 18vw !important;
+    }
+    @media only screen and (max-width: 768px) and (min-width: 720px) {
+        margin-top: 800px !important;
+    }
+    @media only screen and (max-width: 719px) and (min-width: 680px) {
+        margin-top: 830px !important;
+    }
+    @media only screen and (max-width: 679px) and (min-width: 610px) {
+        margin-top: 990px !important;
+    }
+    @media only screen and (max-width: 609px) and (min-width: 600px) {
+        margin-top: 1000px !important;
+    }
+    @media only screen and (max-width: 555px) and (min-width: 532px) {
+        margin-top: 800px !important;
+    }
+    @media only screen and (max-width: 531px) and (min-width: 500px) {
+        margin-top: 840px !important;
+    }
+    @media only screen and (max-width: 514px) and (min-width: 480px) {
+        margin-top: 920px !important;
+    }
+    @media only screen and (max-width: 492px) and (min-width: 446px) {
+        margin-top: 1000px !important;
+    }
+    @media only screen and (max-width: 445px) and (min-width: 390px) {
+        margin-top: 1200px !important;
+    }
+    @media only screen and (max-width: 389px) and (min-width: 300px) {
+        margin-top: 1350px !important;
+    }
+}
+
+.bannertext {
+    @media only screen and (max-width: 1000px) {
+        font-size: 32px !important;
+    }
+}
+
+.commitmentbutton {
+    @media only screen and (max-width: 900px) {
+        width: 100% !important;
+    }
+}
+
+.progress {
+    @media only screen and (max-width: 445px) and (min-width: 390px) {
+        height: 500px !important;
+    }
+    @media only screen and (max-width: 389px) and (min-width: 300px) {
+        height: 600px !important;
+    }
+}
