@@ -8,6 +8,10 @@ import News from "./components/pages/home/ultimenovità/Tabs/News";
 import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
 import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
 import Commitments from "./components/pages/commitments/Commitments";
+import LibreriaDeiGiochiGrid from "./components/pages/games/library/LibreriaDeiGiochiGrid";
+import Generi from "./components/pages/games/library/Tabs/Generi";
+import ClassificazioneEtà from "./components/pages/games/library/Tabs/ClassificazioneEtà";
+import ModalitàDiGioco from "./components/pages/games/library/Tabs/ModalitàDiGioco";
 
 export default function App() {
   return (
@@ -23,6 +27,12 @@ export default function App() {
       <Route path="/games" element={<Games />} >
         <Route index element={<LatestGames />} />
         <Route path="coming-soon" element={<ComingSoon />} />
+        <Route path="library" element={<LibreriaDeiGiochiGrid/>}>
+          <Route index element={<Generi/>}/>
+          <Route path="genres" element={<Generi/>}/>
+          <Route path="age-ratings" element={<ClassificazioneEtà/>} />
+          <Route path="play-modes" element={<ModalitàDiGioco/>} />
+        </Route>
       </Route>
       <Route path="/commitments" element={<Commitments />} />
     </Routes>
