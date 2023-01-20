@@ -25,7 +25,7 @@ function CustomButton(props) {
                 variant={props.variant || "contained"}
                 disableElevation
                 disableRipple
-                sx={{border:"2px solid"}}
+                sx={{border: props.border || "2px solid"}}
             >
                 {props.children || "Button"}
             </BootstrapButton>

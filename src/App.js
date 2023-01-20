@@ -11,6 +11,7 @@ import EATabNew from "./components/components/ea-tab-nav/EATabNew";
 import TabItem from "./components/components/ea-tab-nav/TabItem";
 import EATab from "./components/components/ea-tab-nav/EATabNew";
 
+import Commitments from "./components/pages/commitments/Commitments";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Route index element={<LatestGames />} />
         <Route path="coming-soon" element={<ComingSoon />} />
       </Route>
+      <Route path="/commitments" element={<Commitments />} />
     </Routes>
   );
 }
