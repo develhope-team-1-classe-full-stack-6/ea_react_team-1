@@ -13,10 +13,11 @@ function ModalitàDiGioco() {
             <Typography
                 sx={{
                 display: 'flex',
-                    justifyContent: 'center',
+                justifyContent: 'center',
             }} 
                 variant="d1"
                 component='h3'
+                color={'black'}
             >
                     Modalità di Gioco
                 </Typography>
@@ -42,7 +43,7 @@ function ModalitàDiGioco() {
                         }}
                     >
                         <EACardLibrary
-                            
+                            link={item.link}
                             title={item.title}
                             title2={item.title2}
                         />

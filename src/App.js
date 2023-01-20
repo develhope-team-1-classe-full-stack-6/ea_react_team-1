@@ -12,10 +12,11 @@ import LibreriaDeiGiochiGrid from "./components/pages/games/library/LibreriaDeiG
 import Generi from "./components/pages/games/library/Tabs/Generi";
 import ClassificazioneEtà from "./components/pages/games/library/Tabs/ClassificazioneEtà";
 import ModalitàDiGioco from "./components/pages/games/library/Tabs/ModalitàDiGioco";
+import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
+
 
 export default function App() {
   return (
-
     <Routes>
       <Route path="/" element={<Home/>}>
         <Route index element={<News />} />
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="library" element={<LibreriaDeiGiochiGrid/>}>
           <Route index element={<Generi/>}/>
           <Route path="genres" element={<Generi/>}/>
+          <Route path="platforms" element={<Piattaforme/>} />
           <Route path="age-ratings" element={<ClassificazioneEtà/>} />
           <Route path="play-modes" element={<ModalitàDiGioco/>} />
         </Route>

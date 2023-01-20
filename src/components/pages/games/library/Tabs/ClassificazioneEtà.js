@@ -12,10 +12,11 @@ function ClassificazioneEtà() {
             <Typography
                 sx={{
                 display: 'flex',
-                    justifyContent: 'center',
+                justifyContent: 'center',
             }} 
                 variant="d1"
                 component='h3'
+                color={'black'}
             >
                     Classificazione Età
                 </Typography>
@@ -32,14 +33,9 @@ function ClassificazioneEtà() {
                         xs={12}
                         sm={matchesDownMd ? 12 : 6}
                         md={matchesDownlg ? 6 : 4}
-                        sx={{
-                            
-                            
-                            
-                        }}
                     >
                         <EACardLibrary
-                            
+                            link={item.link}
                             title={item.title}
                             title2={item.title2}
                         />

@@ -12,10 +12,11 @@ function Generi() {
             <Typography
                 sx={{
                 display: 'flex',
-                    justifyContent: 'center',
+                justifyContent: 'center',
             }} 
                 variant="d1"
                 component='h3'
+                color={'black'}
             >
                     Generi
                 </Typography>
@@ -39,7 +40,7 @@ function Generi() {
                         }}
                     >
                         <EACardLibrary
-                            
+                            link={item.link}
                             title={item.title}
                             title2={item.title2}
                         />
