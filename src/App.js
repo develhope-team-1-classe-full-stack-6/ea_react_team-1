@@ -7,10 +7,6 @@ import Home from "./components/pages/home/Home";
 import News from "./components/pages/home/ultimenovità/Tabs/News";
 import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
 import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
-import EATabNew from "./components/components/ea-tab-nav/EATabNew";
-import TabItem from "./components/components/ea-tab-nav/TabItem";
-import EATab from "./components/components/ea-tab-nav/EATabNew";
-
 import Commitments from "./components/pages/commitments/Commitments";
 
 export default function App() {
