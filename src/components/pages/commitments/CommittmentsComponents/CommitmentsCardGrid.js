@@ -1,20 +1,22 @@
-import { Grid, useMediaQuery } from "@mui/material";
+import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import { Container } from "@mui/system";
 import data from '../../../../data/CommitmentsDatabase.json'
 import EACard from "../../../components/ea-card/EACard";
 
 
 function CommitmentsCardGrid(){
+    const theme = useTheme ();
     const matchesDownMd = useMediaQuery('(max-width: 767px)');
     const matchesDownlg = useMediaQuery('(max-width: 1050px)');
+    const md = useMediaQuery (theme.breakpoints.up('md'));
     return(
         <Container
-            maxWidth={'lg'}
             style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-
+                width: md ? "80vw" : "100vw",
+                maxWidth: "1120px"
             }}
         >
             <Grid 

@@ -72,7 +72,6 @@ const PositivePlay = () => {
   })
 
   const CardsContainer = styled (Box) ({
-    border: "1px solid black",
     width: "80vw",
     maxWidth: "1120px",
     maxHeight: xl ? "556.5px" : "auto",
@@ -81,13 +80,12 @@ const PositivePlay = () => {
     flexDirection: md ? "row" : "column",
     gap: "30px",
     margin: "auto",
-    marginTop: xl ? "0px" : "40px"
+    marginTop: "40px"
   })
 
   const PositiveCard = styled (Card) ({
     height: md ? "100%" : "50%",
     width: md ? "50%" : "100%",
-    border: "1px solid red",
     borderRadius: "0px",
     backgroundColor: "#f3f3f3",
     '&:hover': {
@@ -117,10 +115,10 @@ const PositivePlay = () => {
   })
 
   const RedCardsContainer = styled (Box) ({
-    border: "1px solid black",
     width: "100%",
-    height: xl ? "23vw" : lg ? "26vw" : md ? "55vw" : sm ? "170vw" : "800px",
-    maxHeight: xl ? "23vw" : lg ? "30vw" : "auto",
+    height: xl ? "23vw" : lg ? "26vw" : md ? "55vw" : sm ? "170vw" : "1000px",
+    maxHeight: xl ? "360px" : lg ? "30vw" : "auto",
+    minHeight: sm ? "auto" : "1000px",
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
@@ -129,13 +127,30 @@ const PositivePlay = () => {
   })
 
   const RedCard = styled (Box) ({
-    border: "1px solid black",
-    width: lg ? "30%" : md ? "45%" : "100%",
+    width: lg ? "32%" : md ? "45%" : "100%",
     '&:hover': {
+        transform: 'translateY(-12px)',
+        boxShadow: '0px 20px 30px rgba(0, 0, 0, 0.7)',
         cursor: "pointer"
       },
       backgroundImage: "url('https://media.contentapi.ea.com/content/dam/eacom/commitments/common/eacom-our-commnitments-cta-orange.jpg.adapt.crop16x9.652w.jpg')",
-      backgroundSize: "cover"
+      backgroundSize: "cover",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      maxHeight: md ? "49%" : sm ? "32%" : "auto",
+      minHeight: lg ? "auto" : md ?  "32%" : "0px",
+      transition: 'transform 0.5s ease, box-shadow 0.5s ease'
+  })
+
+  const RedCardText = styled (Typography) ({
+    fontSize: xl ? "24px" : md ? "22px" : "20px",
+    fontWeight: "700",
+    lineHeight: "32.4px",
+    textAlign: "center",
+    wordBreak: "break-word",
+    color: "rgb(243, 243, 243)",
+    maxWidth: "90%"
   })
 
     return (
@@ -194,12 +209,7 @@ const PositivePlay = () => {
             <Introduction>
                 <IntroductionTitle>I nostri impegni</IntroductionTitle>
                 <RedCardsContainer>
-                    <RedCard></RedCard>
-                    <RedCard></RedCard>
-                    <RedCard></RedCard>
-                    <RedCard></RedCard>
-                    <RedCard></RedCard>
-                    <RedCard></RedCard>
+                    {data.Redcards.map(card => <RedCard key={card.id}><RedCardText>{card.text}</RedCardText></RedCard>)}
                 </RedCardsContainer>
             </Introduction>
         </PagesContainer>

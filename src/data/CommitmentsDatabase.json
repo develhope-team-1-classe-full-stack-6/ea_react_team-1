@@ -111,5 +111,30 @@
                 "text":"La nostra ambizione: ispirare tutti a creare un mondo migliore attraverso il gioco creativo"
             }
     }
+    ],
+    "Redcards": [{
+        "id": 0,
+        "text": "Squadre sane e all'insegna della diversità"
+    },
+    {
+        "id": 1,
+        "text": "Gioco positivo"
+    },
+    {
+        "id": 2,
+        "text": "Impatto sociale"
+    },
+    {
+        "id": 3,
+        "text": "Investire nella privacy e nella sicurezza"
+    },
+    {
+        "id": 4,
+        "text": "Proteggere l'ambiente"
+    },
+    {
+        "id": 5,
+        "text": "Rafforzare la gestione d'impresa"
+    }
     ]
 }
