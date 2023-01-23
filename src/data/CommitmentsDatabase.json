@@ -38,10 +38,103 @@
         }
     ],
     "Hero": [
-        "./assets/images/pages/commitments/mhero1920.jpg", "./assets/images/pages/commitments/mhero1456.jpg", "./assets/images/pages/commitments/mhero1024.jpg", "./assets/images/pages/commitments/mhero768.jpg", "./assets/images/pages/commitments/mhero320.jpg"
+        "./assets/images/pages/commitments/mhero1920.jpg", 
+        "./assets/images/pages/commitments/mhero1456.jpg", 
+        "./assets/images/pages/commitments/mhero1024.jpg", 
+        "./assets/images/pages/commitments/mhero768.jpg", 
+        "./assets/images/pages/commitments/mhero320.jpg"
     ],
     "Banner": [
-        "./assets/images/pages/commitments/hero1920.jpg", "./assets/images/pages/commitments/mhero1921.jpg", "./assets/images/pages/commitments/hero1023.jpg", "./assets/images/pages/commitments/hero767.jpg", "./assets/images/pages/commitments/hero320.jpg"
+        "./assets/images/pages/commitments/hero1920.jpg", 
+        "./assets/images/pages/commitments/mhero1921.jpg", 
+        "./assets/images/pages/commitments/hero1023.jpg", 
+        "./assets/images/pages/commitments/hero767.jpg", 
+        "./assets/images/pages/commitments/hero320.jpg"
     ],
-    "BlueBanner": "./assets/images/pages/commitments/commitmentbanner.jpg"
+    "BlueBanner": "./assets/images/pages/commitments/commitmentbanner.jpg",
+    "HeroPositive": [
+        "./assets/images/pages/commitments/phero1920.jpg", 
+        "./assets/images/pages/commitments/phero1456.jpg", 
+        "./assets/images/pages/commitments/phero1024.jpg", 
+        "./assets/images/pages/commitments/phero768.jpg", 
+        "./assets/images/pages/commitments/phero320.jpg"
+    ],
+    "CardPositive" : [
+        {
+            "id": 0,
+            "image": "./assets/images/pages/commitments/positiveCard1.jpg",
+            "title": "Apex Legends",
+            "text": "In seguito a un'analisi basata su 100 giochi distribuiti tra il 2017 e il 2021, ad Apex Legends è stato riconosciuto il merito di aver dato vita al roster di personaggi più variegato. Delle leggende pubblicate finora, la metà…"
+        },
+        {
+            "id": 1,
+            "image": "./assets/images/pages/commitments/positiveCard2.jpg",
+            "title": "The Sims",
+            "text": "A gennaio del 2022 abbiamo svelato i pronomi personalizzabili per Sims 4. L'espansione The Sims Wedding Story ha introdotto inoltre Camille e Dominique, la prima coppia interrazziale LGBTQ+ a essere inclusa nel gioco."
+        }
+    ],
+    "GridCards": [{
+        "id": 0,
+        "card": {
+                "img":"./assets/images/pages/commitments/gridcard1.png",
+                "alt":"abstract image",
+                "link":"https://www.ea.com/it-it/news/celebrating-6-years-of-our-purpose-beliefs-awards",
+                "info":"Inside EA",
+                "date":"19-set-2022",
+                "title":"Festeggiamo i 6 anni dei nostri Purpose and Belief Awards",
+                "text":"Questi valori sono alla base di tutto ciò che facciamo"
+        }
+    },
+
+    {
+        "id": 1,
+        "card": {
+                "img":"./assets/images/pages/commitments/gridcard2.png",
+                "alt":"abstract image",
+                "link":"https://www.ea.com/it-it/news/celebrating-6-years-of-our-purpose-beliefs-awards",
+                "info":"Inside EA",
+                "date":"25-ago-2022",
+                "title":"Un'estate di STEM con EA",
+                "text":"Un post per mettere in luce e omaggiare il sostegno di EA ai programmi estivi che aiutano i giovani di diversa estrazione a sviluppare competenze in ambito STEAM"
+        }
+    },
+
+    {
+        "id": 2,
+        "card":{
+                "img":"./assets/images/pages/commitments/gridcard3.jpg",
+                "alt":"abstract image",
+                "link":"https://www.ea.com/it-it/news/come-build-the-future-of-the-sims-at-maxis",
+                "info":"Inside EA",
+                "date":"1-apr-2022",
+                "title":"Vieni a costruire il futuro di The Sims a Maxis",
+                "text":"La nostra ambizione: ispirare tutti a creare un mondo migliore attraverso il gioco creativo"
+            }
+    }
+    ],
+    "Redcards": [{
+        "id": 0,
+        "text": "Squadre sane e all'insegna della diversità"
+    },
+    {
+        "id": 1,
+        "text": "Gioco positivo"
+    },
+    {
+        "id": 2,
+        "text": "Impatto sociale"
+    },
+    {
+        "id": 3,
+        "text": "Investire nella privacy e nella sicurezza"
+    },
+    {
+        "id": 4,
+        "text": "Proteggere l'ambiente"
+    },
+    {
+        "id": 5,
+        "text": "Rafforzare la gestione d'impresa"
+    }
+    ]
 }
