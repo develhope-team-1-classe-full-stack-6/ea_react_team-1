@@ -17,5 +17,5 @@ export default function App() {
       </Route>
       <Route path="/commitments" element={<Commitments />} />
     </Routes>
-  );
-}
+  )
+  }
