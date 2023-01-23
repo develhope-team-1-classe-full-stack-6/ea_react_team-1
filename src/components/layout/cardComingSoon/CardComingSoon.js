@@ -22,11 +22,7 @@ function CardComingSoon(props) {
                 <div className="h6 w-75 text-orange"><p>{props.genere}</p></div>
             </div>}
             <div className="mt-4">
-<<<<<<< HEAD
                 <a className='text-decoration-none' href={props.href}><CustomButton color={"white"}>Sito ufficiale</CustomButton></a>
-=======
-                <a href={props.href}><CustomButton color={"black"}>Sito ufficiale</CustomButton></a>
->>>>>>> caf51e4baf651eef88f0b0d207e6fe91504226fb
             </div>
         </div>
     );
