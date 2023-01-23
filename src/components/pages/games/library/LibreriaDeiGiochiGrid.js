@@ -3,7 +3,7 @@ import { Container } from "@mui/system";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import CustomButton from "../../../components/button/CustomButton";
-import EATab from "../../../components/ea-tab-nav/EATab";
+import EATabLibreriaDeiGiochi from "./EATabLibreriaDeiGiochi";
 
 
 
@@ -25,13 +25,7 @@ const LatestWrapper = styled(Container)(({ theme }) => ({
     },
 }));
 
-const ButtonWrapper = styled(Box)({
-    marginTop: "32px",
-    display: 'flex',
-    justifyContent: 'center',
-});
-
-function LatestGrid(){
+function LibreriaDeiGiochiGrid(){
     
     return(
 
@@ -41,17 +35,7 @@ function LatestGrid(){
                 padding: '0',
             }}
         >
-            <Typography
-            sx={{
-                display: 'flex',
-                justifyContent: 'center',
-            }} 
-                variant="d1"
-                component='h3'
-            >
-                Ultime Novità
-            </Typography>
-            <EATab/>
+            <EATabLibreriaDeiGiochi/>
             <Container
                 maxWidth={'lg'}
                 style={{
@@ -63,13 +47,10 @@ function LatestGrid(){
                 }}
             >
                 <Outlet/>
-            </Container>
-            <ButtonWrapper>
-                <CustomButton color='white'>Più dettagli</CustomButton>
-            </ButtonWrapper>
+            </Container>            
         </LatestWrapper>
     )
 
 }
 
-export default LatestGrid
+export default LibreriaDeiGiochiGrid

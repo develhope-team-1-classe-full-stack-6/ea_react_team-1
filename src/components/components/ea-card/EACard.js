@@ -9,6 +9,7 @@ function EACard(props) {
   
   //theme breakpoints 
   const mqsm = useMediaQuery('(max-width: 767px)');
+  const mqmd = useMediaQuery('(max-width: 1050px)')
   // const mqmd = useMediaQuery((theme) => theme.breakpoints.down('md'))
 
   //original breakpoint 
@@ -18,7 +19,7 @@ function EACard(props) {
   const StyledCard = styled(CardActionArea)({
     
       margin: '20px 20px',
-      width: mqsm ? '90%' : '354px',
+      width: mqmd  ? '700px' : '354px',
       aspectRatio: 2/1,
       maxHeight: '500px',
       overflow: 'clip',
