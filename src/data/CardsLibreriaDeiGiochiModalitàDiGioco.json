@@ -1,0 +1,22 @@
+[
+    {
+        "id": "0",
+        "title": "Gratis",
+        "title2": "Gratis",
+        "link": "https://www.ea.com/it-it/games/library/freetoplay"
+    },
+
+    {
+        "id": "1",
+        "title": "Multigiocatore",
+        "title2": "Multigiocatore",
+        "link": "https://www.ea.com/it-it/games/library/multiplayer"
+    },
+
+    {
+        "id": "2",
+        "title": "Giocatore singolo",
+        "title2": "GIocatore singolo",
+        "link": "https://www.ea.com/it-it/games/library/singleplayer"
+    }
+]

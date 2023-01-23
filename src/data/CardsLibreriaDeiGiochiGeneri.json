@@ -1,0 +1,106 @@
+[
+    {
+        "id": "0",
+        "title": "Azione",
+        "title2": "Azione",
+        "link": "https://www.ea.com/it-it/games/library/action"
+    },
+
+    {
+        "id": "1",
+        "title": "Avventura",
+        "title2": "Avventura",
+        "link": "https://www.ea.com/it-it/games/library/adventure"
+    },
+
+    {
+        "id": "2",
+        "title": "Famiglia",
+        "title2": "Famiglia",
+        "link": "https://www.ea.com/it-it/games/library/family"
+    },
+
+    {
+        "id":"3",
+        "title": "Fantasy",
+        "title2": "Fantasy",
+        "link": "https://www.ea.com/it-it/games/library/fantasy"
+    },
+
+    {
+        "id":"4",
+        "title": "Horror",
+        "title2": "Horror",
+        "link": "https://www.ea.com/it-it/games/library/horror"
+    },
+
+    {
+        "id":"5",
+        "title": "MMORPG",
+        "title2": "MMORPG",
+        "link": "https://www.ea.com/it-it/games/library/mmorpg"
+    },
+
+    {
+        "id":"6",
+        "title": "Musica",
+        "title2": "Musica",
+        "link": "https://www.ea.com/it-it/games/library/music"
+    },
+
+    {
+        "id":"7",
+        "title": "Platform",
+        "title2": "Platform",
+        "link": "https://www.ea.com/it-it/games/library/platform-games"
+    },
+
+    {
+        "id":"8",
+        "title": "Rompicapo",
+        "title2": "Rompicapo",
+        "link": "https://www.ea.com/it-it/games/library/puzzle"
+    },
+
+    {
+        "id":"9",
+        "title": "Corse",
+        "title2": "Corse",
+        "link": "https://www.ea.com/it-it/games/library/racing"
+    },
+
+    {
+        "id":"10",
+        "title": "Giochi di ruolo",
+        "title2": "Giochi di ruolo",
+        "link": "https://www.ea.com/it-it/games/library/rpg"
+    },
+
+    {
+        "id":"11",
+        "title": "Sparatutto",
+        "title2": "Sparatutto",
+        "link": "https://www.ea.com/it-it/games/library/shooter"
+    },
+
+    {
+        "id":"12",
+        "title": "Simulazione",
+        "title2": "Simulazione",
+        "link": "https://www.ea.com/it-it/games/library/simulation"
+    },
+
+    {
+        "id":"13",
+        "title": "Sport",
+        "title2": "Sport",
+        "link": "https://www.ea.com/it-it/games/library/sports"
+    },
+
+    {
+        "id":"14",
+        "title": "Strategia",
+        "title2": "Strategia",
+        "link": "https://www.ea.com/it-it/games/library/strategy"
+    }
+]
