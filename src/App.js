@@ -5,7 +5,6 @@ import { Games } from "./components/pages/games/Games";
 import LatestGames from "./components/pages/games/latest-games/LatestGames";
 import Home from "./components/pages/home/Home";
 import Commitments from "./components/pages/commitments/Commitments";
-import PositivePlay from "./components/pages/commitments/PositivePlay";
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
         <Route path="coming-soon" element={<ComingSoon />} />
       </Route>
       <Route path="/commitments" element={<Commitments />} />
-      <Route path="/positive-play" element={<PositivePlay />} />
     </Routes>
-  );
-}
+  )
+  }
