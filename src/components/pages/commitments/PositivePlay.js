@@ -43,7 +43,7 @@ const PositivePlay = () => {
   })
 
   const IntroductionText = styled (Typography) ({
-    margin: xl ? "00px 0px": "18px 0px",
+    margin: xl ? "00px 0px": "0px 0px",
     color: "#161616",
     fontSize: sm ? "18px" : "16px",
     lineHeight: "27px",
