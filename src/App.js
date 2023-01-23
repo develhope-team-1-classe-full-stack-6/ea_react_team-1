@@ -15,5 +15,5 @@ export default function App() {
         <Route path="coming-soon" element={<ComingSoon />} />
       </Route>
     </Routes>
-  );
-}
+  )
+  }
