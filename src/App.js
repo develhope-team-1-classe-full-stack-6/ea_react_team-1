@@ -14,6 +14,7 @@ import ClassificazioneEtà from "./components/pages/games/library/Tabs/Classific
 import ModalitàDiGioco from "./components/pages/games/library/Tabs/ModalitàDiGioco";
 import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
 import SignIn from "./components/pages/signin/SignIn";
+import Login from "./components/pages/login/Login";
 
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
       </Route>
       <Route path="/commitments" element={<Commitments />} />
       <Route path="/signin" element={<SignIn />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }
