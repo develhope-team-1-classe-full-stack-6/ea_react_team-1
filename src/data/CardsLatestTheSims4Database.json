@@ -1,0 +1,79 @@
+[
+    {
+        "id": 0,
+        "card": {
+                "img":"",
+                "alt":"",
+                "link":"",
+                "info":"",
+                "date":"",
+                "title":"",
+                "text":""
+        }
+    },
+
+    {
+        "id": 1,
+        "card": {
+                "img":"",
+                "alt":"",
+                "link":"",
+                "info":"",
+                "date":"",
+                "title":"",
+                "text":""
+        }
+    },
+
+    {
+        "id": 2,
+        "card": {
+                "img":"",
+                "alt":"",
+                "link":"",
+                "info":"",
+                "date":"",
+                "title":"",
+                "text":""
+        }
+    },
+
+    {
+        "id": 3,
+        "card": {
+                "img":"",
+                "alt":"",
+                "link":"",
+                "info":"",
+                "date":"",
+                "title":"",
+                "text":""
+        }
+    },
+
+    {
+        "id": 4,
+        "card": {
+                "img":"",
+                "alt":"",
+                "link":"",
+                "info":"",
+                "date":"",
+                "title":"",
+                "text":""
+        }
+    },
+
+    {
+        "id": 5,
+        "card": {
+                "img":"",
+                "alt":"",
+                "link":"",
+                "info":"",
+                "date":"",
+                "title":"",
+                "text":""
+        }
+    }
+]

@@ -1,0 +1,120 @@
+[
+    {
+        "id": "0",
+        "link": "https://www.ea.com/it-it/games/library/xbox-series-x",
+        "src": "./assets/images/pages/library/piattaforme/01_xbox_series_x.png",
+        "title": "Xbox Series X"
+    },
+
+    {
+        "id": "1",
+        "link": "https://www.ea.com/it-it/games/library/ps5",
+        "src": "./assets/images/pages/library/piattaforme/02_ps5.png",
+        "title": "Playstation 5"
+    },
+
+    {
+        "id": "2",
+        "link": "https://www.ea.com/it-it/games/library/pc-download",
+        "src": "./assets/images/pages/library/piattaforme/03_pc.png",
+        "title": "PC"
+    },
+
+    {
+        "id": "3",
+        "link": "https://www.ea.com/it-it/games/library/xbox-one",
+        "src": "./assets/images/pages/library/piattaforme/04_xbox_one.png",
+        "title": "Xbox One"
+    },
+
+    {
+        "id": "4",
+        "link": "https://www.ea.com/it-it/games/library/ps4",
+        "src": "./assets/images/pages/library/piattaforme/05_ps4.png",
+        "title": "Playstation 4"
+    },
+
+    {
+        "id": "5",
+        "link": "https://www.ea.com/it-it/games/library/nintendo-switch",
+        "src": "./assets/images/pages/library/piattaforme/06_nintendo_switch.png",
+        "title": "Nintendo Switch"
+    },
+
+    {
+        "id": "6",
+        "link": "https://www.ea.com/it-it/games/library/nintendo-wii-u",
+        "src": "./assets/images/pages/library/piattaforme/07_wii.png",
+        "title": "Nintendo Wii U"
+    },
+
+    {
+        "id": "7",
+        "link": "https://www.ea.com/it-it/games/library/mobile",
+        "src": "./assets/images/pages/library/piattaforme/08_mobile.png",
+        "title": "Mobile"
+    },
+
+    {
+        "id": "8",
+        "link": "https://www.ea.com/it-it/games/library/nintendo-3ds",
+        "src": "./assets/images/pages/library/piattaforme/09_nintendo_3ds.png",
+        "title": "Nintendo 3DS"
+    },
+
+    {
+        "id": "9",
+        "link": "https://www.ea.com/it-it/games/library/playstation-vita",
+        "src": "./assets/images/pages/library/piattaforme/10_ps_vita.png",
+        "title": "PS Vita"
+    },
+
+    {
+        "id": "10",
+        "link": "https://www.ea.com/it-it/games/library/mac-download",
+        "src": "./assets/images/pages/library/piattaforme/11_mac.png",
+        "title": "Macintosh"
+    },
+
+    {
+        "id": "11",
+        "link": "https://www.ea.com/it-it/games/library/xbox-360",
+        "src": "./assets/images/pages/library/piattaforme/12_xbox360.png",
+        "title": "Xbox 360"
+    },
+
+    {
+        "id": "12",
+        "link": "https://www.ea.com/it-it/games/library/ps3",
+        "src": "./assets/images/pages/library/piattaforme/13_ps3.png",
+        "title": "Playstation 3"
+    },
+
+    {
+        "id": "13",
+        "link": "https://www.ea.com/it-it/games/library/psp",
+        "src": "./assets/images/pages/library/piattaforme/14_psp.png",
+        "title": "PSP"
+    },
+
+    {
+        "id": "14",
+        "link": "https://www.ea.com/it-it/games/library/ps2",
+        "src": "./assets/images/pages/library/piattaforme/15_ps2.png",
+        "title": "Playstation 2"
+    },
+
+    {
+        "id": "15",
+        "link": "https://www.ea.com/it-it/games/library/facebook",
+        "src": "./assets/images/pages/library/piattaforme/16_facebook.png",
+        "title": "Facebook"
+    },
+
+    {
+        "id": "16",
+        "link": "https://www.ea.com/it-it/games/library/online",
+        "src": "./assets/images/pages/library/piattaforme/17_globe.png",
+        "title": "Online"
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "id": "0",
+        "title": "PEGI 3",
+        "title2": "PEGI 3", 
+        "link": "https://www.ea.com/it-it/games/base-games?/filter/ratingCategory=pegi-3"
+    },
+
+    {
+        "id": "1",
+        "title": "PEGI 7",
+        "title2": "PEGI 7", 
+        "link": "https://www.ea.com/it-it/games/base-games?/filter/ratingCategory=pegi-7"
+    },
+
+    {
+        "id": "2",
+        "title": "PEGI 12",
+        "title2": "PEGI 12", 
+        "link": "https://www.ea.com/it-it/games/base-games?/filter/ratingCategory=pegi-12"
+    },
+
+    {
+        "id": "3",
+        "title": "PEGI 17",
+        "title2": "PEGI 17", 
+        "link": "https://www.ea.com/it-it/games/base-games?/filter/ratingCategory=pegi-16"
+    }
+]

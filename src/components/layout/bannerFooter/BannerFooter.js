@@ -5,11 +5,11 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import styled from "styled-components";
 import Banner from "../../components/banner/Banner";
 
-function BannerFooter (props) {
+function BannerFooter(props) {
 
     const matchesDownMd = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
-    const list = ["Lavora con noi","Dirigenza","Rapporto sull'impatto", "I nostri impegni","Segnala un problema"]
+    const list = ["Lavora con noi", "Dirigenza", "Rapporto sull'impatto", "I nostri impegni", "Segnala un problema"]
 
     const icons = [
         {
@@ -35,24 +35,24 @@ function BannerFooter (props) {
     ]
 
     const Div = styled(Box)({
-        display:"flex",
+        display: "flex",
         flex: "2 1",
         flexWrap: matchesDownMd ? "wrap" : "no-wrap",
         justifyContent: matchesDownMd ? "center" : "flex-start",
-        alignItems:"center",
-        gap:"40px",
+        alignItems: "center",
+        gap: "40px",
         marginBottom: matchesDownMd ? "20px" : "0",
-        a:{
+        a: {
             textDecoration: "none",
             color: "#161616",
-            "&:hover":{
+            "&:hover": {
                 color: "#ff4747"
             },
         }
     })
 
     const Icons = styled(Box)({
-        display:"flex",
+        display: "flex",
         flexDirection: "column",
         flex: "1 2",
         justifyContent: "space-around",
@@ -62,46 +62,46 @@ function BannerFooter (props) {
             paddingTop: matchesDownMd ? "20px" : "0",
             justifyContent: "flex-end",
         },
-        a:{
+        a: {
             paddingLeft: "20px",
-            "&:first-of-type":{
+            "&:first-of-type": {
                 paddingLeft: "0",
             },
-            img:{
-                "&:hover":{
+            img: {
+                "&:hover": {
                     transform: "scale(1.2)",
                     transition: "all 100ms ease-out"
                 }
             }
         },
-        p:{
+        p: {
             fontSize: "14px",
-           fontWeight: "700",
+            fontWeight: "700",
         }
     })
 
     return (
         <Banner background="#eaeaea">
             <Div>
-            {list.map((item, index) => (
-                <Typography key={index+item}>
-                    <a href="#">{item}</a>
-                </Typography>
-            ))}
+                {list.map((item, index) => (
+                    <Typography key={index + item}>
+                        <a href="#" style={{ whiteSpace: "nowrap" }}>{item}</a>
+                    </Typography>
+                ))}
             </Div>
-            {matchesDownMd && <hr/>}
+            {matchesDownMd && <hr />}
             <Icons>
-                <Typography>
+                <Typography style={{ whiteSpace: "nowrap" }}>
                     Partecipa alla conversazione
                 </Typography>
                 <div>
-                {icons.map((item, index) => (
-                    <a href={item.link} target="_blank" key={item+index}><img src={item.icon}></img></a>
-                ))}
+                    {icons.map((item, index) => (
+                        <a href={item.link} target="_blank" key={item + index}><img src={item.icon}></img></a>
+                    ))}
                 </div>
             </Icons>
         </Banner>
-     );
+    );
 }
 
 export default BannerFooter;
