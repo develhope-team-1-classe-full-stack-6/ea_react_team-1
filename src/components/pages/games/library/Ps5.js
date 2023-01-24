@@ -1,6 +1,6 @@
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
-import { Grid, styled } from "@mui/material";
+import { Grid, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/ps5XboxDatabase.json";
@@ -83,6 +83,7 @@ export function Ps5(props) {
 
   return (
     <>
+    <Typography>
       <PagesContainer>
         <Hero>
           <img src={imgHero} />
@@ -111,6 +112,7 @@ export function Ps5(props) {
           </Grid>
         </BoxWrapper>
       </PagesContainer>
+      </Typography>
     </>
   );
 }

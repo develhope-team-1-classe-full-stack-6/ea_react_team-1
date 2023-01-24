@@ -1,6 +1,6 @@
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
-import { Grid, styled } from "@mui/material";
+import { Grid, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/nintendoSwitchDatabase.json";
@@ -112,6 +112,7 @@ export function Switch(props) {
 
   return (
     <>
+    <Typography>
       <PagesContainer>
         <Hero>
           <img src={imgHero} />
@@ -144,6 +145,7 @@ export function Switch(props) {
           </Grid>
         </BoxWrapper>
       </PagesContainer>
+      </Typography>
     </>
   );
 }

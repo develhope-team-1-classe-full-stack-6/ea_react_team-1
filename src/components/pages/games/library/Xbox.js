@@ -1,6 +1,6 @@
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
-import { Grid, styled } from "@mui/material";
+import { Grid, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/ps5XboxDatabase.json";
@@ -98,35 +98,37 @@ export function Xbox(props) {
 
   return (
     <>
-      <PagesContainer>
-        <Hero>
-          <img src={imgHero} />
-          <h1>GIOCHI EA PER XBOX SERIES X|S</h1>
-          <hr></hr>
-        </Hero>
-        <BoxWrapper>
-          <p>
-            Preparati a portare la tua esperienza di gioco su un altro livello
-            con la più potente Xbox mai creata. Questa console è costruita per
-            offrire velocità e prestazioni, ed è pronta a supportare alcuni dei
-            nostri migliori giochi!
-          </p>
-          <Grid container spacing={3}>
-            {data.map((item) => (
-              <Grid key={item.id} item xs={12} sm={6} md={4}>
-                <EABox
-                  variant={item.variant}
-                  overlay={item.overlay}
-                  boxImage={item.boxImage}
-                  boxLogo={item.boxLogo}
-                  logoWidth={item.logoWidth}
-                  links={item.links}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </BoxWrapper>
-      </PagesContainer>
+      <Typography>
+        <PagesContainer>
+          <Hero>
+            <img src={imgHero} />
+            <h1>GIOCHI EA PER XBOX SERIES X|S</h1>
+            <hr></hr>
+          </Hero>
+          <BoxWrapper>
+            <p>
+              Preparati a portare la tua esperienza di gioco su un altro livello
+              con la più potente Xbox mai creata. Questa console è costruita per
+              offrire velocità e prestazioni, ed è pronta a supportare alcuni
+              dei nostri migliori giochi!
+            </p>
+            <Grid container spacing={3}>
+              {data.map((item) => (
+                <Grid key={item.id} item xs={12} sm={6} md={4}>
+                  <EABox
+                    variant={item.variant}
+                    overlay={item.overlay}
+                    boxImage={item.boxImage}
+                    boxLogo={item.boxLogo}
+                    logoWidth={item.logoWidth}
+                    links={item.links}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </BoxWrapper>
+        </PagesContainer>
+      </Typography>
     </>
   );
 }
