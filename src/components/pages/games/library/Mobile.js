@@ -6,8 +6,9 @@ import { Container } from "@mui/system";
 import data from "../../../../data/mobileDatabase.json";
 import data2 from "../../../../data/mobileDatabase2.json";
 import { useState } from "react";
+import "./Consoles.scss";
 
-export function Mobile(props) {
+export function Mobile() {
   const [activePage, setActivePage] = useState(1);
   const OpenPage = (props) => {
     const { children, page, index } = props;
@@ -17,9 +18,7 @@ export function Mobile(props) {
       </div>
     );
   };
-  const {
-    imgHero = "./assets/images/pages/library/consoles/ea-library-header-16x9-xl.png.adapt.1920w.png",
-  } = props;
+
   const Hero = styled(Box)({
     display: "flex",
     justifyContent: "center",
@@ -127,8 +126,7 @@ export function Mobile(props) {
       <Typography>
         <OpenPage page={activePage} index={1}>
           <PagesContainer>
-            <Hero>
-              <img src={imgHero} />
+            <Hero id="hero-consoles">
               <h1>GIOCHI EA PER DISPOSITIVI MOBILI</h1>
               <hr></hr>
             </Hero>
@@ -177,8 +175,7 @@ export function Mobile(props) {
 
         <OpenPage page={activePage} index={2}>
           <PagesContainer>
-            <Hero>
-              <img src={imgHero} />
+            <Hero id="hero-consoles">
               <h1>GIOCHI EA PER DISPOSITIVI MOBILI</h1>
               <hr></hr>
             </Hero>

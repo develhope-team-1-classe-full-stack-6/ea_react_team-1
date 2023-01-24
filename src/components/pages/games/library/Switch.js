@@ -4,34 +4,14 @@ import { Grid, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/nintendoSwitchDatabase.json";
+import "./Consoles.scss";
 
-export function Switch(props) {
-  const {
-    imgHero = "./assets/images/pages/library/consoles/ea-library-header-16x9-xl.png.adapt.1920w.png",
-  } = props;
+export function Switch() {
 
   const Hero = styled(Box)({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    img: {
-      width: "100%",
-      height: "370px",
-      position: "relative",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      objectFit: "cover",
-
-      "@media (min-width: 769px) and (max-width: 1023px)": {
-        height: "210px",
-      },
-      "@media (max-width: 599px)": {
-        height: "140px",
-      },
-      "@media (min-width: 600px) and (max-width: 768px)": {
-        height: "200px",
-      },
-    },
     h1: {
       position: "absolute",
       color: "#f6f6f6",
@@ -112,39 +92,39 @@ export function Switch(props) {
 
   return (
     <>
-    <Typography>
-      <PagesContainer>
-        <Hero>
-          <img src={imgHero} />
-          <h1>VIDEOGIOCHI EA PER NINTENDO SWITCH</h1>
-          <hr></hr>
-        </Hero>
-        <BoxWrapper>
-          <p>
-            Porta incredibili giochi sempre con te con i fantastici titoli di
-            Electronic Arts per Nintendo Switch! Domina il gioco più bello del
-            mondo nella serie <a href="#">FIFA</a>. Insegui la scintilla
-            dell'avventura da solo o con un amico in <a href="#">Unravel Two</a>
-            . Corri, arrampicati e plana attraverso un'oscura foresta nordica
-            nell'indimenticabile <a href="#">Fe</a>. Non puoi sbagliare con gli
-            incredibili videogiochi di EA per Nintendo Switch!
-          </p>
-          <Grid container spacing={3}>
-            {data.map((item) => (
-              <Grid key={item.id} item xs={12} sm={6} md={4}>
-                <EABox
-                  variant={item.variant}
-                  overlay={item.overlay}
-                  boxImage={item.boxImage}
-                  boxLogo={item.boxLogo}
-                  logoWidth={item.logoWidth}
-                  links={item.links}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </BoxWrapper>
-      </PagesContainer>
+      <Typography>
+        <PagesContainer>
+          <Hero id="hero-consoles">
+            <h1>VIDEOGIOCHI EA PER NINTENDO SWITCH</h1>
+            <hr></hr>
+          </Hero>
+          <BoxWrapper>
+            <p>
+              Porta incredibili giochi sempre con te con i fantastici titoli di
+              Electronic Arts per Nintendo Switch! Domina il gioco più bello del
+              mondo nella serie <a href="#">FIFA</a>. Insegui la scintilla
+              dell'avventura da solo o con un amico in{" "}
+              <a href="#">Unravel Two</a>. Corri, arrampicati e plana attraverso
+              un'oscura foresta nordica nell'indimenticabile <a href="#">Fe</a>.
+              Non puoi sbagliare con gli incredibili videogiochi di EA per
+              Nintendo Switch!
+            </p>
+            <Grid container spacing={3}>
+              {data.map((item) => (
+                <Grid key={item.id} item xs={12} sm={6} md={4}>
+                  <EABox
+                    variant={item.variant}
+                    overlay={item.overlay}
+                    boxImage={item.boxImage}
+                    boxLogo={item.boxLogo}
+                    logoWidth={item.logoWidth}
+                    links={item.links}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </BoxWrapper>
+        </PagesContainer>
       </Typography>
     </>
   );

@@ -11,10 +11,14 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa23-logo-white-stacked.svg",
+    "boxImage": "./assets/images/pages/library/consoles/pc/pgatour.jpg",
+    "boxLogo": "./assets/images/pages/library/consoles/pc/ea-sports-pga-tour-mono-logo-white.svg",
     "logoWidth": ""
   },
   {
@@ -29,10 +33,14 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/apex-mobile-logo.svg",
+    "boxImage": "./assets/images/pages/library/consoles/pc/jedi.jpg",
+    "boxLogo": "./assets/images/pages/library/consoles/pc/star-wars-jedi-survivor-mono-logo.svg",
     "logoWidth": "70px"
   },
   {
@@ -47,11 +55,15 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/madden-23-keyart.jpg.adapt.crop1x1.767w.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/m23-gamebox-logo.svg",
-    "logoWidth": "140px"
+    "boxImage": "./assets/images/pages/library/consoles/pc/wh.jpg",
+    "boxLogo": "./assets/images/pages/library/consoles/pc/wild-hearts-light-logo.svg",
+    "logoWidth": "150px"
   },
   {
     "id": 4,
@@ -65,10 +77,14 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/f122-gamebox.svg",
+    "boxImage": "./assets/images/pages/library/consoles/pc/deadspace.jpg",
+    "boxLogo": "./assets/images/pages/library/consoles/pc/dead-space-game-box-logo.svg",
     "logoWidth": "160px"
   },
   {
@@ -83,11 +99,15 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/grid-legends-gamebox.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/grid-legends-logo-gamebox.svg",
-    "logoWidth": "190px"
+    "boxImage": "./assets/images/pages/library/consoles/pc/nfs.png",
+    "boxLogo": "./assets/images/pages/library/consoles/pc/nfs-unbound-primar-logo.svg",
+    "logoWidth": "200px"
   },
   {
     "id": 6,
@@ -101,10 +121,14 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/battlefield-2042-mono-logo-svg.svg",
+    "boxImage": "./assets/images/pages/library/consoles/pc/the-sims.jpg",
+    "boxLogo": "./assets/images/pages/library/consoles/pc/game-box-logo-thesims4-refresh.svg",
     "logoWidth": "160px"
   },
   {
@@ -119,11 +143,15 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/nhl22-gin-16x9.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/nhl22-mono-logo.svg",
-    "logoWidth": "180px"
+    "boxImage": "./assets/images/pages/ultimi-giochi/madden-23-keyart.jpg.adapt.crop1x1.767w.jpg",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/m23-gamebox-logo.svg",
+    "logoWidth": "130px"
   },
   {
     "id": 8,
@@ -137,10 +165,14 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/fifa22-key-art.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa22-mono-logo.svg",
+    "boxImage": "./assets/images/pages/ultimi-giochi/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/f122-gamebox.svg",
     "logoWidth": "130px"
   },
   {
@@ -155,10 +187,14 @@
       {
         "title": "Aiuto",
         "link": "#"
+      },
+      {
+        "title": "Forum",
+        "link": "#"
       }
     ],
-    "boxImage": "./assets/images/pages/ultimi-giochi/lir-keyart.jpg.adapt.crop1x1.767p.jpg",
-    "boxLogo": "./assets/images/pages/ultimi-giochi/lir-logo-mono.svg",
-    "logoWidth": "170px"
+    "boxImage": "./assets/images/pages/ultimi-giochi/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa23-logo-white-stacked.svg",
+    "logoWidth": "130px"
   }
 ]

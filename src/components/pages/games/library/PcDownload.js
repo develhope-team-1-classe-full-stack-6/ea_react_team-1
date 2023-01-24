@@ -9,6 +9,8 @@ import data3 from "../../../../data/pcDatabase3.json";
 import { useState } from "react";
 import CustomButton from "../../../components/button/CustomButton";
 import "./PcDownload.scss";
+import "./EATabPc.scss";
+import EATabPc from "./EATabPc";
 
 export function Pc(props) {
   const [activePage, setActivePage] = useState(1);
@@ -20,58 +22,32 @@ export function Pc(props) {
       </div>
     );
   };
-  const {
-    imgHero = "./assets/images/pages/library/consoles/smallest.jpeg",
-    imgBanner2 = "./assets/images/pages/library/consoles/pc/banner-2-smallest.jpg",
-    imgBanner3 = "./assets/images/pages/library/consoles/pc/banner-3-smallest.jpg",
-  } = props;
+  const { imgHero = "./assets/images/pages/library/consoles/smallest.jpeg" } =
+    props;
   const Hero = styled(Box)(({ theme }) => ({
-    img: {
-      //   height: "900px",
-      width: "100%",
-      position: "relative",
-      backgroundRepeat: "no-repeat",
-      objectFit: "cover",
-    },
     h1: {
-      position: "absolute",
-      color: "#f6f6f6",
+      color: "#f3f3f3",
       fontSize: "3rem",
-      width: "40%",
-      textAlign: "center",
-      top: "33%",
-      right: "30%",
+      paddingBottom: "4rem",
 
       "@media (max-width: 599px)": {
         fontSize: "2.5rem",
-        top: "43%",
-        left: "0",
-        width: "100%",
-        textAlign: "none",
       },
       "@media (min-width: 600px) and (max-width: 768px)": {
-        width: "100%",
-        textAlign: "none",
-        top: "47%",
-        left: "0",
         fontSize: "2.5rem",
       },
       "@media (min-width: 769px) and (max-width: 1023px)": {
-        width: "60%",
-        textAlign: "none",
-        fontSize: "2.5rem",
-        top: "27%",
-        right: "20%",
+        fontSize: "2rem",
+        paddingBottom: "20rem",
       },
       "@media (min-width: 1024px) and (max-width: 1320px)": {
-        width: "60%",
-        top: "27%",
-        right: "20%",
-        textAlign: "none",
         fontSize: "2.5rem",
+        paddingBottom: "20rem",
       },
-      "@media (min-width: 400px) and (max-width: 499px)": {
-        top: "40%",
+
+      "@media (min-width: 300px) and (max-width: 430px)": {
+        fontSize: "2rem",
+        paddingBottom: "15rem",
       },
     },
   }));
@@ -112,18 +88,10 @@ export function Pc(props) {
             </div>
           </section>
           <Hero>
-            <img
-              src={imgHero}
-              alt="imgbg"
-              srcSet="
-              ./assets/images/pages/library/consoles/smallest.jpeg  320w,
-              ./assets/images/pages/library/consoles/small.jpeg     768w,
-              ./assets/images/pages/library/consoles/medium.jpeg    1024w,
-              ./assets/images/pages/library/consoles/large.jpeg      1456w,
-              ./assets/images/pages/library/consoles/xlarge.jpeg     1920w
-            "
-            />
-            <h1>Giochi PC</h1>
+            <div id="hero-pc">
+              <h1>Giochi PC</h1>
+            </div>
+
             <section id="section-pc">
               <h2>Giochi PC in evidenza</h2>
               <BoxWrapper>
@@ -161,6 +129,7 @@ export function Pc(props) {
                   protetti dalla <a>Nostra Garanzia Grandi Giochi</a>.
                 </p>
               </div>
+              <EATabPc></EATabPc>
             </section>
           </Hero>
           <section id="section-pc-two">
@@ -193,7 +162,10 @@ export function Pc(props) {
                 count={19}
                 page={activePage}
                 onChange={(event, newPage) =>
-                  setActivePage(newPage, window.scroll(0, 0))
+                  setActivePage(
+                    newPage
+                    // window.scroll({ top: 0, behavior: "smooth" })
+                  )
                 }
               />
             </OpenPage>
@@ -225,7 +197,10 @@ export function Pc(props) {
                 count={19}
                 page={activePage}
                 onChange={(event, newPage) =>
-                  setActivePage(newPage, window.scroll(0, 0))
+                  setActivePage(
+                    newPage
+                    // window.scroll({ top: 0, behavior: "smooth" })
+                  )
                 }
               />
             </OpenPage>

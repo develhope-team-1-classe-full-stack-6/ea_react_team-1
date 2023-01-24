@@ -4,34 +4,14 @@ import { Grid, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/ps5XboxDatabase.json";
+import "./Consoles.scss";
 
-export function Xbox(props) {
-  const {
-    imgHero = "./assets/images/pages/library/consoles/ea-library-header-16x9-xl.png.adapt.1920w.png",
-  } = props;
+export function Xbox() {
 
   const Hero = styled(Box)({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    img: {
-      width: "100%",
-      height: "370px",
-      position: "relative",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      objectFit: "cover",
-
-      "@media (min-width: 769px) and (max-width: 1023px)": {
-        height: "210px",
-      },
-      "@media (max-width: 599px)": {
-        height: "140px",
-      },
-      "@media (min-width: 600px) and (max-width: 768px)": {
-        height: "200px",
-      },
-    },
     h1: {
       position: "absolute",
       color: "#f6f6f6",
@@ -75,6 +55,9 @@ export function Xbox(props) {
       "@media (min-width: 769px) and (max-width: 1023px)": {
         top: "27%",
       },
+      "@media (min-width: 1024px) and (max-width: 1320px)": {
+        top: "35%",
+      },
     },
   });
 
@@ -100,8 +83,7 @@ export function Xbox(props) {
     <>
       <Typography>
         <PagesContainer>
-          <Hero>
-            <img src={imgHero} />
+          <Hero id="hero-consoles">
             <h1>GIOCHI EA PER XBOX SERIES X|S</h1>
             <hr></hr>
           </Hero>

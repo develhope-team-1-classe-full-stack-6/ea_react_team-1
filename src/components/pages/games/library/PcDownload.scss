@@ -4,7 +4,6 @@
   justify-content: space-evenly;
   height: 90px;
   background: linear-gradient(90deg, #013ab4, #02c1d3, #12c5a2);
-
   h1 {
     font-size: 2rem;
     color: #f3f3f3;
@@ -15,12 +14,22 @@
   }
 }
 
+#hero-pc {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-xlarge.jpeg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #section-pc {
   text-align: center;
   background-color: #f3f3f5;
   margin-bottom: 10rem;
-  position: absolute;
-  top: 70%;
+  width: 100%;
 
   .paragraph-pc {
     display: flex;
@@ -42,7 +51,8 @@
 }
 
 #section-pc-two {
-  margin-top: 12rem;
+  width: 100%;
+  margin-top: 10rem;
   text-align: center;
   h1 {
     font-size: 2rem;
@@ -64,7 +74,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 60%;
+    width: 60.5%;
     height: 350px;
     background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-xlarge.jpg");
     background-size: cover;
@@ -83,7 +93,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    width: 60%;
+    width: 60.5%;
     height: 350px;
     background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-xlarge.jpg");
     background-size: cover;
@@ -103,18 +113,25 @@
 
 @media (min-width: 300px) and (max-width: 599px) {
   #banner-pc-1 {
-    height: 120px;
+    height: 220px;
     flex-direction: column;
     align-items: flex-start;
-    background: linear-gradient(150deg, #013eb2, #0086e0);
+    background: linear-gradient(180deg, #013eb2, #01bed4);
 
     h1 {
       font-size: 1.5rem;
     }
+
+    .btn-pc-banner {
+      flex-direction: column;
+    }
   }
 
-  #section-pc-two {
-    margin-top: 70rem;
+  #hero-pc {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-small.jpeg");
   }
 
   #section-pc-three {
@@ -155,8 +172,11 @@
     top: 85%;
   }
 
-  #section-pc-two {
-    margin-top: 70rem;
+  #hero-pc {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-small.jpeg");
   }
 
   #section-pc-three {
@@ -195,8 +215,11 @@
     top: 60%;
   }
 
-  #section-pc-two {
-    margin-top: 72rem;
+  #hero-pc {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-medium.jpeg");
   }
 
   #section-pc-three {
@@ -233,9 +256,14 @@
   #section-pc {
     top: 60%;
   }
-  #section-pc-two {
-    margin-top: 20rem;
+
+  #hero-pc {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-large.jpeg");
   }
+
   #section-pc-three {
     .banner-2-pc {
       background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-large.jpg");
@@ -258,52 +286,6 @@
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
-      }
-    }
-  }
-}
-
-@media (min-width: 400px) and (max-width: 499px) {
-  #banner-pc-1 {
-    height: 160px;
-    align-items: center;
-
-    h1 {
-      font-size: 1.5rem;
-    }
-    .btn-pc-banner {
-      margin: auto;
-    }
-  }
-
-  #section-pc {
-    top: 65%;
-  }
-  #section-pc-two {
-    margin-top: 75rem;
-  }
-
-  #section-pc-three {
-    .banner-2-pc {
-      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-small.jpg");
-      height: 600px;
-      width: 85%;
-
-      p {
-        width: 90%;
-      }
-    }
-
-    .banner-3-pc {
-      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-small.jpg");
-      height: 600px;
-      width: 85%;
-      p {
-        width: 90%;
-      }
-      .pc-banner-3-btns {
-        flex-direction: column;
-        gap: 0.2rem;
       }
     }
   }
