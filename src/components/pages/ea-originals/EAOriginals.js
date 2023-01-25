@@ -1,6 +1,13 @@
+import { Grid, Typography } from "@mui/material";
+import { Container } from "@mui/system";
+import { styled } from '@mui/material/styles';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import EABox from '../../components/box/EABox';
 import FormEA from '../../layout/form/FormEA';
+import PagesContainer from '../../layout/PagesContainer';
 import './EAOriginals.scss';
+import data from '../../../data/eaOriginalsDatabase.json'
+
 const SVGInstagram = (props) => (
     <svg
       viewBox="0 0 40 40"
@@ -22,46 +29,84 @@ const SVGInstagram = (props) => (
         />
       </g>
     </svg>
-  );
+);
+
+const SVGFacebook = (props) => (
+  <svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false" style={{width: "40px", height: "40px"}}>
+    <g transform="translate(21.000000, 12.000000)">
+      <path fill="#ffffff" d="M-14.7,4.1v-7.9h-1.6v-2.6h1.6v-1.6c0-2.1,0.6-3.7,3-3.7h2.8v2.6h-2c-1,0-1.2,0.7-1.2,1.3v1.3h3l-0.4,2.6h-2.6v7.9H-14.7z"></path>
+    </g>
+  </svg>
+);
+
+const BoxWrapper = styled(Container)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  margin: "50px auto",
+  h1:{
+    ...theme.typography.d1,
+    fontSize: "46px",
+    color: "#fff",
+    fontWeight: "bold",
+    marginBottom: "32px",
+    "@media (max-width: 599px)":{
+      fontSize: "32px",
+    },
+    "@media (max-width: 290px)":{
+      fontSize: "16px",
+    }
+  },
+}));
 
 function EAOriginals() {
-    return (
-        <section id="ea-originals-wrapper">
-    <header className="hero position-relative overflow-hidden">
-      <video id="video-originals-large" src="./assets/videos/ea-originals/ea-hero-section-ea-originals-xl.mp4" autoPlay muted className="w-100"></video>
-      <video id="video-originals-small" src="./assets/videos/ea-originals/ea-hero-section-ea-originals-xs-s.webm" autoPlay muted className="w-100"></video>
-    </header>
-    <section style={{margin: "-7px", backgroundColor:"#2b2b2b"}}>
+  return (
+    <PagesContainer>
+      <section id="ea-originals-wrapper">
+        <header className="hero position-relative overflow-hidden">
+          <video id="video-originals-large" src="./assets/videos/ea-originals/ea-hero-section-ea-originals-xl.mp4" autoPlay muted className="w-100"></video>
+          <video id="video-originals-small" src="./assets/videos/ea-originals/ea-hero-section-ea-originals-xs-s.webm" autoPlay muted className="w-100"></video>
+        </header>
+        <section style={{margin: "-7px", backgroundColor:"#2b2b2b"}}>
           <div className="container p-5" style={{maxWidth: "950px"}}>
-            <p className="h4 text-white p-5">Questo è EA Originals. Un luogo dove scoprire storie mai raccontate, voci mai ascoltate e mondi mai visti prima. Tornerai indietro? O ti avventurerai nell'ignoto?
-              <br />
-              <br />
-              Siamo qui per coloro che osano esplorare. Gli studi che forgiano nuovi modi di giocare. E i giocatori che li amano. Cerchiamo sviluppatori coraggiosi con una visione artistica audace. Qui raggiungono il pubblico che hanno sempre sognato e godono della libertà creativa.
-              <br />
-              <br />
-              La loro immaginazione ispira i giocatori, i quali ispirano mondi straordinari, i quali ispirano il nostro supporto. E il ciclo ricomincia. Ancora e ancora.
-              <br />
-              <br />
-              Entra nel nostro mondo. Scopri le storie mai raccontate.
-            </p>
-            <div className="socials-wrapper">
-              <div>
-                <a className="d-flex flex-column align-items-center text-decoration-none" href="https://www.facebook.com/EA/" title="Facebook"><svg viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet" focusable="false" style={{width: "40px", height: "40px"}}><g transform="translate(21.000000, 12.000000)"><path fill="#ffffff" d="M-14.7,4.1v-7.9h-1.6v-2.6h1.6v-1.6c0-2.1,0.6-3.7,3-3.7h2.8v2.6h-2c-1,0-1.2,0.7-1.2,1.3v1.3h3l-0.4,2.6h-2.6v7.9H-14.7z"></path></g></svg>
-                  <p className="text-white pt-3">Segui su Facebook</p>
-                </a>
-              </div>
-              <div>
-                <a className="d-flex flex-column align-items-center text-decoration-none" href="https://www.instagram.com/ea" title="Instagram">
-                   <SVGInstagram/>
-                <p className="text-white pt-3">Segui su Instagram</p>
-                </a>
-              </div>
-            </div>
+          <Typography>
+            <p className="h4 text-white pt-4">Questo è EA Originals. Un luogo dove scoprire storie mai raccontate, voci mai ascoltate e mondi mai visti prima. Tornerai indietro? O ti avventurerai nell'ignoto?</p>
+            <p className="h4 text-white pt-4">Siamo qui per coloro che osano esplorare. Gli studi che forgiano nuovi modi di giocare. E i giocatori che li amano. Cerchiamo sviluppatori coraggiosi con una visione artistica audace. Qui raggiungono il pubblico che hanno sempre sognato e godono della libertà creativa.</p>
+            <p className="h4 text-white pt-4">La loro immaginazione ispira i giocatori, i quali ispirano mondi straordinari, i quali ispirano il nostro supporto. E il ciclo ricomincia. Ancora e ancora.</p>
+            <p className="h4 text-white pt-4">Entra nel nostro mondo. Scopri le storie mai raccontate.</p> 
+          </Typography>
+          <div className="socials-wrapper pt-5">
+            <a className="d-flex flex-column align-items-center text-decoration-none" href="https://www.facebook.com/EA/" title="Facebook">
+              <SVGFacebook />
+              <p className="text-white pt-3">Segui su Facebook</p>
+            </a>  
+            <a className="d-flex flex-column align-items-center text-decoration-none" href="https://www.instagram.com/ea" title="Instagram">
+              <SVGInstagram/>
+              <p className="text-white pt-3">Segui su Instagram</p>
+            </a>  
           </div>
-        <FormEA/>
+          </div>
+          <BoxWrapper>
+            <h1>I nostri giochi</h1>   
+            <Grid container spacing={3}>
+              {data.map((item) => (
+                <Grid key={item.id} item xs={12} sm={6} md={4}>
+                  <EABox
+                    variant={item.variant}
+                    overlay={item.overlay}
+                    boxImage={item.boxImage}
+                    boxLogo={item.boxLogo}
+                    logoWidth={item.logoWidth}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </BoxWrapper>
 
+        <FormEA />
         </section>
-  </section>
+      </section>
+    </PagesContainer>
   );
 }
 
