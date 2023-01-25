@@ -21,9 +21,10 @@ const CredentialForm = () => {
                     method: 'POST',
                     body: JSON.stringify({ email, password }),
                     headers: { 'Content-Type': 'application/json' },
+                    credentials: "include",
                 });
                 const data = await res.json();
-                if (data.messaggio === "login eseguito") {
+                if (data.message === "login eseguito") {
                     navigate("/");
                 } else {
                     console.log(data);

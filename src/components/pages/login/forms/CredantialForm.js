@@ -11,12 +11,13 @@ const CredentialForm = () => {
         e.preventDefault();
         try {
             const res = await fetch('http://localhost:3001/auth/login', {
+                credentials: "include",
                 method: 'POST',
                 body: JSON.stringify({ email, password }),
                 headers: { 'Content-Type': 'application/json' },
             });
             const data = await res.json();
-            if (data.messaggio === "login eseguito") {
+            if (data.message === "login eseguito") {
                 navigate("/");
             } else {
                 console.log(data);

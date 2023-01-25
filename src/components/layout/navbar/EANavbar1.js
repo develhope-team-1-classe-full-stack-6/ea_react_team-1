@@ -12,6 +12,8 @@ import ButtonNav1Type1 from '../../components/buttonNav1/ButtonNav1Type1';
 import ButtonNav1Type2 from '../../components/buttonNav1/ButtonNav1Type2';
 import './EANavbar1.scss';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../components/context/Context';
+import ButtonNav1Type3 from '../../components/buttonNav1/ButtonNav1Type3';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -46,6 +48,9 @@ ElevationScroll.propTypes = {
 };
 
 export default function EANavbar1(props) {
+
+  const { idEA, email } = React.useContext(MyContext);
+
   const navigate = useNavigate()
   const handleClickNavigate = (path) => {
     navigate(path)
@@ -57,7 +62,8 @@ export default function EANavbar1(props) {
 
   const [open, setOpen] = React.useState({
     user: false,
-    question: false
+    question: false,
+    profile: false
   });
 
   const handleOpen = (event) => {
@@ -66,6 +72,7 @@ export default function EANavbar1(props) {
     setOpen(c => ({
       user: false,
       question: false,
+      profile: false,
       [name]: !c[name]
     }))
   }
@@ -76,8 +83,8 @@ export default function EANavbar1(props) {
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar variant='dense'>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", width: "100%", height: "100%", gap: "40px" }} onClick={handleOpen} >
-              <ButtonNav1Type1 id="user" src='./assets/images/common/offcanvas/user-regular.svg' alt="User" style={{ width: "15px" }} />
+            <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%", height: "100%", gap: "40px" }} onClick={handleOpen} >
+              {email === undefined && idEA === undefined ? <ButtonNav1Type1 id="user" src='./assets/images/common/offcanvas/user-regular.svg' alt="User" style={{ width: "15px" }} /> : <ButtonNav1Type3 id="profile" src='./assets/images/common/offcanvas/profile.jpeg' alt="User" style={{ width: "25px", height: "25px", borderRadius: "15px" }} />}
               <ButtonNav1Type1 id="question" src='./assets/images/common/offcanvas/question-solid.svg' alt="Question" style={{ width: "12px" }} />
               <ButtonNav1Type1 src='./assets/images/common/offcanvas/ea_logo.svg' alt="EA Logo" style={{ width: "30px" }} />
             </Box>
@@ -85,6 +92,10 @@ export default function EANavbar1(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
+      <OffcanvasTop open={open.profile} render={(item) => { setOpen(item) }}>
+        <Container maxWidth="sm" style={{ height: "100%", display: "flex" }}>
+        </Container>
+      </OffcanvasTop>
       <OffcanvasTop open={open.user} render={(item) => { setOpen(item) }}>
         <Container maxWidth="sm" style={{ height: "100%", display: "flex" }}>
 
