@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CredentialForm = () => {
-    const [idEA, setIdEA] = useState('');
+
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('', {
+            const res = await fetch('http://localhost:3001/auth/login', {
+                credentials: "include",
                 method: 'POST',
-                body: JSON.stringify({ idEA, password }),
+                body: JSON.stringify({ email, password }),
                 headers: { 'Content-Type': 'application/json' },
             });
             const data = await res.json();
-            console.log(data);
+            if (data.message === "login eseguito") {
+                navigate("/");
+            } else {
+                console.log(data);
+            }
         } catch (err) {
             console.error(err);
         }
@@ -22,11 +30,11 @@ const CredentialForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <label>
-                ID EA:
+                Email:
                 <input
                     type='text'
-                    value={idEA}
-                    onChange={(e) => setIdEA(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
             </label>
             <label>

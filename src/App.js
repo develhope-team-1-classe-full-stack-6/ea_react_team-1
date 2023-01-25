@@ -16,7 +16,6 @@ import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
 import SignIn from "./components/pages/signin/SignIn";
 import Login from "./components/pages/login/Login";
 
-
 export default function App() {
   return (
     <Routes>
@@ -42,5 +41,6 @@ export default function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/login" element={<Login />} />
     </Routes>
+
   );
 }
