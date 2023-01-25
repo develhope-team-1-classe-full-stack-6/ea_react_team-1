@@ -1,0 +1,79 @@
+[
+    {
+        "id": 0,
+        "card": {
+                "img":"./assets/images/pages/home/latest_news_images/ea_fifa_section_images/01_world_cup.jpg",
+                "alt":"immagine riguardante il calcio",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-23/news/ea-sports-fifa-world-cup-22-prediction",
+                "info":"FIFA",
+                "date":"8-nov-2022",
+                "title":"Pronostico EA SPORTS FIFA World Cup 2022™",
+                "text":"EA SPORTS™ pronostica che sarà l'Argentina a vincere la FIFA World Cup 2022™. Scopri come si è svolto il torneo nella simulazione di FIFA 23."
+        }
+    },
+
+    {
+        "id": 1,
+        "card": {
+                "img":"./assets/images/pages/home/latest_news_images/ea_fifa_section_images/02_world_cup.jpg",
+                "alt":"immagine riguardante il calcio",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-23/news/fifa-23-pitch-notes-fifa-world-cup",
+                "info":"FIFA",
+                "date":"1-nov-2022",
+                "title":"FIFA 23 | Note degli sviluppatori - FIFA World Cup™",
+                "text":"Abbiamo numerosi dettagli da condividere sulla FIFA World Cup 2022™, disponibile a breve in FIFA 23."
+        }
+    },
+
+    {
+        "id": 2,
+        "card":{
+                "img":"./assets/images/pages/home/latest_news_images/ea_fifa_section_images/03_stadium.jpg",
+                "alt":"immagine riguardante il calcio",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-23/news/fifa-23-show-racism-the-red-card",
+                "info":"FIFA",
+                "date":"28-ott-2022",
+                "title":"Show Racism the Red Card",
+                "text":"28 ottobre 2022 - EA SPORTS™ e Show Racism the Red Card (SRtRC) hanno annunciato che l'opera d'arte vincitrice del concorso scolastico \"IT'S IN THE GAME\" di quest'anno sarà da oggi parte di FIFA 23."
+            }
+    },
+
+    {
+        "id": 3,
+        "card":{
+                "img":"./assets/images/pages/home/latest_news_images/ea_fifa_section_images/04.png",
+                "alt":"immagine riguardante il calcio",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-20/news/pitch-notes-fifa-23-title-update-2",
+                "info":"FIFA",
+                "date":"18-ott-2022",
+                "title":"FIFA 23 | Note degli sviluppatori sull'aggiornamento #2 - EA SPORTS",
+                "text":"L'aggiornamento #2 di FIFA 23 è disponibile per tutte le versioni e include modifiche alla velocità della palla di un passaggio rasoterra, alla precisione dei pallonetti e all'efficacia dei contrasti in piedi."
+            }
+    },
+
+    {
+        "id": 4,
+        "card":{
+                "img":"./assets/images/pages/home/latest_news_images/ea_fifa_section_images/05.jpg",
+                "alt":"immagine riguardante il calcio",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-20/news/fifa-23-ea-play-early-access-trial",
+                "info":"FIFA",
+                "date":"26-set-2022",
+                "title":"FIFA 23 - Versione di prova in accesso anticipato EA Play - Sito ufficiale …",
+                "text":"Inizia la tua stagione in anticipo con la versione di prova in accesso anticipato EA Play di FIFA 23"
+            }
+    },
+
+    {
+        "id": 5,
+        "card":{
+                "img":"./assets/images/pages/home/latest_news_images/ea_fifa_section_images/06.jpg",
+                "alt":"immagine riguardante il calcio",
+                "link":"https://www.ea.com/it-it/games/fifa/fifa-20/news/pitch-notes-fifa-23-fgs-23-deep-dive",
+                "info":"FIFA",
+                "date":"26-set-2022",
+                "title":"FIFA 23 - Note degli sviluppatori - Un'occhiata da vicino alla FGS 23 - EA …",
+                "text":"La FIFA Global Series (FGS) di quest'anno sarà simile a quella della passata stagione, ma con alcune modifiche di rilievo."
+            }
+    }
+]
