@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "variant": "up",
+    "overlay": "#29244d",
+    "links": [
+      {
+        "title": "Sito ufficiale",
+        "link": "#"
+      },
+      {
+        "title": "Aiuto",
+        "link": "#"
+      }
+    ],
+    "boxImage": "./assets/images/pages/ultimi-giochi/fifa21-keyart-horizontal-16x9.png.adapt.crop1x1.767p.png",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa-21-primary-stacked-white.svg",
+    "logoWidth": "120px"
+  },
+  {
+    "id": 2,
+    "variant": "up",
+    "overlay": "#29244d",
+    "links": [
+      {
+        "title": "Sito ufficiale",
+        "link": "#"
+      },
+      {
+        "title": "Aiuto",
+        "link": "#"
+      }
+    ],
+    "boxImage": "./assets/images/pages/ultimi-giochi/fifa21-keyart-horizontal-16x9.png.adapt.crop1x1.767p.png",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa-21-primary-stacked-white.svg",
+    "logoWidth": "120px"
+  },
+  {
+    "id": 3,
+    "variant": "up",
+    "overlay": "#29244d",
+    "links": [
+      {
+        "title": "Sito ufficiale",
+        "link": "#"
+      },
+      {
+        "title": "Aiuto",
+        "link": "#"
+      }
+    ],
+    "boxImage": "./assets/images/pages/ultimi-giochi/fifa21-keyart-horizontal-16x9.png.adapt.crop1x1.767p.png",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa-21-primary-stacked-white.svg",
+    "logoWidth": "120px"
+  },
+  {
+    "id": 4,
+    "variant": "up",
+    "overlay": "#29244d",
+    "links": [
+      {
+        "title": "Sito ufficiale",
+        "link": "#"
+      },
+      {
+        "title": "Aiuto",
+        "link": "#"
+      }
+    ],
+    "boxImage": "./assets/images/pages/ultimi-giochi/fifa21-keyart-horizontal-16x9.png.adapt.crop1x1.767p.png",
+    "boxLogo": "./assets/images/pages/ultimi-giochi/fifa-21-primary-stacked-white.svg",
+    "logoWidth": "120px"
+  }
+]
