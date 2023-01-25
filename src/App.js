@@ -15,32 +15,37 @@ import ModalitàDiGioco from "./components/pages/games/library/Tabs/ModalitàDiG
 import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
 import SignIn from "./components/pages/signin/SignIn";
 import Login from "./components/pages/login/Login";
+import React from "react";
+import MyProvider from "./components/components/context/Context";
 
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />}>
-        <Route index element={<News />} />
-        <Route path="ea-news" element={<News />} />
-        <Route path="ea-play" element={<EAPlay />} />
-        <Route path="fifa" element={<Fifa />} />
-      </Route>
-      <Route path="/ea-originals" element={<EAOriginals />} />
-      <Route path="/games" element={<Games />} >
-        <Route index element={<LatestGames />} />
-        <Route path="coming-soon" element={<ComingSoon />} />
-        <Route path="library" element={<LibreriaDeiGiochiGrid />}>
-          <Route index element={<Generi />} />
-          <Route path="genres" element={<Generi />} />
-          <Route path="platforms" element={<Piattaforme />} />
-          <Route path="age-ratings" element={<ClassificazioneEtà />} />
-          <Route path="play-modes" element={<ModalitàDiGioco />} />
+    <MyProvider>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route index element={<News />} />
+          <Route path="ea-news" element={<News />} />
+          <Route path="ea-play" element={<EAPlay />} />
+          <Route path="fifa" element={<Fifa />} />
         </Route>
-      </Route>
-      <Route path="/commitments" element={<Commitments />} />
-      <Route path="/signin" element={<SignIn />} />
-      <Route path="/login" element={<Login />} />
-    </Routes>
+        <Route path="/ea-originals" element={<EAOriginals />} />
+        <Route path="/games" element={<Games />} >
+          <Route index element={<LatestGames />} />
+          <Route path="coming-soon" element={<ComingSoon />} />
+          <Route path="library" element={<LibreriaDeiGiochiGrid />}>
+            <Route index element={<Generi />} />
+            <Route path="genres" element={<Generi />} />
+            <Route path="platforms" element={<Piattaforme />} />
+            <Route path="age-ratings" element={<ClassificazioneEtà />} />
+            <Route path="play-modes" element={<ModalitàDiGioco />} />
+          </Route>
+        </Route>
+        <Route path="/commitments" element={<Commitments />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </MyProvider>
+
   );
 }

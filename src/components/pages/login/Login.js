@@ -2,12 +2,17 @@ import { Container } from "@mui/material";
 import CredentialForm from "./forms/CredantialForm";
 
 function SignIn() {
-    require("./signin.scss");
+    const pageStyle = {
+        height: " 100vh",
+        backgroundColor: "#1d2033"
+    }
 
     return (
-        <Container maxWidth="xs" style={{ background: "white" }}>
-            <CredentialForm />
-        </Container >
+        <Container maxWidth="100vw" style={pageStyle}>
+            <Container maxWidth="xs" style={{ background: "white" }}>
+                <CredentialForm />
+            </Container >
+        </Container>
     );
 }
 
