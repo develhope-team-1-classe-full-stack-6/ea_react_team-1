@@ -15,7 +15,6 @@ import ModalitàDiGioco from "./components/pages/games/library/Tabs/ModalitàDiG
 import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
 import SignIn from "./components/pages/signin/SignIn";
 import Login from "./components/pages/login/Login";
-import React from "react";
 
 export default function App() {
   return (

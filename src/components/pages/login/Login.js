@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import CredentialForm from "./forms/CredantialForm";
 
 function SignIn() {
+<<<<<<< HEAD
 
     const pageStyle = {
         height: " 100vh",
@@ -14,6 +15,14 @@ function SignIn() {
                 <CredentialForm />
             </Container >
         </Container>
+=======
+    require("./signin.scss");
+
+    return (
+        <Container maxWidth="xs" style={{ background: "white" }}>
+            <CredentialForm />
+        </Container >
+>>>>>>> 466ce2ec1f648cd2862a5a76669f5256d56207fc
     );
 }
 
