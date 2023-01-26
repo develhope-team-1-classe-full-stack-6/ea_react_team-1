@@ -3,6 +3,7 @@ import CustomButton from '../../components/button/CustomButton';
 import './_card-2.scss';
 
 function CardComingSoon(props) {
+    require('bootstrap/dist/css/bootstrap.min.css');
     return (
         <div className="d-flex flex-column coming-soon-card-wrapper">
             <img src={props.srcImg} alt="" />

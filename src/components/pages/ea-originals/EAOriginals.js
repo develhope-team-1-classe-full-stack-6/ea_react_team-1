@@ -61,6 +61,7 @@ const BoxWrapper = styled(Container)(({ theme }) => ({
 }));
 
 function EAOriginals() {
+  require('bootstrap/dist/css/bootstrap.min.css');
   return (
     <PagesContainer>
       <section id="ea-originals-wrapper">
