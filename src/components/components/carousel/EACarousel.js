@@ -31,7 +31,7 @@ export default function EACarousel () {
   };
 
   return(
-    <div className='bg-dark'>
+    <div>
       <div className="carousel-wrapper">
         <h1 className="text-white d-flex justify-content-center pt-5">Trailer</h1>
         <div className="container carousel slide mt-5 position-relative">

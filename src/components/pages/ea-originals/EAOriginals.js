@@ -7,6 +7,7 @@ import FormEA from '../../layout/form/FormEA';
 import PagesContainer from '../../layout/PagesContainer';
 import './EAOriginals.scss';
 import data from '../../../data/eaOriginalsDatabase.json'
+import EACarousel from "../../components/carousel/EACarousel";
 
 const SVGInstagram = (props) => (
     <svg
@@ -102,8 +103,8 @@ function EAOriginals() {
               ))}
             </Grid>
           </BoxWrapper>
-
-        <FormEA />
+          <EACarousel />
+          <FormEA />
         </section>
       </section>
     </PagesContainer>
