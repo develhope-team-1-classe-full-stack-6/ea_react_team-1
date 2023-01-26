@@ -104,8 +104,11 @@ function EAOriginals() {
               ))}
             </Grid>
           </BoxWrapper>
+
           <EACarousel />
-          <FormEA />
+          <div className="py-5">
+            <FormEA />
+          </div>
         </section>
       </section>
     </PagesContainer>
