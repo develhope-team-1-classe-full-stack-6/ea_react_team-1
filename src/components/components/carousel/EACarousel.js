@@ -23,7 +23,6 @@ export default function EACarousel () {
   }
 
   const Modalstyle = {
-    position: 'absolute',
     width: "100vw",
     height: "100vh",
     bgcolor: '#000',
