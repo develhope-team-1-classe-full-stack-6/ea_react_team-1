@@ -26,7 +26,6 @@ import PageNotFound from "./components/pages/page_not_found/PageNotFound";
 
 export default function App() {
   return (
-
     <Routes>
       <Route path="/" element={<Home />}>
         <Route index element={<News />} />
@@ -38,14 +37,14 @@ export default function App() {
       <Route path="games" element={<Games />} >
         <Route index element={<LatestGames />} />
         <Route path="coming-soon" element={<ComingSoon />} />
-        <Route path="library" element={<LibreriaDeiGiochiGrid />}>
+      </Route>
+        <Route path="games/library" element={<LibreriaDeiGiochiGrid />}>
           <Route index element={<Generi />} />
           <Route path="genres" element={<Generi />} />
           <Route path="platforms" element={<Piattaforme />} />
           <Route path="age-ratings" element={<ClassificazioneEtà />} />
           <Route path="play-modes" element={<ModalitàDiGioco />} />
         </Route>
-      </Route>
       <Route path="games/library/pc-download" element={<PcDownload />} />
       <Route path="games/library/ps5" element={<Ps5 />} />
       <Route path="games/library/xbox-series-x" element={<Xbox />} />
