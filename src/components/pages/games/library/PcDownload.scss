@@ -1,0 +1,292 @@
+#banner-pc-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90px;
+  background: linear-gradient(90deg, #013ab4, #02c1d3, #12c5a2);
+  h1 {
+    font-size: 2rem;
+    color: #f3f3f3;
+  }
+  .btn-pc-banner {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+#hero-pc {
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-xlarge.jpeg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-pc {
+  text-align: center;
+  background-color: #f3f3f5;
+  margin-bottom: 10rem;
+  width: 100%;
+
+  .paragraph-pc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      text-align: center;
+      width: 58%;
+      font-size: 18px;
+      margin-bottom: 16px;
+      margin-top: 16px;
+    }
+    a {
+      color: #ff4747;
+      text-decoration: none;
+    }
+  }
+}
+
+#section-pc-two {
+  width: 100%;
+  margin-top: 10rem;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+#section-pc-three {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+
+  .banner-2-pc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 60.5%;
+    height: 350px;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-xlarge.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    p {
+      font-size: 18px;
+      color: #f3f3f3;
+      width: 58%;
+      text-align: center;
+    }
+  }
+
+  .banner-3-pc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 60.5%;
+    height: 350px;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-xlarge.jpg");
+    background-size: cover;
+    margin-bottom: 3rem;
+    p {
+      font-size: 18px;
+      color: #f3f3f3;
+      width: 100%;
+      text-align: center;
+    }
+    .pc-banner-3-btns {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  #banner-pc-1 {
+    height: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(180deg, #013eb2, #01bed4);
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .btn-pc-banner {
+      flex-direction: column;
+    }
+  }
+
+  #hero-pc {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-small.jpeg");
+  }
+
+  #section-pc-three {
+    .banner-2-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-small.jpg");
+      height: 650px;
+      width: 85%;
+
+      p {
+        width: 90%;
+      }
+    }
+
+    .banner-3-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-small.jpg");
+      height: 650px;
+      width: 85%;
+      p {
+        width: 90%;
+      }
+      .pc-banner-3-btns {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  #banner-pc-1 {
+    height: 130px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(150deg, #013eb2, #0086e0);
+  }
+
+  #section-pc {
+    top: 85%;
+  }
+
+  #hero-pc {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-small.jpeg");
+  }
+
+  #section-pc-three {
+    .banner-2-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-small.jpg");
+      height: 600px;
+      width: 85%;
+
+      p {
+        width: 90%;
+      }
+    }
+
+    .banner-3-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-small.jpg");
+      height: 600px;
+      width: 85%;
+      p {
+        width: 100%;
+      }
+      .pc-banner-3-btns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  #banner-pc-1 h1 {
+    font-size: 1.5rem;
+  }
+  #section-pc {
+    top: 60%;
+  }
+
+  #hero-pc {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-medium.jpeg");
+  }
+
+  #section-pc-three {
+    .banner-2-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-medium.jpg");
+      height: 350px;
+      width: 85%;
+
+      p {
+        width: 65%;
+      }
+    }
+
+    .banner-3-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-medium.jpg");
+      height: 350px;
+      width: 85%;
+      p {
+        width: 70%;
+      }
+      .pc-banner-3-btns {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1320px) {
+  #banner-pc-1 h1 {
+    font-size: 1.5rem;
+  }
+  #section-pc {
+    top: 60%;
+  }
+
+  #hero-pc {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/bg-large.jpeg");
+  }
+
+  #section-pc-three {
+    .banner-2-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-2-large.jpg");
+      height: 350px;
+      width: 85%;
+
+      p {
+        width: 60%;
+      }
+    }
+
+    .banner-3-pc {
+      background-image: url("../../../../../public/assets/images/pages/library/consoles/pc/banner-3-large.jpg");
+      height: 350px;
+      width: 85%;
+      p {
+        width: 60%;
+      }
+      .pc-banner-3-btns {
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+  }
+}
