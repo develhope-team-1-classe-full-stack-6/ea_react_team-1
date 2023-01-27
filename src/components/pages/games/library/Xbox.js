@@ -6,7 +6,7 @@ import { Container } from "@mui/system";
 import data from "../../../../data/ps5XboxDatabase.json";
 import "./Consoles.scss";
 
-export function Xbox() {
+export default function Xbox() {
 
   const Hero = styled(Box)({
     display: "flex",
