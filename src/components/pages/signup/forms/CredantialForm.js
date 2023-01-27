@@ -10,18 +10,18 @@ const CredentialForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:3001/auth/signin', {
+            const res = await fetch('http://localhost:3001/auth/signup', {
                 method: 'POST',
                 body: JSON.stringify({ email, idEA, password }),
                 headers: { 'Content-Type': 'application/json' },
             });
             const data = await res.json();
-            if (data.messaggio === "utente registrato") {
+            if (data.message === "utente registrato") {
                 const res = await fetch('http://localhost:3001/auth/login', {
+                    credentials: "include",
                     method: 'POST',
                     body: JSON.stringify({ email, password }),
                     headers: { 'Content-Type': 'application/json' },
-                    credentials: "include",
                 });
                 const data = await res.json();
                 if (data.message === "login eseguito") {

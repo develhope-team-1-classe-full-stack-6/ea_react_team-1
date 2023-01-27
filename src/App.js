@@ -13,8 +13,9 @@ import Generi from "./components/pages/games/library/Tabs/Generi";
 import ClassificazioneEtà from "./components/pages/games/library/Tabs/ClassificazioneEtà";
 import ModalitàDiGioco from "./components/pages/games/library/Tabs/ModalitàDiGioco";
 import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
-import SignIn from "./components/pages/signin/SignIn";
 import Login from "./components/pages/login/Login";
+import Logout from "./components/pages/logout/Logout";
+import Signup from "./components/pages/signup/Signup";
 
 export default function App() {
   return (
@@ -38,8 +39,9 @@ export default function App() {
         </Route>
       </Route>
       <Route path="/commitments" element={<Commitments />} />
-      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/logout" element={<Logout />} />
     </Routes>
 
   );

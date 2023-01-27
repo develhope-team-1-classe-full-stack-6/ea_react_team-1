@@ -21,14 +21,14 @@ function CustomButton(props) {
     return (
         <div style={{ width: matches ? "100%" : "210px", height: "70px", display: "flex", justifyContent: "center" }}>
             <BootstrapButton size="large"
-                color={props.color || "gray"}
-                variant={props.variant || "contained"}
+                color={props.color}
+                variant={props.variant}
                 disableElevation
                 disableRipple
-                sx={{ border: props.border || "2px solid" }}
+                sx={{ border: props.border }}
                 style={{ whiteSpace: "nowrap" }}
             >
-                {props.children || "Button"}
+                {props.children}
             </BootstrapButton>
 
         </div>
@@ -37,6 +37,16 @@ function CustomButton(props) {
 CustomButton.propTypes = {
     color: PropTypes.string,
     variant: PropTypes.string,
+    border: PropTypes.string,
+    children: PropTypes.node,
 };
+
+CustomButton.defaultProps = {
+    color: 'gray',
+    variant: 'contained',
+    border: '2px solid',
+    children: 'Button',
+}
+
 
 export default CustomButton;
