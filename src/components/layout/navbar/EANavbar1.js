@@ -14,6 +14,7 @@ import './EANavbar1.scss';
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../../components/context/Context';
 import ButtonNav1Type3 from '../../components/buttonNav1/ButtonNav1Type3';
+import Profile from '../profile/Profile';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -93,7 +94,8 @@ export default function EANavbar1(props) {
       </ElevationScroll>
       <Toolbar />
       <OffcanvasTop open={open.profile} render={(item) => { setOpen(item) }}>
-        <Container maxWidth="sm" style={{ height: "100%", display: "flex" }}>
+        <Container maxWidth="sm" style={{ height: "100%", display: "flex", justifyContent: "center" }}>
+          <Profile />
         </Container>
       </OffcanvasTop>
       <OffcanvasTop open={open.user} render={(item) => { setOpen(item) }}>
