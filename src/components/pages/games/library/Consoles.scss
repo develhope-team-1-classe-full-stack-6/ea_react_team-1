@@ -1,0 +1,35 @@
+#hero-consoles {
+  width: 100%;
+  height: 370px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../../../public/assets/images/pages/library/consoles/ea-bg-xlarge.jpg");
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  #hero-consoles {
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/ea-bg-medium.jpg");
+    height: 210px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1320px) {
+  #hero-consoles {
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/ea-bg-large.jpg");
+    height: 250px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  #hero-consoles {
+    height: 100px;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/ea-bg-small.jpg");
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  #hero-consoles {
+    height: 200px;
+    background-image: url("../../../../../public/assets/images/pages/library/consoles/ea-bg-medium.jpg");
+  }
+}

@@ -4,6 +4,7 @@ import CommitmentsButton from "../../components/button/CommittmentsButton";
 import CustomButton from "../../components/button/CustomButton";
 import './Commitments.scss';
 import data from '../../../data/CommitmentsDatabase.json';
+import PagesContainer from "../../layout/PagesContainer";
 
 const Commitments = () => {
 
@@ -184,7 +185,7 @@ const Commitments = () => {
   })
 
     return (
-        <div>
+        <PagesContainer>
             <Hero>
                 <HeroText>
                     I nostri impegni
@@ -230,7 +231,7 @@ const Commitments = () => {
                   <CommitmentsButton color="white">2021</CommitmentsButton>
                 </ProgressButtonContainer>
             </PreviousImpactsContainer>
-        </div>
+        </PagesContainer>
     )
 }
 
