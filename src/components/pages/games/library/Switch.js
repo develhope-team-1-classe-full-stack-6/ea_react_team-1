@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
 import { Grid, Typography, styled } from "@mui/material";
@@ -6,7 +7,7 @@ import { Container } from "@mui/system";
 import data from "../../../../data/nintendoSwitchDatabase.json";
 import "./Consoles.scss";
 
-export function Switch() {
+export default function Switch() {
 
   const Hero = styled(Box)({
     display: "flex",

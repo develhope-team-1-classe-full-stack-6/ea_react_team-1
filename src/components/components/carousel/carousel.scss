@@ -1,12 +1,15 @@
-.carousel-wrapper{
-  // Carousel Controls 
-  .carousel-control-next, .carousel-control-prev {
+.carousel-wrapper {
+
+  // Carousel Controls
+  .carousel-control-next,
+  .carousel-control-prev {
     position: static;
     width: 12%;
     opacity: 1;
   }
 
-  .carousel-control-prev-icon, .carousel-control-next-icon{
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
     width: 40px;
     height: 40px;
     background-size: 16px;
@@ -15,29 +18,29 @@
   }
 
   // Modal Styling
-  .modal{
+  .modal {
     --bs-modal-width: 100%;
-    --bs-modal-bg: #000; 
+    --bs-modal-bg: #000;
 
-    .modal-content{
+    .modal-content {
       height: 100vh;
       border-radius: 0;
     }
 
-    .modal-header{
+    .modal-header {
       border-bottom: none;
     }
 
-    .modal-body{
+    .modal-body {
       padding: 0;
     }
 
-    .modal-dialog{
+    .modal-dialog {
       margin: 0;
     }
   }
 
-  .btn-trigger-modal{
+  .btn-trigger-modal {
     border: none;
     width: 40px;
     height: 40px;
@@ -46,16 +49,17 @@
     right: 40px;
     bottom: 92px;
     border-radius: 50%;
-    img{
+
+    img {
       width: 20px;
       height: 20px;
     }
   }
 
-  .modalHeader{
+  .modalHeader {
     display: flex;
-    justify-content: end;
-    
+    justify-content: flex-end;
+
     .closeBtnModal {
       font-size: 24px;
       color: #fff;

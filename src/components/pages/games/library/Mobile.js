@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
 import { Grid, Pagination, Typography, styled } from "@mui/material";
