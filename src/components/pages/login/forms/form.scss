@@ -1,0 +1,26 @@
+div.MuiFormControl-root {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    .css-m05ceo-MuiInputBase-root-MuiOutlinedInput-root,
+    .MuiInputBase-adornedEnd {
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+
+
+        fieldset.MuiOutlinedInput-notchedOutline {
+            background-color: rgba(0, 0, 10, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.6) !important;
+            border-radius: 10px;
+        }
+
+        input:focus~fieldset.MuiOutlinedInput-notchedOutline {
+            border-color: rgba(255, 255, 255, 1) !important;
+            box-shadow: 0px 0px 10px 1px #ffffff;
+        }
+
+        :focus::placeholder {
+            opacity: 1;
+        }
+    }
+}
