@@ -48,6 +48,7 @@ function LatestGrid(){
             }} 
                 variant="d1"
                 component='h3'
+                color={'black'}
             >
                 Ultime Novità
             </Typography>
