@@ -4,8 +4,6 @@ import ComingSoon from "./components/pages/games/coming-soon/ComingSoon";
 import { Games } from "./components/pages/games/Games";
 import LatestGames from "./components/pages/games/latest-games/LatestGames";
 import Home from "./components/pages/home/Home";
-<<<<<<< HEAD
-=======
 import News from "./components/pages/home/ultimenovità/Tabs/News";
 import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
 import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
@@ -25,19 +23,10 @@ import Xbox from "./components/pages/games/library/Xbox";
 import Switch from "./components/pages/games/library/Switch";
 import Mobile from "./components/pages/games/library/Mobile";
 import PageNotFound from "./components/pages/page_not_found/PageNotFound";
->>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
 
 export default function App() {
   return (
     <Routes>
-<<<<<<< HEAD
-      <Route path="/" element={<Home />} />
-      <Route path="/ea-originals" element={<EAOriginals />} />
-      <Route path="/games" element={<Games />}>
-        <Route index element={<LatestGames />} />
-        <Route path="coming-soon" element={<ComingSoon />} />
-      </Route>
-=======
       <Route path="/" element={<Home />}>
         <Route index element={<News />} />
         <Route path="ea-news" element={<News />} />
@@ -67,7 +56,6 @@ export default function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<PageNotFound/>} />
->>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
     </Routes>
 
   );
