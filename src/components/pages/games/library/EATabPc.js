@@ -2,18 +2,11 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-<<<<<<< HEAD
-import "./EATabPc.scss";
-import { useNavigate } from "react-router-dom";
-
-export default function EATabLibreriaDeiGiochi() {
-=======
 import { useNavigate } from "react-router-dom";
 
 export default function EATabLibreriaDeiGiochi() {
 
   require('./EATabPc.scss')
->>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
   const navigate = useNavigate();
   const handleClick = (path) => {
     navigate(path);
