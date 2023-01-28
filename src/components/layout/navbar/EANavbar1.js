@@ -11,6 +11,10 @@ import { useTheme } from '@mui/material/styles';
 import ButtonNav1Type1 from '../../components/buttonNav1/ButtonNav1Type1';
 import ButtonNav1Type2 from '../../components/buttonNav1/ButtonNav1Type2';
 import './EANavbar1.scss';
+import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../components/context/Context';
+import ButtonNav1Type3 from '../../components/buttonNav1/ButtonNav1Type3';
+import Profile from '../profile/Profile';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -24,12 +28,14 @@ function ElevationScroll(props) {
   });
 
   return React.cloneElement(children, {
-    sx: {top: trigger ? props.aside.aside1 || props.aside.aside2 ? "0px": "-40px" : "0px",
-          transition:"all 0.30s ease",
-          height: "40px",
-          boxShadow: "none",
-          zIndex: "17",
-          backgroundColor: "#111111"},
+    sx: {
+      top: trigger ? props.aside.aside1 || props.aside.aside2 ? "0px" : "-40px" : "0px",
+      transition: "all 0.30s ease",
+      height: "40px",
+      boxShadow: "none",
+      zIndex: "17",
+      backgroundColor: "#111111"
+    },
   });
 }
 
@@ -43,13 +49,22 @@ ElevationScroll.propTypes = {
 };
 
 export default function EANavbar1(props) {
+
+  const { idEA, email } = React.useContext(MyContext);
+
+  const navigate = useNavigate()
+  const handleClickNavigate = (path) => {
+    navigate(path)
+  }
+
   const theme = useTheme();
   // const matchesMd = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesSm = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [open, setOpen] = React.useState({
     user: false,
-    question: false
+    question: false,
+    profile: false
   });
 
   const handleOpen = (event) => {
@@ -58,6 +73,7 @@ export default function EANavbar1(props) {
     setOpen(c => ({
       user: false,
       question: false,
+      profile: false,
       [name]: !c[name]
     }))
   }
@@ -68,8 +84,8 @@ export default function EANavbar1(props) {
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar variant='dense'>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", width: "100%", height:"100%", gap: "40px" }} onClick={handleOpen} >
-              <ButtonNav1Type1 id="user" src='./assets/images/common/offcanvas/user-regular.svg' alt="User" style={{ width: "15px" }} />
+            <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%", height: "100%", gap: "40px" }} onClick={handleOpen} >
+              {email === undefined && idEA === undefined ? <ButtonNav1Type1 id="user" src='./assets/images/common/offcanvas/user-regular.svg' alt="User" style={{ width: "15px" }} /> : <ButtonNav1Type3 id="profile" src='./assets/images/common/offcanvas/profile.jpeg' alt="User" style={{ width: "25px", height: "25px", borderRadius: "15px" }} />}
               <ButtonNav1Type1 id="question" src='./assets/images/common/offcanvas/question-solid.svg' alt="Question" style={{ width: "12px" }} />
               <ButtonNav1Type1 src='./assets/images/common/offcanvas/ea_logo.svg' alt="EA Logo" style={{ width: "30px" }} />
             </Box>
@@ -77,15 +93,22 @@ export default function EANavbar1(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar />
+      <OffcanvasTop open={open.profile} render={(item) => { setOpen(item) }}>
+        <Container maxWidth="sm" style={{ height: "100%", display: "flex", justifyContent: "center" }}>
+          <Profile />
+        </Container>
+      </OffcanvasTop>
       <OffcanvasTop open={open.user} render={(item) => { setOpen(item) }}>
         <Container maxWidth="sm" style={{ height: "100%", display: "flex" }}>
 
           <Box style={{ margin: matchesSm ? "-20px 40px" : "-20px 0px", width: "100%", height: "100%", display: "flex", flexDirection: matchesSm ? "column" : "row", gap: "10px" }}>
-            <Box style={{ display: "flex", justifyContent: matchesSm ? "flex-start" : "center", alignItems: matchesSm ? "flex-end" : "center", height: "100%", flex: "1 1" }}>
-              <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconsignin.svg">Accedi</ButtonNav1Type2>
+            <Box style={{ display: "flex", justifyContent: matchesSm ? "flex-start" : "center", alignItems: matchesSm ? "flex-end" : "center", height: "100%", flex: "1 1" }}
+              onClick={() => { handleClickNavigate("/login") }}>
+              <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconsignin.svg" >Accedi</ButtonNav1Type2>
             </Box>
-            <Box style={{ display: "flex", justifyContent: matchesSm ? "flex-start" : "center", alignItems: matchesSm ? "flex-start" : "center", height: "100%", flex: "1 1" }}>
-              <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconregister.svg">Crea Account</ButtonNav1Type2>
+            <Box style={{ display: "flex", justifyContent: matchesSm ? "flex-start" : "center", alignItems: matchesSm ? "flex-start" : "center", height: "100%", flex: "1 1" }}
+              onClick={() => { handleClickNavigate("/signin") }} >
+              <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconregister.svg" >Crea Account</ButtonNav1Type2>
 
             </Box>
           </Box>
@@ -94,12 +117,12 @@ export default function EANavbar1(props) {
       <OffcanvasTop open={open.question} render={(item) => { setOpen(item) }}>
         <Container maxWidth="sm" style={{ height: "100%", display: "flex" }}>
 
-          <Box style={{ width: "100%", display:"flex", flexDirection:"column", justifyContent:"space-evenly", alignItems:"center" }}>
+          <Box style={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-evenly", alignItems: "center" }}>
             <Typography variant='navBar1' style={{ color: "#eaeaea" }}>
               Ti serve aiuto?
             </Typography>
-            <Box style={{height:"60%", display:"flex", flexDirection:matchesSm ? "column" : "row", justifyContent:"space-evenly", gap:matchesSm ? "0px":"50px"}}>
-              <Box style={{flex:"1",display:"flex", flexDirection:"column", justifyContent:"space-around"}}>
+            <Box style={{ height: "60%", display: "flex", flexDirection: matchesSm ? "column" : "row", justifyContent: "space-evenly", gap: matchesSm ? "0px" : "50px" }}>
+              <Box style={{ flex: "1", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
                 <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconorigin.svg">
                   Verifica dati di accesso a Origin
                 </ButtonNav1Type2>
@@ -107,7 +130,7 @@ export default function EANavbar1(props) {
                   Collega Origin al mio ID PSN
                 </ButtonNav1Type2>
               </Box>
-              <Box style={{flex:"1",display:"flex", flexDirection:"column", justifyContent:"space-around"}}>
+              <Box style={{ flex: "1", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
                 <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconorigincode.svg">
                   Come riscatta un codice
                 </ButtonNav1Type2>
@@ -116,7 +139,7 @@ export default function EANavbar1(props) {
                 </ButtonNav1Type2>
               </Box>
             </Box>
-            <Typography variant='navBar1' style={{ color: "#eaeaea", fontSize:"0.8rem", textAlign:"center"}}>
+            <Typography variant='navBar1' style={{ color: "#eaeaea", fontSize: "0.8rem", textAlign: "center" }}>
               Non hai trovato ciò che cerchi? Vai su Aiuto EA, Answers HQ oder die Forum EA.
             </Typography>
           </Box>

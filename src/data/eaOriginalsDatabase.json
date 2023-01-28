@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/wild-hearts-key-art.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/wild-hearts-logo.svg",
+    "logoWidth":"160px"
+  },
+  {
+    "id": 2,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/lir-keyart.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/lir-logo-mono.svg",
+    "logoWidth":"160px"
+  },
+  {
+    "id": 3,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/it-takes-two-keyart.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/it-takes-two-logo-mono.svg",
+    "logoWidth":"120px"
+  },
+  {
+    "id": 4,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/rocket-arena-keyart-16x9.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/rocket-arena-mono-logo.svg",
+    "logoWidth":"100px"
+  },
+  {
+    "id": 5,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/sos-section-keyart-xl.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/sea-of-solitude-mono-logo.svg",
+    "logoWidth":"160px"
+  },
+  {
+    "id": 6,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/unravel-2-key-art.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/unravel-2-mono-logo.svg",
+    "logoWidth":"160px"
+  },
+  {
+    "id": 7,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/a-way-out-key-art.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/a-way-out-mono-logo.svg",
+    "logoWidth":"160px"
+  },
+  {
+    "id": 8,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/fe-keyart.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/fe-mono-logo.svg",
+    "logoWidth":"60px"
+  },
+  {
+    "id": 9,
+    "variant": "up",
+    "overlay": "#ff4747",
+    "boxImage":"./assets/images/pages/ea-originals/unravel.jpg.adapt.crop1x1.767p.jpg",
+    "boxLogo":"./assets/images/pages/ea-originals/unravel-logo-white.svg",
+    "logoWidth":"160px"
+  }
+]
