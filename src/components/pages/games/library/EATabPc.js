@@ -13,7 +13,7 @@ export default function EATabLibreriaDeiGiochi() {
 
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (newValue) => {
     setValue(newValue);
   };
 
@@ -38,7 +38,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Ultimi Giochi"
-          onClick={() => handleClick("lastest-games")}
+          onClick={() => handleClick("/games/latest-games")}
         />
         <div
           style={{
@@ -51,7 +51,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Disponibili A Breve"
-          onClick={() => handleClick("coming-soon")}
+          onClick={() => handleClick("/games/coming-soon")}
         />
         <div
           style={{
@@ -64,7 +64,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="EA SPORTS"
-          onClick={() => handleClick("ea-sports")}
+          onClick={() => handleClick("/sports")}
         />
         <div
           style={{
@@ -77,7 +77,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Star Wars"
-          onClick={() => handleClick("star-wars")}
+          onClick={() => handleClick("#")}
         />
         <div
           style={{
@@ -90,7 +90,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="The Sims"
-          onClick={() => handleClick("the-sims")}
+          onClick={() => handleClick("#")}
         />
 
         <div
@@ -104,7 +104,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="EA Originals"
-          onClick={() => handleClick("ea-originals")}
+          onClick={() => handleClick("/ea-originals")}
         />
         <div
           style={{
@@ -117,7 +117,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Pogo"
-          onClick={() => handleClick("pogo")}
+          onClick={() => handleClick("/pogo")}
         />
       </Tabs>
       <hr
