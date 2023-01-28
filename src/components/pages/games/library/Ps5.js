@@ -6,7 +6,11 @@ import { Container } from "@mui/system";
 import data from "../../../../data/ps5XboxDatabase.json";
 import "./Consoles.scss";
 
+<<<<<<< HEAD
 export function Ps5() {
+=======
+export default function Ps5() {
+>>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
   const Hero = styled(Box)({
     display: "flex",
     justifyContent: "center",

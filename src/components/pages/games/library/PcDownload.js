@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable jsx-a11y/anchor-is-valid */
+>>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
 import { Grid, Pagination, Typography, styled } from "@mui/material";
@@ -12,7 +16,11 @@ import "./PcDownload.scss";
 import "./EATabPc.scss";
 import EATabPc from "./EATabPc";
 
+<<<<<<< HEAD
 export function Pc(props) {
+=======
+export default function PcDownload(props) {
+>>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
   const [activePage, setActivePage] = useState(1);
   const OpenPage = (props) => {
     const { children, page, index } = props;
@@ -22,8 +30,12 @@ export function Pc(props) {
       </div>
     );
   };
+<<<<<<< HEAD
   const { imgHero = "./assets/images/pages/library/consoles/smallest.jpeg" } =
     props;
+=======
+
+>>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
   const Hero = styled(Box)(({ theme }) => ({
     h1: {
       color: "#f3f3f3",
