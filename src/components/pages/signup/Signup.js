@@ -3,16 +3,18 @@ import HeadForm from "../../layout/headLoginSignupForm/HeadForm";
 import CredentialForm from "./forms/CredantialForm";
 
 function Signup() {
+
     const pageStyle = {
         height: " 100vh",
-        backgroundColor: "#1d2033"
+        backgroundColor: "#1d2033",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     }
 
     return (
-        <Container maxWidth="100vw" style={pageStyle} >
-            <Container maxWidth="xs"
-            // style={{ background: "white" }}
-            >
+        <Container maxWidth="100vw" style={pageStyle}>
+            <Container maxWidth="xs" style={{ marginBottom: "70px" }}>
                 <HeadForm>
                     <Typography variant="h5" color="white.main"><strong>Crea un account EA</strong></Typography>
 

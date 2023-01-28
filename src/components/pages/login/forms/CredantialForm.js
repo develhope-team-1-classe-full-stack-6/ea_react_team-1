@@ -5,8 +5,8 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 const Loginutton = styled(Button)({
-    height: "50px",
-    fontSize: "1.3rem",
+    height: "45px",
+    fontSize: "1.2rem",
     lineHeight: 1.5,
     color: "white",
     fontWeight: "bold"

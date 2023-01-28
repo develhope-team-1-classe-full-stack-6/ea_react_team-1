@@ -26,14 +26,15 @@ function SignIn() {
 
     const pageStyle = {
         height: " 100vh",
-        backgroundColor: "#1d2033"
+        backgroundColor: "#1d2033",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     }
 
     return (
         <Container maxWidth="100vw" style={pageStyle}>
-            <Container maxWidth="xs"
-            // style={{ background: "white" }}
-            >
+            <Container maxWidth="xs" style={{ marginBottom: "70px" }}>
                 <HeadForm>
                     <Typography variant="h5" color="white.main"><strong>Accedi al tuo account EA</strong></Typography>
                 </HeadForm>
