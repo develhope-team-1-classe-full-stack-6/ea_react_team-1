@@ -7,11 +7,8 @@ import { Container } from "@mui/system";
 import data from "../../../../data/nintendoSwitchDatabase.json";
 import "./Consoles.scss";
 
-<<<<<<< HEAD
-export function Switch() {
-=======
 export default function Switch() {
->>>>>>> c73030422a0ddca07c13a255b6b5136451b7dfae
+
 
   const Hero = styled(Box)({
     display: "flex",
