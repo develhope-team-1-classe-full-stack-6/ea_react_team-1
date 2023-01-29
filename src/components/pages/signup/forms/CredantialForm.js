@@ -16,12 +16,24 @@ const Loginutton = styled(Button)({
 const CredentialForm = () => {
     require("./form.scss");
 
+
     const [checkboxColor, setCheckboxColor] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState(false);
     const [idEA, setIdEA] = useState('');
+    const [idEAError, setIdEAError] = useState({
+        error: false,
+        message: undefined
+    });
     const [password, setPassword] = useState('');
+    const [passwordError, setPasswordError] = useState({
+        error: false,
+        message: undefined
+    });
     const navigate = useNavigate();
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -42,9 +54,40 @@ const CredentialForm = () => {
                 const data = await res.json();
                 if (data.message === "login eseguito") {
                     navigate("/");
+                } else if (data.message === "Invalid email address") {
+                    console.log(data);
+                    setEmailError(true)
                 } else {
                     console.log(data);
                 }
+            } else if (data.message === "Invalid email address") {
+                setEmailError({
+                    error: true,
+                    message: data.message
+                })
+            } else if (data.message === "idEA must be between 4 and 16 characters") {
+                setIdEAError({
+                    error: true,
+                    message: data.message
+                })
+            } else if (data.message === "Password must be between 8 and 64 characters") {
+                setPasswordError({
+                    error: true,
+                    message: data.message
+                })
+            } else if (data.message.toString().includes('Unique')) {
+                setEmailError({
+                    error: true,
+                    message: ""
+                })
+                setIdEAError({
+                    error: true,
+                    message: ""
+                })
+                setPasswordError({
+                    error: true,
+                    message: "Utente già esistente"
+                })
             } else {
                 console.log(data);
             }
@@ -57,32 +100,79 @@ const CredentialForm = () => {
         <form onSubmit={handleSubmit}>
             <Typography color="white.main" variant="body2"><strong>E-MAIL</strong></Typography>
             <TextField
-                type="email"
+                type="text"
                 name="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                className={emailError.error && "error"}
+                onChange={(e) => {
+                    setEmail(e.target.value);
+                    setEmailError({
+                        error: false,
+                        message: undefined
+                    })
+                    setIdEAError({
+                        error: false,
+                        message: undefined
+                    })
+                    setPasswordError({
+                        error: false,
+                        message: undefined
+                    })
+                }}
                 fullWidth
                 margin="normal"
                 variant="outlined"
                 placeholder='Inserisci il tuo indirizzo e-mail'
             />
+            {emailError.error && <Typography style={{ color: "#c20000" }}>{emailError.message}</Typography>}
             <Typography color="white.main" variant="body2"><strong>ID EA</strong></Typography>
             <TextField
-                type="email"
-                name="email"
+                type="text"
+                name="idEA"
                 value={idEA}
-                onChange={(e) => setIdEA(e.target.value)}
+                className={idEAError.error && "error"}
+                onChange={(e) => {
+                    setIdEA(e.target.value);
+                    setEmailError({
+                        error: false,
+                        message: undefined
+                    })
+                    setIdEAError({
+                        error: false,
+                        message: undefined
+                    })
+                    setPasswordError({
+                        error: false,
+                        message: undefined
+                    })
+                }}
                 fullWidth
                 margin="normal"
                 variant="outlined"
                 placeholder='Inserisci il tuo ID EA'
             />
+            {idEAError.error && <Typography style={{ color: "#c20000" }}>{idEAError.message}</Typography>}
             <Typography color="white.main" variant="body2"><strong>PASSWORD</strong></Typography>
             <TextField
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                className={passwordError.error && "error"}
+                onChange={(e) => {
+                    setPassword(e.target.value);
+                    setEmailError({
+                        error: false,
+                        message: undefined
+                    })
+                    setIdEAError({
+                        error: false,
+                        message: undefined
+                    })
+                    setPasswordError({
+                        error: false,
+                        message: undefined
+                    })
+                }}
                 fullWidth
                 margin="normal"
                 variant="outlined"
@@ -102,6 +192,7 @@ const CredentialForm = () => {
                     ),
                 }}
             />
+            {passwordError.error && <Typography style={{ color: "#c20000" }}>{passwordError.message}</Typography>}
             <FormControlLabel
                 control={<Checkbox name="remember" color="primary" style={{ color: checkboxColor ? 'white' : "#235fe3" }} />}
                 onClick={() => { setCheckboxColor(b => !b) }}
@@ -115,6 +206,7 @@ const CredentialForm = () => {
                 color="primary"
                 fullWidth
                 margin="normal"
+                disabled={email.length < 3 && !email.includes("@") && password.length < 1 && idEA < 1}
             >
                 CREA ACCOUNT
             </Loginutton>

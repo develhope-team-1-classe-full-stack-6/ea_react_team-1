@@ -1,4 +1,5 @@
 import { Button, Container, styled, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import HeadForm from "../../layout/headLoginSignupForm/HeadForm";
 import CredentialForm from "./forms/CredantialForm";
 
@@ -24,6 +25,8 @@ const CustomTypography = styled(Typography)({
 
 function SignIn() {
 
+    const navigate = useNavigate()
+
     const pageStyle = {
         height: " 100vh",
         backgroundColor: "#1d2033",
@@ -48,6 +51,7 @@ function SignIn() {
                     size="large"
                     fullWidth
                     margin="normal"
+                    onClick={() => { navigate("/signup") }}
                 >
                     Crea Account
                 </CustomButton>
