@@ -13,12 +13,21 @@ const Loginutton = styled(Button)({
 });
 
 const CredentialForm = () => {
+
     require("./form.scss");
 
     const [checkboxColor, setCheckboxColor] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
+    const [emailError, setEmailError] = useState({
+        error: false,
+        message: undefined
+    });
     const [password, setPassword] = useState('');
+    const [passwordError, setPasswordError] = useState({
+        error: false,
+        message: undefined
+    });
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -33,6 +42,25 @@ const CredentialForm = () => {
             const data = await res.json();
             if (data.message === "login eseguito") {
                 navigate("/");
+            } else if (data.message === "Invalid email address") {
+                setEmailError({
+                    error: true,
+                    message: data.message
+                })
+            } else if (data.message === "Password must be between 8 and 64 characters") {
+                setPasswordError({
+                    error: true,
+                    message: data.message
+                })
+            } else if (data.message === "utente non trovato") {
+                setEmailError({
+                    error: true,
+                    message: ""
+                })
+                setPasswordError({
+                    error: true,
+                    message: "Utente non esistente o l'email e/o la password non sono corretti"
+                })
             } else {
                 console.log(data);
             }
@@ -45,21 +73,44 @@ const CredentialForm = () => {
         <form onSubmit={handleSubmit}>
             <Typography color="white.main" variant="body2"><strong>E-MAIL</strong></Typography>
             <TextField
-                type="email"
+                className={emailError.error && "error"}
+                type="text"
                 name="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                    setEmail(e.target.value);
+                    setEmailError({
+                        error: false,
+                        message: undefined
+                    })
+                    setPasswordError({
+                        error: false,
+                        message: undefined
+                    })
+                }}
                 fullWidth
                 margin="normal"
                 variant="outlined"
                 placeholder='Inserisci il tuo indirizzo e-mail'
             />
+            {emailError.error && <Typography style={{ color: "#c20000" }}>{emailError.message}</Typography>}
             <Typography color="white.main" variant="body2"><strong>PASSWORD</strong></Typography>
             <TextField
+                className={passwordError.error && "error"}
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                    setPassword(e.target.value);
+                    setEmailError({
+                        error: false,
+                        message: undefined
+                    })
+                    setPasswordError({
+                        error: false,
+                        message: undefined
+                    })
+                }}
                 fullWidth
                 margin="normal"
                 variant="outlined"
@@ -79,6 +130,7 @@ const CredentialForm = () => {
                     ),
                 }}
             />
+            {passwordError.error && <Typography style={{ color: "#c20000" }}>{passwordError.message}</Typography>}
             <FormControlLabel
                 control={<Checkbox name="remember" color="primary" style={{ color: checkboxColor ? 'white' : "#235fe3" }} />}
                 onClick={() => { setCheckboxColor(b => !b) }}
