@@ -5,6 +5,7 @@ import { styled } from '@mui/material';
 import { Grid } from "@mui/material";
 import CustomButton from "../../../components/button/CustomButton";
 import data from '../../../../data/latestGamesDatabase.json';
+import EATabGames from "./EATabGames";
 
 export default function LatestGames() {
 
@@ -31,6 +32,8 @@ export default function LatestGames() {
   });
 
   return (
+    <>
+    <EATabGames />
     <BoxWrapper>
         <h3>Ultimi giochi</h3>
         <Grid container spacing={3}>
@@ -51,5 +54,6 @@ export default function LatestGames() {
           <CustomButton color="white">Vedi tutti i giochi</CustomButton>
         </ButtonWrapper>
     </BoxWrapper>
+    </>
   );
 }
