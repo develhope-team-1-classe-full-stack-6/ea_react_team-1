@@ -3,7 +3,7 @@ import { Container } from "@mui/system";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import CustomButton from "../../../components/button/CustomButton";
-import boxSectiondatabase from '../../../../data/boxSectionDatabase.json';
+import boxSectiondatabase from '../../../../data/boxSectiondatabase.json';
 import EABox from "../../../components/box/EABox";
 
 const BoxWrapper = styled(Container)(({ theme }) => ({
