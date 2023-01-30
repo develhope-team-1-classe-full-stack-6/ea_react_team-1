@@ -89,10 +89,32 @@ const CredentialForm = () => {
                     message: "Utente già esistente"
                 })
             } else {
-                console.log(data);
+                setEmailError({
+                    error: true,
+                    message: ""
+                })
+                setIdEAError({
+                    error: true,
+                    message: ""
+                })
+                setPasswordError({
+                    error: true,
+                    message: "Server side error"
+                })
             }
         } catch (err) {
-            console.error(err);
+            setEmailError({
+                error: true,
+                message: ""
+            })
+            setIdEAError({
+                error: true,
+                message: ""
+            })
+            setPasswordError({
+                error: true,
+                message: "Server side error"
+            })
         }
     };
 
