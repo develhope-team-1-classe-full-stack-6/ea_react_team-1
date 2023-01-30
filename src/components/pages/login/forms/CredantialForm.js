@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Checkbox, FormControlLabel, IconButton, InputAdornment, styled, TextField, Typography } from '@mui/material';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { MyContext } from '../../../components/context/Context';
 
 const Loginutton = styled(Button)({
     height: "45px",
@@ -28,7 +29,11 @@ const CredentialForm = () => {
         error: false,
         message: undefined
     });
+
     const navigate = useNavigate();
+    const context = useContext(MyContext);
+
+    if (context.idEA && context.email) navigate("/")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
