@@ -2,10 +2,13 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import './EATab.scss'
+
 import { useNavigate } from 'react-router-dom';
 
 export default function EATab() {
+
+  require('./EATab.scss')
+
   const navigate = useNavigate()
   const handleClick = (path) => {
     navigate(path)

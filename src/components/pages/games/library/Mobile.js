@@ -1,13 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
-import { Grid, Pagination, styled } from "@mui/material";
+import { Grid, Pagination, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/mobileDatabase.json";
 import data2 from "../../../../data/mobileDatabase2.json";
 import { useState } from "react";
+import "./Consoles.scss";
 
-export function Mobile(props) {
+export function Mobile() {
   const [activePage, setActivePage] = useState(1);
   const OpenPage = (props) => {
     const { children, page, index } = props;
@@ -17,9 +19,7 @@ export function Mobile(props) {
       </div>
     );
   };
-  const {
-    imgHero = "./assets/images/pages/library/consoles/ea-library-header-16x9-xl.png.adapt.1920w.png",
-  } = props;
+
   const Hero = styled(Box)({
     display: "flex",
     justifyContent: "center",
@@ -124,105 +124,105 @@ export function Mobile(props) {
 
   return (
     <>
-      <OpenPage page={activePage} index={1}>
-        <PagesContainer>
-          <Hero>
-            <img src={imgHero} />
-            <h1>GIOCHI EA PER DISPOSITIVI MOBILI</h1>
-            <hr></hr>
-          </Hero>
-          <BoxWrapper>
-            <p>
-              Gioca quando e dove vuoi con i migliori giochi gratuiti per
-              dispositivi mobili di EA. Ottieni la gloria nel campo da gioco in{" "}
-              <a href="#">Madden mobile</a>. crea una squadra per dominare la
-              galassia in <a href="#">Star Wars™: Galaxy of Heroes</a>. gioca
-              con la vita in
-              <a href="#">The Sims Mobile</a>. sfida i tuoi amici in
-              <a href="#">FIFA Mobile</a>, e molto altro. I giochi EA per
-              dispositivi mobili sono disponibili per iOS e Android.
-            </p>
-            <Grid container spacing={3}>
-              {data.map((item) => (
-                <Grid key={item.id} item xs={12} sm={6} md={4}>
-                  <EABox
-                    variant={item.variant}
-                    overlay={item.overlay}
-                    boxImage={item.boxImage}
-                    boxLogo={item.boxLogo}
-                    logoWidth={item.logoWidth}
-                    links={item.links}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </BoxWrapper>
-          <Pagination
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "1rem",
-            }}
-            defaultPage={1}
-            size="large"
-            count={2}
-            page={activePage}
-            onChange={(event, newPage) =>
-              setActivePage(newPage, window.scroll(0, 0))
-            }
-          />
-        </PagesContainer>
-      </OpenPage>
+      <Typography>
+        <OpenPage page={activePage} index={1}>
+          <PagesContainer>
+            <Hero id="hero-consoles">
+              <h1>GIOCHI EA PER DISPOSITIVI MOBILI</h1>
+              <hr></hr>
+            </Hero>
+            <BoxWrapper>
+              <p>
+                Gioca quando e dove vuoi con i migliori giochi gratuiti per
+                dispositivi mobili di EA. Ottieni la gloria nel campo da gioco
+                in <a href="#">Madden mobile</a>. crea una squadra per dominare
+                la galassia in <a href="#">Star Wars™: Galaxy of Heroes</a>.
+                gioca con la vita in
+                <a href="#">The Sims Mobile</a>. sfida i tuoi amici in
+                <a href="#">FIFA Mobile</a>, e molto altro. I giochi EA per
+                dispositivi mobili sono disponibili per iOS e Android.
+              </p>
+              <Grid container spacing={3}>
+                {data.map((item) => (
+                  <Grid key={item.id} item xs={12} sm={6} md={4}>
+                    <EABox
+                      variant={item.variant}
+                      overlay={item.overlay}
+                      boxImage={item.boxImage}
+                      boxLogo={item.boxLogo}
+                      logoWidth={item.logoWidth}
+                      links={item.links}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+            </BoxWrapper>
+            <Pagination
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+              defaultPage={1}
+              size="large"
+              count={2}
+              page={activePage}
+              onChange={(event, newPage) =>
+                setActivePage(newPage, window.scroll(0, 0))
+              }
+            />
+          </PagesContainer>
+        </OpenPage>
 
-      <OpenPage page={activePage} index={2}>
-        <PagesContainer>
-          <Hero>
-            <img src={imgHero} />
-            <h1>GIOCHI EA PER DISPOSITIVI MOBILI</h1>
-            <hr></hr>
-          </Hero>
-          <BoxWrapper>
-            <p>
-              Gioca quando e dove vuoi con i migliori giochi gratuiti per
-              dispositivi mobili di EA. Ottieni la gloria nel campo da gioco in{" "}
-              <a href="#">Madden mobile</a>. crea una squadra per dominare la
-              galassia in <a href="#">Star Wars™: Galaxy of Heroes</a>. gioca
-              con la vita in
-              <a href="#">The Sims Mobile</a>. sfida i tuoi amici in
-              <a href="#">FIFA Mobile</a>, e molto altro. I giochi EA per
-              dispositivi mobili sono disponibili per iOS e Android.
-            </p>
-            <Grid container spacing={3}>
-              {data2.map((item) => (
-                <Grid key={item.id} item xs={12} sm={6} md={4}>
-                  <EABox
-                    variant={item.variant}
-                    overlay={item.overlay}
-                    boxImage={item.boxImage}
-                    boxLogo={item.boxLogo}
-                    logoWidth={item.logoWidth}
-                    links={item.links}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </BoxWrapper>
-          <Pagination
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "1rem",
-            }}
-            defaultPage={1}
-            size="large"
-            count={2}
-            page={activePage}
-            onChange={(event, newPage) =>
-              setActivePage(newPage, window.scroll(0, 0))
-            }
-          />
-        </PagesContainer>
-      </OpenPage>
+        <OpenPage page={activePage} index={2}>
+          <PagesContainer>
+            <Hero id="hero-consoles">
+              <h1>GIOCHI EA PER DISPOSITIVI MOBILI</h1>
+              <hr></hr>
+            </Hero>
+            <BoxWrapper>
+              <p>
+                Gioca quando e dove vuoi con i migliori giochi gratuiti per
+                dispositivi mobili di EA. Ottieni la gloria nel campo da gioco
+                in <a href="#">Madden mobile</a>. crea una squadra per dominare
+                la galassia in <a href="#">Star Wars™: Galaxy of Heroes</a>.
+                gioca con la vita in
+                <a href="#">The Sims Mobile</a>. sfida i tuoi amici in
+                <a href="#">FIFA Mobile</a>, e molto altro. I giochi EA per
+                dispositivi mobili sono disponibili per iOS e Android.
+              </p>
+              <Grid container spacing={3}>
+                {data2.map((item) => (
+                  <Grid key={item.id} item xs={12} sm={6} md={4}>
+                    <EABox
+                      variant={item.variant}
+                      overlay={item.overlay}
+                      boxImage={item.boxImage}
+                      boxLogo={item.boxLogo}
+                      logoWidth={item.logoWidth}
+                      links={item.links}
+                    />
+                  </Grid>
+                ))}
+              </Grid>
+            </BoxWrapper>
+            <Pagination
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+              defaultPage={1}
+              size="large"
+              count={2}
+              page={activePage}
+              onChange={(event, newPage) =>
+                setActivePage(newPage, window.scroll(0, 0))
+              }
+            />
+          </PagesContainer>
+        </OpenPage>
+      </Typography>
     </>
   );
 }

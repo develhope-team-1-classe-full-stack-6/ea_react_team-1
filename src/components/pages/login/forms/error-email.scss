@@ -1,0 +1,33 @@
+.MuiTypography-root.MuiTypography-body2.css-vo6uqf-MuiTypography-root {
+    margin-top: 15px !important;
+}
+
+div.MuiFormControl-root {
+    margin-top: 10px;
+
+
+
+    .css-m05ceo-MuiInputBase-root-MuiOutlinedInput-root,
+    .MuiInputBase-adornedEnd {
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+
+
+        fieldset.MuiOutlinedInput-notchedOutline:first-of-type {
+            background-color: rgba(0, 0, 10, 0.3);
+            border: 3px solid rgb(194, 0, 0) !important;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 1px rgb(194, 0, 0);
+        }
+
+        input:hover~fieldset.MuiOutlinedInput-notchedOutline:first-of-type,
+        input:focus~fieldset.MuiOutlinedInput-notchedOutline:first-of-type {
+            border-color: rgb(194, 0, 0) !important;
+            box-shadow: 0px 0px 10px 1px rgb(194, 0, 0);
+        }
+
+        :focus::placeholder {
+            opacity: 1;
+        }
+    }
+}
