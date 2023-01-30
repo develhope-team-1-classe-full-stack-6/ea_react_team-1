@@ -9,6 +9,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Typography from "@mui/material/Typography";
 import { Divider, List, ListItem, ListItemText } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -69,6 +70,7 @@ const styleList = {
 };
 
 export default function AccordinonAside(props) {
+  const navigate = useNavigate()
   return (
     <div>
       <Accordion>
@@ -96,8 +98,9 @@ export default function AccordinonAside(props) {
                           paddingBlockStart: "15px",
                           cursor: "pointer",
                         }}
+                        onClick={() => { navigate(item[1]) }}
                       >
-                        {item || "Collapsible Group Item #1"}
+                        {item[0] || "Collapsible Group Item #1"}
                       </Typography>
                     );
                   })}
@@ -112,10 +115,12 @@ export default function AccordinonAside(props) {
               >
                 {menu.items.map((item, index) => {
                   return (
-                    <div key={index + item}>
+                    <div key={index + item}
+                      style={{ cursor: "pointer" }}>
                       <ListItem>
                         <ListItemText
-                          primary={item || "Collapsible Group Item #1"}
+                          onClick={() => { navigate(item[1]) }}
+                          primary={item[0] || "Collapsible Group Item #1"}
                         />
                       </ListItem>
                       <Divider />

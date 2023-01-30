@@ -5,11 +5,57 @@
         "menu": [
             {
                 "subtitle": "ESPLORA I GIOCHI",
-                "items": ["Ultimi giochi", "Prossimamente", "Giochi gratuiti", "EA SPORTS", "EA Originals", "Libreria dei giochi"]
+                "items": [
+                    [
+                        "Ultimi giochi",
+                        "/games"
+                    ],
+                    [
+                        "Prossimamente",
+                        "/games/coming-soon"
+                    ],
+                    [
+                        "Giochi gratuiti",
+                        "Giochi gratuiti"
+                    ],
+                    [
+                        "EA SPORTS",
+                        "EA SPORTS"
+                    ],
+                    [
+                        "EA Originals",
+                        "/ea-originals"
+                    ],
+                    [
+                        "Libreria dei giochi",
+                        "/games/library"
+                    ]
+                ]
             },
             {
                 "subtitle": "PIATTAFORME",
-                "items": ["PC", "PlayStation®5", "Xbox Series X", "Nintendo Switch™", "Cellulari"]
+                "items": [
+                    [
+                        "PC",
+                        "/games/library/pc-download"
+                    ],
+                    [
+                        "PlayStation®5",
+                        "/games/library/ps5"
+                    ],
+                    [
+                        "Xbox Series X",
+                        "/games/library/xbox-series-x"
+                    ],
+                    [
+                        "Nintendo Switch™",
+                        "/games/library/nintendo-switch"
+                    ],
+                    [
+                        "Cellulari",
+                        "/games/library/mobile"
+                    ]
+                ]
             }
         ]
     },
@@ -18,7 +64,28 @@
         "title": "Altre esperienze",
         "menu": [
             {
-                "items": ["EA Play", "l'EA app", "Competizioni videoludiche", "Diretta di EA Play", "Test di gioco"]
+                "items": [
+                    [
+                        "EA Play",
+                        "EA Play"
+                    ],
+                    [
+                        "l'EA app",
+                        "l'EA app"
+                    ],
+                    [
+                        "Competizioni videoludiche",
+                        "Competizioni videoludiche"
+                    ],
+                    [
+                        "Diretta di EA Play",
+                        "Diretta di EA Play"
+                    ],
+                    [
+                        "Test di gioco",
+                        "Test di gioco"
+                    ]
+                ]
             }
         ]
     },
@@ -27,7 +94,36 @@
         "title": "Informazioni",
         "menu": [
             {
-                "items": ["Società", "EA Studi", "Lavora con noi", "La nostra tecnologia", "EA Partners", "Notizie", "Inside EA"]
+                "items": [
+                    [
+                        "Società",
+                        "Società"
+                    ],
+                    [
+                        "EA Studi",
+                        "EA Studi"
+                    ],
+                    [
+                        "Lavora con noi",
+                        "Lavora con noi"
+                    ],
+                    [
+                        "La nostra tecnologia",
+                        "La nostra tecnologia"
+                    ],
+                    [
+                        "EA Partners",
+                        "EA Partners"
+                    ],
+                    [
+                        "Notizie",
+                        "Notizie"
+                    ],
+                    [
+                        "Inside EA",
+                        "Inside EA"
+                    ]
+                ]
             }
         ]
     },
@@ -36,7 +132,32 @@
         "title": "impegni",
         "menu": [
             {
-                "items": ["I nostri impegni", "Gioco positivo", "Diversità e inclusione", "Impatto sociale", "Persone e cultura", "Ambiente"]
+                "items": [
+                    [
+                        "I nostri impegni",
+                        "/commitments"
+                    ],
+                    [
+                        "Gioco positivo",
+                        "/commitments/positive-play"
+                    ],
+                    [
+                        "Diversità e inclusione",
+                        "Diversità e inclusione"
+                    ],
+                    [
+                        "Impatto sociale",
+                        "Impatto sociale"
+                    ],
+                    [
+                        "Persone e cultura",
+                        "Persone e cultura"
+                    ],
+                    [
+                        "Ambiente",
+                        "Ambiente"
+                    ]
+                ]
             }
         ]
     },
@@ -45,7 +166,32 @@
         "title": "Risorse",
         "menu": [
             {
-                "items": ["Aiuto", "Forum", "Filtro famiglia", "Accessibilità", "Stampa", "Investitori"]
+                "items": [
+                    [
+                        "Aiuto",
+                        "Aiuto"
+                    ],
+                    [
+                        "Forum",
+                        "Forum"
+                    ],
+                    [
+                        "Filtro famiglia",
+                        "Filtro famiglia"
+                    ],
+                    [
+                        "Accessibilità",
+                        "Accessibilità"
+                    ],
+                    [
+                        "Stampa",
+                        "Stampa"
+                    ],
+                    [
+                        "Investitori",
+                        "Investitori"
+                    ]
+                ]
             }
         ]
     }

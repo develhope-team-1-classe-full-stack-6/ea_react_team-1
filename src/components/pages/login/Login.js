@@ -12,10 +12,11 @@ const CustomButton = styled(Button)({
     border: "2px solid #235fe3"
 });
 
-const CustomTypography = styled(Typography)({
+const CustomTypographyLink = styled(Typography)({
     color: "white",
     display: "flex",
     justifyContent: "center",
+    cursor: "pointer",
     marginBlock: "20px",
     "&:hover": {
         color: "#1976d2",
@@ -42,7 +43,7 @@ function SignIn() {
                     <Typography variant="h5" color="white.main"><strong>Accedi al tuo account EA</strong></Typography>
                 </HeadForm>
                 <CredentialForm />
-                <CustomTypography>Hai dimenticato la password?</CustomTypography>
+                <CustomTypographyLink>Hai dimenticato la password?</CustomTypographyLink>
 
                 <CustomButton
                     type='submit'

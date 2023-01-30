@@ -87,7 +87,7 @@ export default function EANavbar1(props) {
             <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", width: "100%", height: "100%", gap: "40px" }} onClick={handleOpen} >
               {email === undefined && idEA === undefined ? <ButtonNav1Type1 id="user" src='./assets/images/common/offcanvas/user-regular.svg' alt="User" style={{ width: "15px" }} /> : <ButtonNav1Type3 id="profile" src='./assets/images/common/offcanvas/profile.jpeg' alt="User" style={{ width: "25px", height: "25px", borderRadius: "15px" }} />}
               <ButtonNav1Type1 id="question" src='./assets/images/common/offcanvas/question-solid.svg' alt="Question" style={{ width: "12px" }} />
-              <ButtonNav1Type1 src='./assets/images/common/offcanvas/ea_logo.svg' alt="EA Logo" style={{ width: "30px" }} />
+              <ButtonNav1Type1 onClick={() => { navigate("/") }} src='./assets/images/common/offcanvas/ea_logo.svg' alt="EA Logo" style={{ width: "30px" }} />
             </Box>
           </Toolbar>
         </AppBar>

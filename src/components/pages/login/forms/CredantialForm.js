@@ -59,13 +59,20 @@ const CredentialForm = () => {
                 })
                 setPasswordError({
                     error: true,
-                    message: "Utente non esistente o l'email e/o la password non sono corretti"
+                    message: "User's not found. Email or password couldn't be correct"
                 })
             } else {
                 console.log(data);
             }
         } catch (err) {
-            console.error(err);
+            setEmailError({
+                error: true,
+                message: ""
+            })
+            setPasswordError({
+                error: true,
+                message: "Server side error"
+            })
         }
     };
 

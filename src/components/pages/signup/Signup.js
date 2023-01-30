@@ -23,6 +23,7 @@ function Signup() {
         color: "#1976d2",
         display: "flex",
         justifyContent: "center",
+        cursor: "pointer",
         "&:hover": {
             textDecoration: "underline"
         }
