@@ -1,5 +1,6 @@
 import { Button, Container, styled, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import MyProvider from "../../components/context/Context";
 import HeadForm from "../../layout/headLoginSignupForm/HeadForm";
 import CredentialForm from "./forms/CredantialForm";
 
@@ -37,27 +38,30 @@ function SignIn() {
     }
 
     return (
-        <Container maxWidth="100vw" style={pageStyle}>
-            <Container maxWidth="xs" style={{ marginBottom: "70px" }}>
-                <HeadForm>
-                    <Typography variant="h5" color="white.main"><strong>Accedi al tuo account EA</strong></Typography>
-                </HeadForm>
-                <CredentialForm />
-                <CustomTypographyLink>Hai dimenticato la password?</CustomTypographyLink>
 
-                <CustomButton
-                    type='submit'
-                    variant="outlined"
-                    color="primary"
-                    size="large"
-                    fullWidth
-                    margin="normal"
-                    onClick={() => { navigate("/signup") }}
-                >
-                    Crea Account
-                </CustomButton>
-            </Container >
-        </Container>
+        <MyProvider>
+            <Container maxWidth="100vw" style={pageStyle}>
+                <Container maxWidth="xs" style={{ marginBottom: "70px" }}>
+                    <HeadForm>
+                        <Typography variant="h5" color="white.main"><strong>Accedi al tuo account EA</strong></Typography>
+                    </HeadForm>
+                    <CredentialForm />
+                    <CustomTypographyLink>Hai dimenticato la password?</CustomTypographyLink>
+
+                    <CustomButton
+                        type='submit'
+                        variant="outlined"
+                        color="primary"
+                        size="large"
+                        fullWidth
+                        margin="normal"
+                        onClick={() => { navigate("/signup") }}
+                    >
+                        Crea Account
+                    </CustomButton>
+                </Container >
+            </Container>
+        </MyProvider>
     );
 }
 
