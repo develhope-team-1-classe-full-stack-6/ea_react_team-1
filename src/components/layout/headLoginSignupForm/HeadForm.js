@@ -16,7 +16,7 @@ const MiddleDot = styled.span`
 function HeadForm(props) {
     return (
         <Container style={{
-            display: "flex", flexDirection: "column", gap: "20px"
+            display: "flex", flexDirection: "column", gap: "30px"
         }}>
             <Row>
                 <Col Col xs={12} style={{ display: "flex", justifyContent: "center" }}>

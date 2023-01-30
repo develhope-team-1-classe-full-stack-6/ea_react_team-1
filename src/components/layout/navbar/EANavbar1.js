@@ -107,7 +107,7 @@ export default function EANavbar1(props) {
               <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconsignin.svg" >Accedi</ButtonNav1Type2>
             </Box>
             <Box style={{ display: "flex", justifyContent: matchesSm ? "flex-start" : "center", alignItems: matchesSm ? "flex-start" : "center", height: "100%", flex: "1 1" }}
-              onClick={() => { handleClickNavigate("/signin") }} >
+              onClick={() => { handleClickNavigate("/signup") }} >
               <ButtonNav1Type2 src="./assets/images/common/offcanvas/eaglobalnav-iconregister.svg" >Crea Account</ButtonNav1Type2>
 
             </Box>

@@ -22,6 +22,7 @@ import Ps5 from "./components/pages/games/library/Ps5";
 import Xbox from "./components/pages/games/library/Xbox";
 import Switch from "./components/pages/games/library/Switch";
 import Mobile from "./components/pages/games/library/Mobile";
+import PageNotFound from "./components/pages/page_not_found/PageNotFound";
 
 export default function App() {
   return (
@@ -54,6 +55,7 @@ export default function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />
+      <Route path="*" element={<PageNotFound/>} />
     </Routes>
 
   );
