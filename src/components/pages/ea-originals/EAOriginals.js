@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import EABox from '../../components/box/EABox';
 import FormEA from '../../layout/form/FormEA';
 import PagesContainer from '../../layout/PagesContainer';
-import './EAOriginals.scss';
 import data from '../../../data/eaOriginalsDatabase.json'
 import EACarousel from "../../components/carousel/EACarousel";
 
@@ -61,7 +60,7 @@ const BoxWrapper = styled(Container)(({ theme }) => ({
 }));
 
 function EAOriginals() {
-  require('bootstrap/dist/css/bootstrap.min.css');
+  require('./EAOriginals.scss');
   return (
     <PagesContainer>
       <section id="ea-originals-wrapper">
