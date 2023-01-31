@@ -2,8 +2,10 @@ import { Box, Button, keyframes, MenuItem, styled, useMediaQuery } from "@mui/ma
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
 import { theme } from "../../themes/theme";
+import { useNavigate } from "react-router-dom";
 
 function EAMenuStyle() {
+
     const matches = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
     const MenuButton = styled(Button)({
@@ -54,7 +56,7 @@ function EAMenuStyle() {
 
     const styleItemMenu = {
         position: "absolute",
-        zIndex:"16",
+        zIndex: "16",
         fontWeight: "lighter",
         transformOrigin: "top",
         transform: hover ? "scaleY(1)" : "scaleY(0)",
@@ -81,6 +83,7 @@ function EAMenuStyle() {
 }
 
 function EANavbarMenu(props) {
+    const navigate = useNavigate();
 
     const {
         MenuButton,
@@ -114,7 +117,7 @@ function EANavbarMenu(props) {
                     }}
                 >
                     {props.children.title}
-                    <ExpandMoreIcon sx={{ animation: hover? `${rotateArrow} 0.8s ease forwards`: `${rotateArrowHover} 0.8s ease forwards` }} />
+                    <ExpandMoreIcon sx={{ animation: hover ? `${rotateArrow} 0.8s ease forwards` : `${rotateArrowHover} 0.8s ease forwards` }} />
                 </MenuButton>
                 <li key={props.children.title + "list"}><ul style={styleItemMenu}>
                     {!!props.children.menu ? <Box key={props.children.title + "box"} sx={BoxSx}>
@@ -122,7 +125,7 @@ function EANavbarMenu(props) {
                             <Box key={index + "box"} sx={{ padding: "10px 20px 10px 0px", margin: "20px 10px" }}>
                                 {!!items.subtitle ? <EAMenuTitle disableRipple key={items.subtitle}>{items.subtitle}</EAMenuTitle> : null}
                                 {!!items.subtitle ? <hr style={{ marginBlock: "0px 10px", opacity: 0.4, transform: "scaleY(0.5)" }}></hr> : null}
-                                {!!items.items ? items.items.map((item, index) => (<EAMenuItem disableRipple key={index + item}>{item}</EAMenuItem>)) : null}
+                                {!!items.items ? items.items.map((item, index) => (<EAMenuItem onClick={() => { navigate(item[1]) }} disableRipple key={index + item}>{item[0]}</EAMenuItem>)) : null}
                             </Box>
                         ))}
                     </Box> : null}

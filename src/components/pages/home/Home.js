@@ -6,15 +6,16 @@ import Hero2 from "./hero2/Hero2";
 import LatestGrid from "./ultimenovità/LatestGrid";
 
 function Home() {
+
     return (
         <PagesContainer>
-            <Hero1/>
-            <BoxSection/>
+            <Hero1 />
+            <BoxSection />
             <LatestGrid />
-            <Hero2/>
-            <BannerHome/>
+            <Hero2 />
+            <BannerHome />
         </PagesContainer>
-     );
+    );
 }
 
 export default Home;

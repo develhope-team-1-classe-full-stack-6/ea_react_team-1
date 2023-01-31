@@ -3,6 +3,7 @@ import { styled } from '@mui/material';
 import { Grid } from "@mui/material";
 import data from '../../../../data/ComingSoonDatabase.json';
 import CardComingSoon from "../../../layout/cardComingSoon/CardComingSoon";
+import EATabGames from "../latest-games/EATabGames";
 
 export default function ComingSoon() {
 
@@ -25,6 +26,8 @@ export default function ComingSoon() {
   }));
 
   return (
+    <>
+    <EATabGames />
     <BoxWrapper>
         <h3>Prossimamente</h3>
         <Grid container spacing={4}>
@@ -42,5 +45,6 @@ export default function ComingSoon() {
           ))}
         </Grid>
     </BoxWrapper>
+    </>
   );
 }

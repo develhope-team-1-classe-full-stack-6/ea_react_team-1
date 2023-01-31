@@ -1,37 +1,17 @@
 import PagesContainer from "../../../layout/PagesContainer";
 import Box from "@mui/material/Box";
-import { Grid, styled } from "@mui/material";
+import { Grid, Typography, styled } from "@mui/material";
 import EABox from "../../../components/box/EABox";
 import { Container } from "@mui/system";
 import data from "../../../../data/ps5XboxDatabase.json";
+import "./Consoles.scss";
 
-export function Xbox(props) {
-  const {
-    imgHero = "./assets/images/pages/library/consoles/ea-library-header-16x9-xl.png.adapt.1920w.png",
-  } = props;
+export default function Xbox() {
 
   const Hero = styled(Box)({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    img: {
-      width: "100%",
-      height: "370px",
-      position: "relative",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      objectFit: "cover",
-
-      "@media (min-width: 769px) and (max-width: 1023px)": {
-        height: "210px",
-      },
-      "@media (max-width: 599px)": {
-        height: "140px",
-      },
-      "@media (min-width: 600px) and (max-width: 768px)": {
-        height: "200px",
-      },
-    },
     h1: {
       position: "absolute",
       color: "#f6f6f6",
@@ -75,6 +55,9 @@ export function Xbox(props) {
       "@media (min-width: 769px) and (max-width: 1023px)": {
         top: "27%",
       },
+      "@media (min-width: 1024px) and (max-width: 1320px)": {
+        top: "35%",
+      },
     },
   });
 
@@ -98,35 +81,36 @@ export function Xbox(props) {
 
   return (
     <>
-      <PagesContainer>
-        <Hero>
-          <img src={imgHero} />
-          <h1>GIOCHI EA PER XBOX SERIES X|S</h1>
-          <hr></hr>
-        </Hero>
-        <BoxWrapper>
-          <p>
-            Preparati a portare la tua esperienza di gioco su un altro livello
-            con la più potente Xbox mai creata. Questa console è costruita per
-            offrire velocità e prestazioni, ed è pronta a supportare alcuni dei
-            nostri migliori giochi!
-          </p>
-          <Grid container spacing={3}>
-            {data.map((item) => (
-              <Grid key={item.id} item xs={12} sm={6} md={4}>
-                <EABox
-                  variant={item.variant}
-                  overlay={item.overlay}
-                  boxImage={item.boxImage}
-                  boxLogo={item.boxLogo}
-                  logoWidth={item.logoWidth}
-                  links={item.links}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </BoxWrapper>
-      </PagesContainer>
+      <Typography>
+        <PagesContainer>
+          <Hero id="hero-consoles">
+            <h1>GIOCHI EA PER XBOX SERIES X|S</h1>
+            <hr></hr>
+          </Hero>
+          <BoxWrapper>
+            <p>
+              Preparati a portare la tua esperienza di gioco su un altro livello
+              con la più potente Xbox mai creata. Questa console è costruita per
+              offrire velocità e prestazioni, ed è pronta a supportare alcuni
+              dei nostri migliori giochi!
+            </p>
+            <Grid container spacing={3}>
+              {data.map((item) => (
+                <Grid key={item.id} item xs={12} sm={6} md={4}>
+                  <EABox
+                    variant={item.variant}
+                    overlay={item.overlay}
+                    boxImage={item.boxImage}
+                    boxLogo={item.boxLogo}
+                    logoWidth={item.logoWidth}
+                    links={item.links}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </BoxWrapper>
+        </PagesContainer>
+      </Typography>
     </>
   );
 }
