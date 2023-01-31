@@ -9,6 +9,7 @@ import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
 import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
 import Commitments from "./components/pages/commitments/Commitments";
 import PositivePlay from "./components/pages/commitments/PositivePlay";
+import SocialImpact from "./components/pages/commitments/SocialImpact";
 import LibreriaDeiGiochiGrid from "./components/pages/games/library/LibreriaDeiGiochiGrid";
 import Generi from "./components/pages/games/library/Tabs/Generi";
 import ClassificazioneEtà from "./components/pages/games/library/Tabs/ClassificazioneEtà";
@@ -53,6 +54,7 @@ export default function App() {
       <Route path="/commitments" element={<Commitments />} />
       <Route path="/positive-play" element={<PositivePlay />} />
       <Route path="/commitments/positive-play" element={<PositivePlay />} />
+      <Route path="/commitments/social-impact" element={<SocialImpact />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />

@@ -59,6 +59,11 @@
         "./assets/images/pages/commitments/phero768.jpg", 
         "./assets/images/pages/commitments/phero320.jpg"
     ],
+    "HeroImpact": [
+        "./assets/images/pages/commitments/socialimpacthero1.jpg", 
+        "./assets/images/pages/commitments/socialimpacthero2.jpg", 
+        "./assets/images/pages/commitments/socialimpacthero3.jpg"
+    ],
     "CardPositive" : [
         {
             "id": 0,
