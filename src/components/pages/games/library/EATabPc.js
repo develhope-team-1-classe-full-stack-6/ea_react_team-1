@@ -5,8 +5,7 @@ import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 
 export default function EATabLibreriaDeiGiochi() {
-
-  require('./EATabPc.scss')
+  require("./EATabPc.scss");
   const navigate = useNavigate();
   const handleClick = (path) => {
     navigate(path);
@@ -65,7 +64,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="EA SPORTS"
-          onClick={() => handleClick("/ea-sports")}
+          onClick={() => handleClick("#")}
         />
         <div
           style={{
@@ -118,7 +117,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Pogo"
-          onClick={() => handleClick("/pogo")}
+          onClick={() => handleClick("#")}
         />
       </Tabs>
       <hr
