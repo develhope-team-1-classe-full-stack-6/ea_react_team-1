@@ -23,7 +23,8 @@ export default function PcDownload(props) {
       </div>
     );
   };
-
+  const { imgHero = "./assets/images/pages/library/consoles/smallest.jpeg" } =
+    props;
   const Hero = styled(Box)(({ theme }) => ({
     h1: {
       color: "#f3f3f3",

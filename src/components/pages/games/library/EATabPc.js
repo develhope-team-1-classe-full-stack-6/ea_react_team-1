@@ -5,8 +5,7 @@ import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 
 export default function EATabLibreriaDeiGiochi() {
-
-  require('./EATabPc.scss')
+  require("./EATabPc.scss");
   const navigate = useNavigate();
   const handleClick = (path) => {
     navigate(path);
@@ -39,7 +38,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Ultimi Giochi"
-          onClick={() => handleClick("/games")}
+          onClick={() => handleClick("/games/latest-games")}
         />
         <div
           style={{
@@ -52,7 +51,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Disponibili A Breve"
-          onClick={() => handleClick("/coming-soon")}
+          onClick={() => handleClick("/games/coming-soon")}
         />
         <div
           style={{
@@ -65,7 +64,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="EA SPORTS"
-          onClick={() => handleClick("/ea-sports")}
+          onClick={() => handleClick("#")}
         />
         <div
           style={{
@@ -78,7 +77,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Star Wars"
-          onClick={() => handleClick("/star-wars")}
+          onClick={() => handleClick("#")}
         />
         <div
           style={{
@@ -91,7 +90,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="The Sims"
-          onClick={() => handleClick("/the-sims")}
+          onClick={() => handleClick("#")}
         />
 
         <div
@@ -118,7 +117,7 @@ export default function EATabLibreriaDeiGiochi() {
         <Tab
           disableRipple="true"
           label="Pogo"
-          onClick={() => handleClick("/pogo")}
+          onClick={() => handleClick("#")}
         />
       </Tabs>
       <hr
