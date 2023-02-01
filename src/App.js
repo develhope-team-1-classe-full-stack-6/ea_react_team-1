@@ -8,6 +8,8 @@ import News from "./components/pages/home/ultimenovità/Tabs/News";
 import EAPlay from "./components/pages/home/ultimenovità/Tabs/EAPlay"
 import Fifa from "./components/pages/home/ultimenovità/Tabs/Fifa";
 import Commitments from "./components/pages/commitments/Commitments";
+import PositivePlay from "./components/pages/commitments/PositivePlay";
+import SocialImpact from "./components/pages/commitments/SocialImpact";
 import LibreriaDeiGiochiGrid from "./components/pages/games/library/LibreriaDeiGiochiGrid";
 import Generi from "./components/pages/games/library/Tabs/Generi";
 import ClassificazioneEtà from "./components/pages/games/library/Tabs/ClassificazioneEtà";
@@ -16,7 +18,6 @@ import Piattaforme from "./components/pages/games/library/Tabs/Piattaforme";
 import Login from "./components/pages/login/Login";
 import Logout from "./components/pages/logout/Logout";
 import Signup from "./components/pages/signup/Signup";
-import PositivePlay from "./components/pages/commitments/PositivePlay";
 import PcDownload from "./components/pages/games/library/PcDownload";
 import Ps5 from "./components/pages/games/library/Ps5";
 import Xbox from "./components/pages/games/library/Xbox";
@@ -51,11 +52,13 @@ export default function App() {
       <Route path="/games/library/nintendo-switch" element={<Switch />} />
       <Route path="/games/library/mobile" element={<Mobile />} />
       <Route path="/commitments" element={<Commitments />} />
+      <Route path="/positive-play" element={<PositivePlay />} />
       <Route path="/commitments/positive-play" element={<PositivePlay />} />
+      <Route path="/commitments/social-impact" element={<SocialImpact />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
-  );
-}
+  )
+  }
